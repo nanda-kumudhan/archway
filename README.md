@@ -1,108 +1,151 @@
-# Dotfiles
+# Sway Config
 
-My Debian Stable development desktop configuration for Sway, Waybar, Rofi, Foot, Fastfetch, Starship.
+My personal Sway setup for Arch Linux.
 
-This setup follows the default Fedora Sway Spin behavior with a **GTK Gruvbox monochrome theme** and uses **dunst for notifications**.
+Built around a minimal Wayland workflow with:
 
----
+- Sway
+- Waybar
+- Foot terminal
+- Rofi launcher
+- Thunar file manager
+- Dunst notifications
+- Kanshi display profiles
+- Autotiling
+- Zed editor
+- Grim + Slurp screenshots
+- Swayidle + Swaylock power management
+
+## Features
+
+- Custom keybindings
+- Vim-style window navigation
+- Workspace management
+- Scratchpad support
+- Floating rules for utilities
+- Laptop lid handling
+- PipeWire media controls
+- Automatic wallpaper
+- GNOME keyring integration
+- Network and Bluetooth tray apps
+- Custom borders, gaps, and colours
+
+## Installation
+
+Install dependencies:
+
+```bash
+sudo pacman -S sway waybar foot rofi thunar dunst kanshi \
+grim slurp swayidle swaylock playerctl brightnessctl \
+pavucontrol blueman network-manager-applet udiskie \
+gnome-keyring
+```
+
+Clone:
+
+```bash
+git clone https://github.com/<username>/sway-config.git
+```
+
+Copy the configuration:
+
+```bash
+mkdir -p ~/.config/sway
+cp config ~/.config/sway/config
+```
+
+Reload Sway:
+
+```
+Mod + Shift + R
+```
 
 ## Keybindings
 
-`Super` is the Windows key.
+### Applications
 
----
-
-### Launchers
-
-| Keys | Action |
+| Shortcut | Action |
 | --- | --- |
-| `Ctrl + Alt + T` | Open terminal |
-| `Super + E` | Open file menu |
-| `Super + Shift + E` | Open Thunar |
-| `Super + Space` | Open application launcher |
-| `Ctrl + Escape` | Open system monitor |
+| `Ctrl + Mod + T` | Terminal |
+| `Mod + Space` | App launcher |
+| `Mod + E` | Rofi file browser |
+| `Mod + Shift + E` | Thunar |
+| `Mod + Z` | Zed |
+| `Mod + Q` | Close window |
+| `Mod + L` | Lock screen |
 
----
+### Window Management
 
-### Windows
-
-| Keys | Action |
+| Shortcut | Action |
 | --- | --- |
-| `Super + Q` | Close focused window |
-| `Super + H` / `Super + V` | Split horizontally / vertically |
-| `Super + R` | Toggle split layout |
-| `Super + T` / `Super + S` | Tabbed / stacking layout |
-| `Super + F` | Toggle fullscreen |
-| `Super + D` | Toggle floating |
-| `Super + Shift + D` | Toggle sticky |
-| `Super + C` | Center floating window |
-| `Super + Plus` / `Super + Minus` | Grow / shrink window width |
-| `Super + Arrow` | Focus in a direction |
-| `Super + Shift + Arrow` | Move window in a direction |
-| `Super + A` / `Super + Shift + A` | Focus parent / child |
-| `Alt + Tab` / `Alt + Shift + Tab` | Next / previous application |
+| `Mod + H` | Horizontal split |
+| `Mod + V` | Vertical split |
+| `Mod + R` | Toggle layout |
+| `Mod + F` | Fullscreen |
+| `Mod + D` | Toggle floating |
+| `Mod + T` | Tabbed layout |
+| `Mod + S` | Stacking layout |
 
----
+### Navigation
 
-### Workspaces
-
-| Keys | Action |
+| Shortcut | Action |
 | --- | --- |
-| `Super + 1-9` | Switch workspace |
-| `Super + Shift + 1-9` | Move window to workspace |
-| `Super + Tab` / `Super + Shift + Tab` | Next / previous workspace |
-| `Super + Ctrl + Left/Right` | Move workspace between displays |
-| `Super + Shift + Grave` | Move window to scratchpad |
-| `Super + Grave` | Show scratchpad |
+| `Mod + Arrow Keys` | Focus windows |
+| `Mod + Shift + Arrow Keys` | Move windows |
+| `Mod + 1-9` | Switch workspace |
+| `Mod + Shift + 1-9` | Move window to workspace |
 
----
+## Screenshots
 
-### Apps And Menus
+Full screenshot:
 
-| Keys | Action |
-| --- | --- |
-| `Super + B` | Blueman Manager |
-| `Super + P` | Display menu |
-| `Super + Shift + P` | Wdisplays |
-| `Super + K` | KeePassXC |
-| `Super + Z` | Zed |
+```
+Print
+```
 
----
+Area screenshot:
 
-### Capture And Session
+```
+Shift + Print
+```
 
-| Keys | Action |
-| --- | --- |
-| `Print` / `Shift + Print` | Full / region screenshot |
-| `Super + L` | Lock screen |
-| `Super + Shift + R` | Reload Sway |
-| `Ctrl + Alt + Delete` | Power menu |
+Saved to:
 
----
+```
+~/Pictures/Screenshots/
+```
 
-### Media And Hardware
+## Power Management
 
-| Keys | Action |
-| --- | --- |
-| Volume and mute keys | Control output volume |
-| Mic mute key | Toggle microphone mute |
-| Media keys | Play, pause, stop, or change track |
-| Brightness keys | Change display brightness |
-| Tools key | Open volume control |
-| Display key | Open display menu |
+Idle behaviour:
 
----
+- 5 minutes → lock screen
+- 10 minutes → suspend
 
-## Notes
+Manual suspend:
 
-- Notifications handled by **dunst**
-- No idle inhibitor toggle configured
-- No screen recording bindings
-- No audio input/output selection shortcuts
-- No network menu binding
-- Bluetooth managed via Blueman Manager
-- No LibreWolf shortcut
-- No searchable shortcut menu
-- Kanshi is not configured
-- Theme: GTK Gruvbox monochrome
-- Base: Fedora Sway Spin defaults
+```
+Mod + Shift + S
+```
+
+## Customisation
+
+Main config:
+
+```
+~/.config/sway/config
+```
+
+Reload after changes:
+
+```
+Mod + Shift + R
+```
+
+## Preview
+
+_Add screenshots here._
+
+## License
+
+MIT
