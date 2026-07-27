@@ -32,14 +32,23 @@ Built around a minimal Wayland workflow with:
 
 ## Installation
 
-Install dependencies:
+Install packages:
+
+- Core: `sway`, `swaybg`, `swayidle`, `swaylock`, `waybar`, `foot`, `kanshi`
+- Launcher + UI: `rofi`, `thunar`, `dunst`
+- Media + power: `wireplumber`, `playerctl`, `brightnessctl`, `pavucontrol`
+- System tray + devices: `blueman`, `network-manager-applet`, `udiskie`
+- Screenshots + clipboard: `grim`, `slurp`, `wl-clipboard`
+- Theming + fonts: `papirus-icon-theme`, `ttf-jetbrains-mono-nerd`, `gnome-keyring`
 
 ```bash
-sudo pacman -S sway waybar foot rofi thunar dunst kanshi \
-grim slurp swayidle swaylock playerctl brightnessctl \
-pavucontrol blueman network-manager-applet udiskie \
-gnome-keyring
+sudo pacman -S sway swaybg swayidle swaylock waybar foot kanshi \
+rofi thunar dunst wireplumber playerctl brightnessctl pavucontrol \
+blueman network-manager-applet udiskie grim slurp wl-clipboard \
+papirus-icon-theme ttf-jetbrains-mono-nerd gnome-keyring
 ```
+
+Optional GTK theme package (if not already installed): `gruvbox-dark-gtk` (AUR).
 
 Clone:
 
