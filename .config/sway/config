@@ -1,6 +1,6 @@
 set $term foot
 set $file_manager Thunar
-set $file_menu exec rofi -show filebrowser
+set $file_menu exec rofi -show filebrowser -show-icons -icon-theme "Papirus-Dark"
 set $power_menu swaynag -t warning -m "Do you want to exit Sway?" \
   -B "Logout" "swaymsg exit"
 set $editor zeditor
@@ -15,7 +15,7 @@ exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY SWAYSOC
 exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP
 
 # App launchers
-set $launcher exec rofi -show drun -show-icons -icon-theme "Papirus" -drun-display-format "{name}" -p "Apps"
+set $launcher exec rofi -show drun -show-icons -icon-theme "Papirus-Dark" -drun-display-format "{name}" -p "Apps"
 
 # --- Workspaces ---
 set $ws1 "1"
@@ -227,6 +227,9 @@ for_window [app_id="org.gnome.DiskUtility"] floating enable, move position cente
 for_window [app_id="mpv"] floating enable, resize set 76% 74%, move position center
 for_window [app_id="imv"] floating enable, resize set 76% 74%, move position center
 for_window [class="imv"] floating enable, resize set 76% 74%, move position center
+for_window [app_id="zathura"] floating enable, resize set 78% 82%, move position center
+for_window [app_id="org.pwmt.zathura"] floating enable, resize set 78% 82%, move position center
+for_window [class="Zathura"] floating enable, resize set 78% 82%, move position center
 for_window [class="Virt-manager"] floating enable, resize set 86% 84%, move position center
 for_window [class="virt-manager"] floating enable, resize set 86% 84%, move position center
 for_window [app_id="foot" title="sysmon"] floating enable, resize set 72% 72%, move position center
