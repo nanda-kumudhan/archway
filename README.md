@@ -39,7 +39,8 @@ Install packages:
 - Media + power: `wireplumber`, `playerctl`, `brightnessctl`, `pavucontrol`
 - System tray + devices: `blueman`, `network-manager-applet`, `udiskie`
 - Screenshots + clipboard: `grim`, `slurp`, `wl-clipboard`
-- Theming + fonts: `papirus-icon-theme`, `ttf-jetbrains-mono-nerd`, `gnome-keyring`
+- Theming + fonts: `papirus-icon-theme`, `ttf-jetbrains-mono-nerd`
+- Session + secrets: `gnome-keyring`
 
 ```bash
 sudo pacman -S sway swaybg swayidle swaylock waybar foot kanshi \

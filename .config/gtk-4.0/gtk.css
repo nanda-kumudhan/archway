@@ -10,7 +10,7 @@
 @define-color accent #89b4fa;
 
 * {
-  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", monospace;
+  font-family: "Adwaita Sans", "Noto Sans", sans-serif;
   font-size: 15pt;
   color: @foreground;
   background-color: @background;
