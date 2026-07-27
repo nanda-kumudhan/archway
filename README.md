@@ -32,14 +32,24 @@ Built around a minimal Wayland workflow with:
 
 ## Installation
 
-Install dependencies:
+Install packages:
+
+- ⚙️ Core: `sway`, `swaybg`, `swayidle`, `swaylock`, `waybar`, `foot`, `kanshi`
+- 🧩 Launcher + UI: `rofi`, `thunar`, `dunst`
+- 🔊 Media + power: `wireplumber`, `playerctl`, `brightnessctl`, `pavucontrol`
+- 📡 System tray + devices: `blueman`, `network-manager-applet`, `udiskie`
+- 📸 Capture: `grim`, `slurp`, `wl-clipboard`, `wf-recorder`
+- 🎨 Theming + fonts: `papirus-icon-theme`, `ttf-jetbrains-mono-nerd`
+- 🔐 Session + secrets: `gnome-keyring`
 
 ```bash
-sudo pacman -S sway waybar foot rofi thunar dunst kanshi \
-grim slurp swayidle swaylock playerctl brightnessctl \
-pavucontrol blueman network-manager-applet udiskie \
-gnome-keyring
+sudo pacman -S sway swaybg swayidle swaylock waybar foot kanshi \
+rofi thunar dunst wireplumber playerctl brightnessctl pavucontrol \
+blueman network-manager-applet udiskie grim slurp wl-clipboard wf-recorder \
+papirus-icon-theme ttf-jetbrains-mono-nerd gnome-keyring
 ```
+
+Optional GTK theme package (if not already installed): `gruvbox-dark-gtk` (AUR).
 
 Clone:
 
@@ -95,6 +105,15 @@ Mod + Shift + R
 | `Mod + 1-9` | Switch workspace |
 | `Mod + Shift + 1-9` | Move window to workspace |
 
+### Capture
+
+| Shortcut | Action |
+| --- | --- |
+| `Print` | Full screenshot |
+| `Shift + Print` | Area screenshot |
+| `Ctrl + Print` | Toggle full-screen recording |
+| `Ctrl + Shift + Print` | Toggle area recording |
+
 ## Screenshots
 
 Full screenshot:
@@ -113,6 +132,26 @@ Saved to:
 
 ```
 ~/Pictures/Screenshots/
+```
+
+## Screen Recording
+
+Toggle full-screen recording:
+
+```
+Ctrl + Print
+```
+
+Toggle area recording:
+
+```
+Ctrl + Shift + Print
+```
+
+Saved to:
+
+```
+~/Videos/Recordings/
 ```
 
 ## Power Management
