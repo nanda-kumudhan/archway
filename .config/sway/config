@@ -119,6 +119,10 @@ bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
 
 # Region screenshot
 bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
+
+# Screen recording (Ctrl + Print to toggle, Ctrl + Shift + Print for area)
+bindsym Ctrl+Print exec sh -c 'mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -f ~/Videos/Recordings/$(date +'"'"'%Y-%m-%d_%H-%M-%S'"'"').mp4; fi'
+bindsym Ctrl+Shift+Print exec sh -c 'mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -g "$(slurp)" -f ~/Videos/Recordings/$(date +'"'"'%Y-%m-%d_%H-%M-%S'"'"').mp4; fi'
 # Window management
 bindsym Mod4+h splith, exec $layout_titles refresh
 bindsym Mod4+v splitv, exec $layout_titles refresh
@@ -214,16 +218,21 @@ bindswitch --reload --locked lid:off output eDP-1 enable
 # --- Window Rules ---
 
 # Floating dialogs and utilities
-for_window [app_id="keepassxc"] floating enable, move position center
-for_window [app_id="Thunar"] floating enable, move position center
+for_window [app_id="keepassxc"] floating enable, resize set 68% 78%, move position center
+for_window [app_id="thunar"] floating enable, resize set 82% 82%, move position center
+for_window [app_id="Thunar"] floating enable, resize set 82% 82%, move position center
 for_window [app_id="gnome-disks"] floating enable, move position center
 for_window [app_id="wdisplays"] floating enable, move position center
 for_window [app_id="org.gnome.DiskUtility"] floating enable, move position center
-for_window [app_id="mpv"] floating enable, move position center
-for_window [app_id="foot" title="sysmon"] floating enable, move position center
+for_window [app_id="mpv"] floating enable, resize set 76% 74%, move position center
+for_window [app_id="imv"] floating enable, resize set 76% 74%, move position center
+for_window [class="imv"] floating enable, resize set 76% 74%, move position center
+for_window [class="Virt-manager"] floating enable, resize set 86% 84%, move position center
+for_window [class="virt-manager"] floating enable, resize set 86% 84%, move position center
+for_window [app_id="foot" title="sysmon"] floating enable, resize set 72% 72%, move position center
 for_window [app_id="scratchpad_term"] floating enable, resize set 80% 70%, move position center
-for_window [class="pavucontrol"] floating enable, resize set 640 420, move position center
-for_window [app_id="pavucontrol"] floating enable, resize set 640 420, move position center
+for_window [class="pavucontrol"] floating enable, resize set 52% 58%, move position center
+for_window [app_id="pavucontrol"] floating enable, resize set 52% 58%, move position center
 for_window [class="blueman-manager"] floating enable, resize set 640 420, move position center
 for_window [app_id="blueman-manager"] floating enable, resize set 640 420, move position center
 

@@ -34,18 +34,18 @@ Built around a minimal Wayland workflow with:
 
 Install packages:
 
-- Core: `sway`, `swaybg`, `swayidle`, `swaylock`, `waybar`, `foot`, `kanshi`
-- Launcher + UI: `rofi`, `thunar`, `dunst`
-- Media + power: `wireplumber`, `playerctl`, `brightnessctl`, `pavucontrol`
-- System tray + devices: `blueman`, `network-manager-applet`, `udiskie`
-- Screenshots + clipboard: `grim`, `slurp`, `wl-clipboard`
-- Theming + fonts: `papirus-icon-theme`, `ttf-jetbrains-mono-nerd`
-- Session + secrets: `gnome-keyring`
+- ⚙️ Core: `sway`, `swaybg`, `swayidle`, `swaylock`, `waybar`, `foot`, `kanshi`
+- 🧩 Launcher + UI: `rofi`, `thunar`, `dunst`
+- 🔊 Media + power: `wireplumber`, `playerctl`, `brightnessctl`, `pavucontrol`
+- 📡 System tray + devices: `blueman`, `network-manager-applet`, `udiskie`
+- 📸 Capture: `grim`, `slurp`, `wl-clipboard`, `wf-recorder`
+- 🎨 Theming + fonts: `papirus-icon-theme`, `ttf-jetbrains-mono-nerd`
+- 🔐 Session + secrets: `gnome-keyring`
 
 ```bash
 sudo pacman -S sway swaybg swayidle swaylock waybar foot kanshi \
 rofi thunar dunst wireplumber playerctl brightnessctl pavucontrol \
-blueman network-manager-applet udiskie grim slurp wl-clipboard \
+blueman network-manager-applet udiskie grim slurp wl-clipboard wf-recorder \
 papirus-icon-theme ttf-jetbrains-mono-nerd gnome-keyring
 ```
 
@@ -117,6 +117,26 @@ Area screenshot:
 
 ```
 Shift + Print
+```
+
+## Screen Recording
+
+Toggle full-screen recording:
+
+```
+Ctrl + Print
+```
+
+Toggle area recording:
+
+```
+Ctrl + Shift + Print
+```
+
+Saved to:
+
+```
+~/Videos/Recordings/
 ```
 
 Saved to:
