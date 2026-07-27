@@ -105,6 +105,15 @@ Mod + Shift + R
 | `Mod + 1-9` | Switch workspace |
 | `Mod + Shift + 1-9` | Move window to workspace |
 
+### Capture
+
+| Shortcut | Action |
+| --- | --- |
+| `Print` | Full screenshot |
+| `Shift + Print` | Area screenshot |
+| `Ctrl + Print` | Toggle full-screen recording |
+| `Ctrl + Shift + Print` | Toggle area recording |
+
 ## Screenshots
 
 Full screenshot:
@@ -117,6 +126,12 @@ Area screenshot:
 
 ```
 Shift + Print
+```
+
+Saved to:
+
+```
+~/Pictures/Screenshots/
 ```
 
 ## Screen Recording
@@ -137,12 +152,6 @@ Saved to:
 
 ```
 ~/Videos/Recordings/
-```
-
-Saved to:
-
-```
-~/Pictures/Screenshots/
 ```
 
 ## Power Management
