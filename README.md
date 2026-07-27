@@ -34,7 +34,7 @@ A minimal Wayland workflow built around:
 
 ### Core
 
-`sway` `swaybg` `swayidle` `swaylock` `waybar` `foot` `kanshi`
+`sway` `swaybg` `swayidle` `swaylock` `waybar` `foot` `kanshi` `wdisplays`
 
 ### Applications
 
@@ -64,55 +64,58 @@ A minimal Wayland workflow built around:
 
 ### Applications
 
-| Shortcut          | Action            |
-| ----------------- | ----------------- |
-| `Ctrl + Mod + T`  | Terminal          |
-| `Mod + Space`     | Launcher          |
-| `Mod + E`         | Rofi file browser |
-| `Mod + Shift + E` | Thunar            |
-| `Mod + Z`         | Zed               |
-| `Mod + Q`         | Close window      |
-| `Mod + L`         | Lock screen       |
+| Shortcut | Action |
+| --- | --- |
+| `Ctrl + Mod + T` | Terminal |
+| `Mod + Space` | Launcher |
+| `Mod + E` | Rofi file browser |
+| `Mod + Shift + E` | Thunar |
+| `Mod + Z` | Zed |
+| `Mod + Shift + P` | Wdisplays |
+| `Mod + Q` | Close window |
+| `Mod + L` | Lock screen |
 
 ### Window Management
 
-| Shortcut    | Action          |
-| ----------- | --------------- |
+| Shortcut | Action |
+| --- | --- |
 | `Mod + H/V` | Split direction |
-| `Mod + R`   | Toggle layout   |
-| `Mod + F`   | Fullscreen      |
-| `Mod + D`   | Floating mode   |
-| `Mod + T`   | Tabbed layout   |
-| `Mod + S`   | Stacking layout |
+| `Mod + R` | Toggle layout |
+| `Mod + F` | Fullscreen |
+| `Mod + D` | Floating mode |
+| `Mod + T` | Tabbed layout |
+| `Mod + S` | Stacking layout |
 
 ### Navigation
 
-| Shortcut               | Action            |
-| ---------------------- | ----------------- |
-| `Mod + Arrows`         | Focus windows     |
-| `Mod + Shift + Arrows` | Move windows      |
-| `Mod + 1-9`            | Workspace switch  |
-| `Mod + Shift + 1-9`    | Move to workspace |
+| Shortcut | Action |
+| --- | --- |
+| `Mod + Arrows` | Focus windows |
+| `Mod + Shift + Arrows` | Move windows |
+| `Mod + 1-9` | Workspace switch |
+| `Mod + Shift + 1-9` | Move to workspace |
 
 ## Screenshots & Recording
 
-| Shortcut               | Action                |
-| ---------------------- | --------------------- |
-| `Print`                | Full screenshot       |
-| `Shift + Print`        | Area screenshot       |
-| `Ctrl + Print`         | Full-screen recording |
-| `Ctrl + Shift + Print` | Area recording        |
+| Shortcut | Action |
+| --- | --- |
+| `Print` | Full screenshot |
+| `Shift + Print` | Area screenshot |
+| `Ctrl + Print` | Full-screen recording |
+| `Ctrl + Shift + Print` | Area recording |
 
 Screenshots:
 
 ```
 ~/Pictures/Screenshots/
+
 ```
 
 Recordings:
 
 ```
 ~/Videos/Recordings/
+
 ```
 
 ## Power Management
@@ -124,6 +127,7 @@ Manual suspend:
 
 ```
 Mod + Shift + S
+
 ```
 
 ## Configuration
@@ -132,12 +136,14 @@ Main config:
 
 ```
 ~/.config/sway/config
+
 ```
 
 Reload:
 
 ```
 Mod + Shift + R
+
 ```
 
 ## Preview
