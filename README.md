@@ -46,7 +46,7 @@ A minimal Wayland workflow built around:
 
 ### System
 
-`blueman` `network-manager-applet` `udiskie`
+`blueman` `network-manager-applet` `udiskie` `gnome-disk-utility` `seahorse`
 
 ### Capture
 
@@ -82,6 +82,7 @@ A minimal Wayland workflow built around:
 | `Mod + H/V` | Split direction |
 | `Mod + R` | Toggle layout |
 | `Mod + F` | Fullscreen |
+| `Mod + Shift + S` | Stay on all workspacese |
 | `Mod + D` | Floating mode |
 | `Mod + T` | Tabbed layout |
 | `Mod + S` | Stacking layout |
