@@ -1,4 +1,3 @@
-Here is the complete cleaned-up file as a single README-style document:
 
 # Sway Config
 
