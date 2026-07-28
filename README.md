@@ -38,7 +38,7 @@ A minimal Wayland workflow built around:
 
 ### Applications
 
-`rofi` `thunar` `zathura` `imv` `keepassxc` `zed`
+`rofi` `thunar` `zathura` `imv` `keepassxc` `zed` `xarchiver`
 
 ### Media + Power
 
