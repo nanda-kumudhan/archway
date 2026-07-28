@@ -34,7 +34,7 @@ A minimal Wayland workflow built around:
 
 ### Core
 
-`sway` `swaybg` `swayidle` `swaylock` `waybar` `foot` `kanshi` `wdisplays`
+`sway` `swaybg` `swayidle` `swaylock` `waybar` `foot` `kanshi` `wdisplays` `autotiling`
 
 ### Applications
 
