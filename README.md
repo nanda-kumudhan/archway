@@ -42,7 +42,7 @@ A minimal Wayland workflow built around:
 
 ### Media + Power
 
-`wireplumber` `playerctl` `brightnessctl` `pavucontrol`
+`wireplumber` `playerctl` `brightnessctl` `pavucontrol` `imv` `mpv`
 
 ### System
 
