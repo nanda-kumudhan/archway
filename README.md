@@ -126,6 +126,7 @@ network-manager-applet
 udiskie
 gnome-disk-utility
 seahorse
+htop
 ```
 </details>
 
