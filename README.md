@@ -1,48 +1,82 @@
+<div align="center">
 
-# Sway Config
+# 🌊 Sway Config
 
-My personal Sway setup for Arch Linux.
+**A minimal, keyboard-driven Wayland workflow for Arch Linux**
 
-A minimal Wayland workflow built around:
-
-- Sway
-- Waybar
-- Foot
-- Rofi
-- Thunar
-- Dunst
-- Kanshi
-- Autotiling
-- Zed
-- Grim + Slurp
-- Swayidle + Swaylock
+</div>
 
 ---
 
-# Features
+## 📸 Preview
 
-- Custom keybindings
-- Vim-style window navigation
-- Workspace management
-- Scratchpad support
-- Floating window rules
-- Laptop lid handling
-- PipeWire media controls
-- Automatic wallpaper handling
-- GNOME keyring integration
-- Network and Bluetooth tray support
-- Custom gaps, borders, and colours
+<!-- Add screenshots here -->
+<div align="center">
+
+*Add screenshots to `~/Pictures/Screenshots/` and link them here.*
+
+```
+![Desktop](./screenshots/desktop.png)
+![Waybar](./screenshots/waybar.png)
+```
+
+</div>
 
 ---
 
-# Packages
+## 📋 Table of Contents
 
-## Core
+- [Overview](#-overview)
+- [Packages](#-packages)
+- [Keybindings](#️-keybindings)
+- [Screenshots & Recording](#-screenshots--recording)
+- [Power Management](#-power-management)
+- [Configuration](#️-configuration)
+- [Components](#-included-components)
+- [Extras](#-extras)
+- [License](#-license)
 
-Core Wayland compositor and desktop components:
+---
 
+## 🧩 Overview
 
+A clean, minimal Wayland desktop built around **Sway**, tuned for speed and keyboard-first navigation.
 
+**Core stack:**
+
+| Category | Tools |
+| --- | --- |
+| Compositor | Sway, Autotiling |
+| Bar | Waybar |
+| Terminal | Foot |
+| Launcher | Rofi |
+| File manager | Thunar |
+| Notifications | Dunst |
+| Display / outputs | Kanshi |
+| Editor | Zed |
+| Screenshots | Grim + Slurp |
+| Lock / idle | Swayidle + Swaylock |
+
+**Highlights:**
+
+- ⌨️ Custom keybindings with Vim-style navigation
+- 🗂️ Workspace management with scratchpad support
+- 🪟 Floating window rules
+- 💻 Laptop lid handling & power saving
+- 🔊 PipeWire media controls
+- 🖼️ Automatic wallpaper handling
+- 🔐 GNOME keyring integration
+- 📶 Network and Bluetooth tray support
+- 🎨 Custom gaps, borders, and colours
+
+---
+
+## 📦 Packages
+
+<details>
+<summary><strong>Core</strong> — Wayland compositor & desktop components</summary>
+
+```
 sway
 swaybg
 swayidle
@@ -52,16 +86,13 @@ foot
 kanshi
 wdisplays
 autotiling
+```
+</details>
 
+<details>
+<summary><strong>Applications</strong> — Daily-use apps</summary>
 
----
-
-## Applications
-
-Daily-use applications:
-
-
-
+```
 rofi
 thunar
 zathura
@@ -69,16 +100,13 @@ imv
 keepassxc
 zed
 xarchiver
+```
+</details>
 
+<details>
+<summary><strong>Media & Power</strong> — Audio, brightness, playback, notifications</summary>
 
----
-
-## Media & Power
-
-Audio, brightness, playback, and notifications:
-
-
-
+```
 wireplumber
 playerctl
 brightnessctl
@@ -86,71 +114,58 @@ pavucontrol
 imv
 mpv
 dunst
+```
+</details>
 
+<details>
+<summary><strong>System Utilities</strong> — Hardware & system management</summary>
 
----
-
-## System Utilities
-
-System management and hardware utilities:
-
-
-
+```
 blueman
 network-manager-applet
 udiskie
 gnome-disk-utility
 seahorse
+```
+</details>
 
+<details>
+<summary><strong>Capture</strong> — Screenshots & screen recording</summary>
 
----
-
-## Capture
-
-Screenshot and screen recording tools:
-
-
-
+```
 grim
 slurp
 wl-clipboard
 wf-recorder
+```
+</details>
 
+<details>
+<summary><strong>Theming</strong> — Appearance & fonts</summary>
 
----
-
-## Theming
-
-Appearance and font packages:
-
-
-
+```
 nwg-look
 papirus-icon-theme
 materia-gtk
 ttf-jetbrains-mono-nerd
+```
+</details>
 
+<details>
+<summary><strong>Session</strong> — Authentication & desktop integration</summary>
 
----
-
-## Session
-
-Authentication and desktop integration:
-
-
-
+```
 gnome-keyring
-
-
----
-
-# Keybindings
-
-`Mod` refers to the Sway modifier key (usually the Super/Windows key).
+```
+</details>
 
 ---
 
-# Applications
+## ⌨️ Keybindings
+
+> `Mod` refers to the Sway modifier key (usually Super/Windows).
+
+### Applications
 
 | Shortcut | Action |
 | --- | --- |
@@ -163,13 +178,11 @@ gnome-keyring
 | `Mod + Q` | Close window |
 | `Mod + L` | Lock screen |
 
----
-
-# Window Management
+### Window Management
 
 | Shortcut | Action |
 | --- | --- |
-| `Mod + H/V` | Set split direction |
+| `Mod + H / V` | Set split direction |
 | `Mod + R` | Toggle layout |
 | `Mod + F` | Toggle fullscreen |
 | `Mod + Shift + S` | Keep window visible on all workspaces |
@@ -177,22 +190,20 @@ gnome-keyring
 | `Mod + T` | Tabbed layout |
 | `Mod + S` | Stacking layout |
 
----
-
-# Navigation
+### Navigation
 
 | Shortcut | Action |
 | --- | --- |
 | `Mod + Arrow Keys` | Focus windows |
 | `Mod + Shift + Arrow Keys` | Move windows |
-| `Mod + 1-9` | Switch workspace |
-| `Mod + Shift + 1-9` | Move window to workspace |
+| `Mod + 1–9` | Switch workspace |
+| `Mod + Shift + 1–9` | Move window to workspace |
 
 ---
 
-# Screenshots & Recording
+## 🖼️ Screenshots & Recording
 
-## Keybindings
+### Keybindings
 
 | Shortcut | Action |
 | --- | --- |
@@ -201,166 +212,81 @@ gnome-keyring
 | `Ctrl + Print` | Full-screen recording |
 | `Ctrl + Shift + Print` | Area recording |
 
----
+### Storage Locations
 
-## Storage Locations
-
-Screenshots:
-
-
-
-~/Pictures/Screenshots/
-
-
-Recordings:
-
-
-
-~/Videos/Recordings/
-
+| Type | Path |
+| --- | --- |
+| Screenshots | `~/Pictures/Screenshots/` |
+| Recordings | `~/Videos/Recordings/` |
 
 ---
 
-# Power Management
+## 🔋 Power Management
 
-Automatic power behaviour:
+| Trigger | Behaviour |
+| --- | --- |
+| Idle 5 minutes | Lock screen |
+| Idle 10 minutes | Suspend system |
+| `Mod + Shift + S` | Manual suspend |
 
-- **5 minutes** → Lock screen
-- **10 minutes** → Suspend system
-
-Manual suspend:
-
-
-
-Mod + Shift + S
-
+Includes full **laptop support**: lid handling, automatic display management, and power-saving rules.
 
 ---
 
-# Configuration
+## ⚙️ Configuration
 
-Main Sway configuration:
+**Main config file:**
 
-
-
+```
 ~/.config/sway/config
+```
 
+**Reload configuration:** `Mod + Shift + R`
 
-Reload configuration:
+**Suggested layout:**
 
-
-
-Mod + Shift + R
-
-
----
-
-# Configuration Structure
-
-Suggested config layout:
-
-
-
+```
 ~/.config/sway/
 ├── config
 ├── scripts/
 ├── themes/
 └── wallpapers/
+```
 
+**Wallpaper location:**
 
----
-
-# Included Components
-
-## Window Manager
-
-- Sway
-- Autotiling
-- Custom layouts
-- Vim-style navigation
-- Workspace management
-
-## Status Bar
-
-- Waybar
-- Network indicators
-- Bluetooth tray support
-- Media controls
-
-## Terminal
-
-- Foot terminal
-- JetBrains Mono Nerd Font
-
-## Launcher
-
-- Rofi application launcher
-- Rofi file browser
-
-## File Management
-
-- Thunar
-- UDisks integration
-
-## Notifications
-
-- Dunst notification daemon
-
-## Screenshots
-
-- Grim
-- Slurp
-- wl-clipboard
-
-## Locking & Idle
-
-- Swayidle
-- Swaylock
-
-## Display Management
-
-- Kanshi
-- Wdisplays
-
----
-
-# Wallpaper
-
-Automatic wallpaper handling is included.
-
-Wallpaper location:
-
-
-
+```
 ~/Pictures/Wallpapers/
-
-
----
-
-# Laptop Support
-
-Includes:
-
-- Laptop lid handling
-- Automatic display management
-- Power saving rules
+```
 
 ---
 
-# Media Controls
+## 🧱 Included Components
 
-PipeWire-based media setup:
+| Component | Details |
+| --- | --- |
+| **Window Manager** | Sway, Autotiling, custom layouts, Vim-style navigation, workspace management |
+| **Status Bar** | Waybar — network indicators, Bluetooth tray, media controls |
+| **Terminal** | Foot, JetBrains Mono Nerd Font |
+| **Launcher** | Rofi (app launcher + file browser) |
+| **File Management** | Thunar with UDisks integration |
+| **Notifications** | Dunst |
+| **Screenshots** | Grim, Slurp, wl-clipboard |
+| **Locking & Idle** | Swayidle, Swaylock |
+| **Display Management** | Kanshi, Wdisplays |
+
+---
+
+## ✨ Extras
+
+**Media controls** *(PipeWire-based)*
 
 - WirePlumber
 - Playerctl
 - Brightnessctl
 - Pavucontrol
 
----
-
-# Security & Authentication
-
-GNOME keyring integration provides:
+**Security & authentication** *(GNOME Keyring)*
 
 - Secret storage
 - Application authentication
@@ -368,17 +294,6 @@ GNOME keyring integration provides:
 
 ---
 
-# Preview
-
-Add screenshots here.
-
-Example:
-
-
-
-
----
-
-# License
+## 📄 License
 
 MIT
