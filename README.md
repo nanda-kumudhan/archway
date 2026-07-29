@@ -13,17 +13,13 @@
 <!-- Add screenshots here -->
 <div align="center">
 
-*Add screenshots to `~/Pictures/Screenshots/` and link them here.*
+<img width="993" alt="Main desktop" src="https://github.com/user-attachments/assets/5abaa738-303f-4c58-a243-71216b42fd87" />
 
-```
-![Screenshot 1](https://github.com/user-attachments/assets/5abaa738-303f-4c58-a243-71216b42fd87)
+<img width="900" alt="Waybar" src="https://github.com/user-attachments/assets/7d9c5a02-d8f4-44ae-8d92-5b3c6bbe26fe" />
 
-![Screenshot 2](https://github.com/user-attachments/assets/7d9c5a02-d8f4-44ae-8d92-5b3c6bbe26fe)
+<img width="900" alt="Workspace overview" src="https://github.com/user-attachments/assets/1ebb1786-f397-446f-ad2e-96614f9f6118" />
 
-![Screenshot 3](https://github.com/user-attachments/assets/1ebb1786-f397-446f-ad2e-96614f9f6118)
-
-![Screenshot 4](https://github.com/user-attachments/assets/880c964a-f5e4-4705-b365-d32c66c7d413)
-```
+<img width="871" alt="Application launcher" src="https://github.com/user-attachments/assets/880c964a-f5e4-4705-b365-d32c66c7d413" />
 
 </div>
 
