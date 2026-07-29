@@ -16,11 +16,13 @@
 *Add screenshots to `~/Pictures/Screenshots/` and link them here.*
 
 ```
-<img width="993" height="612" alt="2026-07-29_14-38-00" src="https://github.com/user-attachments/assets/5abaa738-303f-4c58-a243-71216b42fd87" />
-<img width="1920" height="1080" alt="2026-07-29_14-38-10" src="https://github.com/user-attachments/assets/7d9c5a02-d8f4-44ae-8d92-5b3c6bbe26fe" />
-<img width="1920" height="22" alt="2026-07-29_14-38-34" src="https://github.com/user-attachments/assets/1ebb1786-f397-446f-ad2e-96614f9f6118" />
-<img width="871" height="748" alt="2026-07-29_14-39-09" src="https://github.com/user-attachments/assets/880c964a-f5e4-4705-b365-d32c66c7d413" />
+![Screenshot 1](https://github.com/user-attachments/assets/5abaa738-303f-4c58-a243-71216b42fd87)
 
+![Screenshot 2](https://github.com/user-attachments/assets/7d9c5a02-d8f4-44ae-8d92-5b3c6bbe26fe)
+
+![Screenshot 3](https://github.com/user-attachments/assets/1ebb1786-f397-446f-ad2e-96614f9f6118)
+
+![Screenshot 4](https://github.com/user-attachments/assets/880c964a-f5e4-4705-b365-d32c66c7d413)
 ```
 
 </div>
