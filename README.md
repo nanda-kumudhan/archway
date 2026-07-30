@@ -174,6 +174,7 @@ gnome-keyring
 | `Ctrl + Mod + T`      | Open terminal             |
 | `Mod + Space`         | Open application launcher |
 | `Mod + Shift + E`     | Open Thunar file manager  |
+| `Mod + W`             | Open Brave Origin browser |
 | `Mod + Z`             | Open Zed editor           |
 | `Mod + L`             | Lock screen               |
 | `Mod + Shift + P`     | Open display settings     |
