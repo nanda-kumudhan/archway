@@ -113,6 +113,8 @@ bindsym Mod4+space exec $launcher
 bindsym Mod4+q kill
 bindsym Mod4+l exec swaylock
 bindsym Ctrl+Escape exec $term -T "sysmon" -e htop
+bindsym Mod4+w exec brave-origin
+
 
 # Full screenshot
 bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
@@ -177,8 +179,8 @@ bindsym Mod4+Ctrl+Left move workspace to output left
 
 bindsym Mod4+Tab workspace next
 bindsym Mod4+Shift+Tab workspace prev
-bindsym Mod1+Tab focus next
-bindsym Mod1+Shift+Tab focus prev
+bindsym Mod1+Tab focus next window
+bindsym Mod1+Shift+Tab focus prev window
 
 # Session actions
 bindsym Mod4+Shift+s exec systemctl suspend
@@ -191,6 +193,7 @@ bindsym Mod4+z exec $editor
 # Scratchpad: hide/show any focused window
 bindsym Mod4+Shift+grave move scratchpad
 bindsym Mod4+grave scratchpad show
+
 
 # --- Function Keys ---
 
@@ -215,6 +218,17 @@ bindsym Ctrl+Alt+Delete exec $power_menu
 bindswitch --reload --locked lid:on output eDP-1 disable
 bindswitch --reload --locked lid:off output eDP-1 enable
 
+# Media (3-finger)
+bindgesture swipe:3:left exec playerctl previous
+bindgesture swipe:3:right exec playerctl next
+bindgesture swipe:3:up exec playerctl play-pause
+
+# Audio mixer
+bindsym Mod4+XF86AudioMute exec pavucontrol
+
+# Network manager terminal UI
+bindsym Mod4+n exec foot -e nmtui
+
 # --- Window Rules ---
 
 # Floating dialogs and utilities
@@ -238,7 +252,8 @@ for_window [class="pavucontrol"] floating enable, resize set 52% 58%, move posit
 for_window [app_id="pavucontrol"] floating enable, resize set 52% 58%, move position center
 for_window [class="blueman-manager"] floating enable, resize set 640 420, move position center
 for_window [app_id="blueman-manager"] floating enable, resize set 640 420, move position center
-
+for_window [app_id="nmtui"] floating enable, resize set 600 500, move position center
+for_window [app_id="brave-browser" title="^Picture-in-Picture$"] floating enable
 
 bar {
     position top
