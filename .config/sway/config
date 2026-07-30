@@ -253,7 +253,7 @@ for_window [app_id="pavucontrol"] floating enable, resize set 52% 58%, move posi
 for_window [class="blueman-manager"] floating enable, resize set 640 420, move position center
 for_window [app_id="blueman-manager"] floating enable, resize set 640 420, move position center
 for_window [app_id="nmtui"] floating enable, resize set 600 500, move position center
-for_window [app_id="brave-browser" title="^Picture-in-Picture$"] floating enable
+for_window [app_id="brave-origin" title="^Picture-in-Picture$"] floating enable
 
 bar {
     position top
