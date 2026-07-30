@@ -1,3 +1,4 @@
+[
 {
   "layer": "top",
   "position": "top",
@@ -13,7 +14,7 @@
     "backlight",
     "battery",
     "idle_inhibitor",
-    "privacy",
+    "privacy"
   ],
 
   "sway/workspaces": {
@@ -24,61 +25,55 @@
     "all-outputs": false,
 
     "persistent-workspaces": {
-          "*": [1, 2, 3, 4, 5]
-      },
-    "window-rewrite-default": "󰋙",
-    "window-rewrite": {
-        "firefox": "󰈹",
-        "brave-browser": "󰖟",
-
-        "org.keepassxc.KeePassXC": "󰌋",
-
-        "dev.zed.Zed": "󰨞",
-
-        "foot": "",
-
-        "org.remmina.Remmina": "󰢹",
-
-        "org.prismlauncher.PrismLauncher": "󰍳",
-
-        "org.gnome.DiskUtility": "󰋊",
-        "org.gnome.seahorse": "󰌋",
-
-        "org.localsend.localsend_app": "󰑴",
-
-        "imv": "󰋩",
-        "org.pwmt.zathura": "󰈙",
-        "mpv": "󰐊",
-
-        "org.xfce.Thunar": "󰉋",
-
-        "com.stremio.Stremio": "󰎁",
-        "com.discordapp.Discord": "󰙯",
-
-        "transmission-gtk": "󰐹",
-
-        "rpi-imager": "󰆧",
-
-
-
+      "*": [1, 2, 3, 4, 5]
     },
 
+    "window-rewrite-default": "󰋙",
+    "window-rewrite": {
+      "wdisplays": "󰍹",
+      "texmaker": "",
+      "brave-origin": "󰖟",
+      "keepassxc": "󰌆",
+      "dev.zed.Zed": "",
+      "foot": "",
+      "org.remmina.Remmina": "󰢹",
+
+      "org.gnome.DiskUtility": "󰋊",
+      "org.gnome.seahorse": "󰌋",
+      "podman": "󰡨",
+      "dbeaver": "󰆼",
 
 
+      "org.localsend.localsend_app": "󰇚",
+
+      "imv": "󰋩",
+      "org.pwmt.zathura": "󰈙",
+      "mpv": "󰐊",
+
+      "org.xfce.Thunar": "󰉋",
+
+
+      "libreoffice": "󰏆",
+      "libreoffice-writer": "󰈬",
+      "libreoffice-calc": "",
+      "libreoffice-impress": "",
+      "libreoffice-draw": "󰕳",
+      "libreoffice-math": "󰙩",
+
+      "blueman": "󰂯",
+      "virt-manager": "󰢹",
+      "pavucontrol": "󰕾",
+      "nm-connection-editor": "󰛳"
+    }
   },
-
-
 
   "sway/scratchpad": {
     "format": "{icon}{count}",
     "show-empty": false,
     "format-icons": ["", ""],
     "tooltip": true,
-    "tooltip-format": "{app}: {title}",
-
-  },
-
-  "mpris": {
+    "tooltip-format": "{app}: {title}"
+  },  "mpris": {
     "format": "{status_icon}",
     "format-paused": "{status_icon}",
     "format-stopped": "",
@@ -92,55 +87,73 @@
     "status-icons": {
       "playing": "󰐊",
       "paused": "󰏤",
-      "stopped": "󰓛",
-    },
+      "stopped": "󰓛"
+    }
   },
 
   "tray": {
     "icon-size": 14,
-    "spacing": 10,
+    "spacing": 10
   },
 
   "battery": {
     "interval": 5,
     "states": {
       "warning": 30,
-      "critical": 15,
+      "critical": 15
     },
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-plugged": "󰚥 {capacity}%",
-    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂁", "󰁹"],
-    "tooltip-format": "Capacity: {capacity}%\nPower draw: {power}W\nTime remaining: {time}",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂁",
+      "󰁹"
+    ],
+    "tooltip-format": "Capacity: {capacity}%\nPower draw: {power}W\nTime remaining: {time}"
   },
 
   "backlight": {
     "format": "{icon} {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
     "scroll-step": 1,
-    "tooltip-format": "Brightness: {percent}%",
+    "tooltip-format": "Brightness: {percent}%"
   },
 
   "wireplumber": {
     "format": "{icon} {volume}%",
     "format-muted": "󰖁 {volume}%",
-    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "format-icons": [
+      "󰕿",
+      "󰖀",
+      "󰕾"
+    ],
     "max-volume": 100,
     "scroll-step": 1,
     "tooltip-format": "Volume: {volume}%\nNode: {node_name}",
     "on-click": "$HOME/.config/rofi/pipewire-output",
     "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "pavucontrol",
+    "on-click-right": "pavucontrol"
   },
 
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
       "activated": "󰛊",
-      "deactivated": "󰛉",
+      "deactivated": "󰛉"
     },
     "tooltip-format-activated": "Idle inhibitor is on",
-    "tooltip-format-deactivated": "Idle inhibitor is off",
+    "tooltip-format-deactivated": "Idle inhibitor is off"
   },
 
   "privacy": {
@@ -151,15 +164,15 @@
       {
         "type": "screenshare",
         "tooltip": true,
-        "tooltip-icon-size": 18,
+        "tooltip-icon-size": 18
       },
       {
         "type": "audio-in",
         "tooltip": true,
-        "tooltip-icon-size": 18,
-      },
+        "tooltip-icon-size": 18
+      }
     ],
-    "ignore-monitor": true,
+    "ignore-monitor": true
   },
 
   "clock": {
@@ -169,8 +182,9 @@
       "mode": "month",
       "on-scroll": 1,
       "format": {
-        "today": "<span color='#e6e6e6'>{}</span>",
-      },
-    },
-  },
+        "today": "<span color='#e6e6e6'>{}</span>"
+      }
+    }
+  }
 }
+]
