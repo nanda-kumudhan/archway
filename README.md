@@ -169,37 +169,46 @@ gnome-keyring
 
 ### Applications
 
-| Shortcut | Action |
-| --- | --- |
-| `Ctrl + Mod + T` | Open terminal |
-| `Mod + Space` | Open launcher |
-| `Mod + E` | Open Rofi file browser |
-| `Mod + Shift + E` | Open Thunar |
-| `Mod + Z` | Open Zed |
-| `Mod + Shift + P` | Open Wdisplays |
-| `Mod + Q` | Close window |
-| `Mod + L` | Lock screen |
+| Shortcut              | Action                    |
+| --------------------- | ------------------------- |
+| `Ctrl + Mod + T`      | Open terminal             |
+| `Mod + Space`         | Open application launcher |
+| `Mod + Shift + E`     | Open Thunar file manager  |
+| `Mod + Z`             | Open Zed editor           |
+| `Mod + L`             | Lock screen               |
+| `Mod + Shift + P`     | Open display settings     |
+| `Mod + Q`             | Close focused window      |
+| `Ctrl + Alt + Delete` | Open power menu           |
 
 ### Window Management
 
-| Shortcut | Action |
-| --- | --- |
-| `Mod + H / V` | Set split direction |
-| `Mod + R` | Toggle layout |
-| `Mod + F` | Toggle fullscreen |
-| `Mod + Shift + S` | Keep window visible on all workspaces |
-| `Mod + D` | Toggle floating mode |
-| `Mod + T` | Tabbed layout |
-| `Mod + S` | Stacking layout |
+| Shortcut              | Action                    |
+| --------------------- | ------------------------- |
+| `Mod + H`             | Set horizontal split      |
+| `Mod + V`             | Set vertical split        |
+| `Mod + R`             | Toggle split layout       |
+| `Mod + F`             | Toggle fullscreen         |
+| `Mod + D`             | Toggle floating mode      |
+| `Mod + Shift + D`     | Toggle sticky window      |
+| `Mod + C`             | Centre floating window    |
+| `Mod + T`             | Tabbed layout             |
+| `Mod + S`             | Stacking layout           |
+| `Mod + Shift + R`     | Reload Sway configuration |
+| `Mod + Shift + Grave` | Move window to scratchpad |
+| `Mod + Grave`         | Show scratchpad window    |
 
 ### Navigation
 
-| Shortcut | Action |
-| --- | --- |
-| `Mod + Arrow Keys` | Focus windows |
-| `Mod + Shift + Arrow Keys` | Move windows |
-| `Mod + 1–9` | Switch workspace |
-| `Mod + Shift + 1–9` | Move window to workspace |
+| Shortcut                   | Action                   |
+| -------------------------- | ------------------------ |
+| `Mod + Arrow Keys`         | Focus windows            |
+| `Mod + Shift + Arrow Keys` | Move windows             |
+| `Mod + 1–9`                | Switch workspace         |
+| `Mod + Shift + 1–9`        | Move window to workspace |
+| `Mod + Tab`                | Next workspace           |
+| `Mod + Shift + Tab`        | Previous workspace       |
+| `Alt + Tab`                | Next window              |
+| `Alt + Shift + Tab`        | Previous window          |
 
 ---
 
@@ -207,75 +216,52 @@ gnome-keyring
 
 ### Keybindings
 
-| Shortcut | Action |
-| --- | --- |
-| `Print` | Full screenshot |
-| `Shift + Print` | Area screenshot |
-| `Ctrl + Print` | Full-screen recording |
-| `Ctrl + Shift + Print` | Area recording |
+| Shortcut               | Action                       |
+| ---------------------- | ---------------------------- |
+| `Print`                | Full screenshot              |
+| `Shift + Print`        | Area screenshot              |
+| `Ctrl + Print`         | Toggle full-screen recording |
+| `Ctrl + Shift + Print` | Toggle area recording        |
 
 ### Storage Locations
 
-| Type | Path |
-| --- | --- |
+| Type        | Path                      |
+| ----------- | ------------------------- |
 | Screenshots | `~/Pictures/Screenshots/` |
-| Recordings | `~/Videos/Recordings/` |
+| Recordings  | `~/Videos/Recordings/`    |
 
 ---
 
 ## 🔋 Power Management
 
-| Trigger | Behaviour |
-| --- | --- |
-| Idle 5 minutes | Lock screen |
-| Idle 10 minutes | Suspend system |
-| `Mod + Shift + S` | Manual suspend |
+| Trigger           | Behaviour                |
+| ----------------- | ------------------------ |
+| Idle 5 minutes    | Lock screen              |
+| Idle 10 minutes   | Suspend system           |
+| `Mod + Shift + S` | Manual suspend           |
+| Laptop lid closed | Disable internal display |
+| Laptop lid opened | Enable internal display  |
 
-Includes full **laptop support**: lid handling, automatic display management, and power-saving rules.
-
----
-
-## ⚙️ Configuration
-
-**Main config file:**
-
-```
-~/.config/sway/config
-```
-
-**Reload configuration:** `Mod + Shift + R`
-
-**Suggested layout:**
-
-```
-~/.config/sway/
-├── config
-├── scripts/
-├── themes/
-└── wallpapers/
-```
-
-**Wallpaper location:**
-
-```
-~/Pictures/Wallpapers/
-```
+Includes laptop support with lid handling, display management, PipeWire controls, and power-saving rules.
 
 ---
 
 ## 🧱 Included Components
 
-| Component | Details |
-| --- | --- |
-| **Window Manager** | Sway, Autotiling, custom layouts, Vim-style navigation, workspace management |
-| **Status Bar** | Waybar — network indicators, Bluetooth tray, media controls |
-| **Terminal** | Foot, JetBrains Mono Nerd Font |
-| **Launcher** | Rofi (app launcher + file browser) |
-| **File Management** | Thunar with UDisks integration |
-| **Notifications** | Dunst |
-| **Screenshots** | Grim, Slurp, wl-clipboard |
-| **Locking & Idle** | Swayidle, Swaylock |
-| **Display Management** | Kanshi, Wdisplays |
+| Component              | Details                                                                                         |
+| ---------------------- | ----------------------------------------------------------------------------------------------- |
+| **Window Manager**     | Sway with Autotiling, custom gaps, floating rules, scratchpad support, and workspace management |
+| **Status Bar**         | Waybar with system indicators and media controls                                                |
+| **Terminal**           | Foot with JetBrains Mono Nerd Font                                                              |
+| **Launcher**           | Rofi application launcher with Papirus icons                                                    |
+| **File Management**    | Thunar with UDisks automount support                                                            |
+| **Notifications**      | Dunst                                                                                           |
+| **Screenshots**        | Grim, Slurp, wl-clipboard                                                                       |
+| **Screen Recording**   | wf-recorder                                                                                     |
+| **Locking & Idle**     | Swayidle and Swaylock                                                                           |
+| **Display Management** | Kanshi and Wdisplays                                                                            |
+| **Authentication**     | GNOME Keyring and Polkit integration                                                            |
+| **Secrets**            | KeePassXC auto-started in the background                                                        |
 
 ---
 
@@ -283,18 +269,19 @@ Includes full **laptop support**: lid handling, automatic display management, an
 
 **Media controls** *(PipeWire-based)*
 
-- WirePlumber
-- Playerctl
-- Brightnessctl
-- Pavucontrol
+* WirePlumber
+* Playerctl
+* Brightnessctl
+* Pavucontrol
 
-**Security & authentication** *(GNOME Keyring)*
+**Desktop integration**
 
-- Secret storage
-- Application authentication
-- SSH key support
+* NetworkManager applet
+* Blueman Bluetooth tray
+* UDisks automounting
+* GNOME Keyring secret storage
+* Automatic wallpaper handling through Swaybg
 
----
 
 ## 📄 License
 
