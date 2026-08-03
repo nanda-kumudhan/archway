@@ -110,7 +110,6 @@ wf-recorder
 wget
 wireplumber
 wmenu
-wofi
 wpa_supplicant
 xdg-desktop-portal-wlr
 xdg-utils
