@@ -114,7 +114,7 @@ bindsym Ctrl+Mod1+t exec $term
 bindsym Mod4+e exec $file_menu
 bindsym Mod4+Shift+e exec $file_manager
 bindsym Mod4+space exec $launcher
-bindsym Mod4+q kill
+bindsym Mod4+Shift+q kill
 bindsym Mod4+l exec swaylock
 bindsym Ctrl+Escape exec $term -T "sysmon" -e htop
 bindsym Mod4+w exec brave-origin
@@ -211,7 +211,7 @@ bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 # System / media
 bindsym XF86Tools exec pavucontrol
-bindsym XF86Display exec $display_menu
+bindsym XF86Display exec wdisplays
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPlay exec playerctl play-pause
