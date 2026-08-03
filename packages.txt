@@ -21,7 +21,6 @@ engrampa
 exfatprogs
 fastfetch
 foot
-fprintd
 fwupd
 git
 github-cli
