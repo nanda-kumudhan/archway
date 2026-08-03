@@ -37,14 +37,14 @@
 - [Dunst notifications](#-dunst-notifications)
 - [Swaylock](#-swaylock)
 - [Screenshots and recording](#-screenshots-and-recording)
-- [Reproducibility](#-reproducibility)
+- [Power management](#-power-management)
 - [Repository layout](#-repository-layout)
 - [Philosophy](#-philosophy)
 - [License](#-license)
 
 ---
 
-## 🧩 Overview
+## 🌿 Overview
 
 Archway is a minimal Wayland desktop built around **Sway** and tuned for a keyboard-first Arch Linux workflow.
 
@@ -59,7 +59,7 @@ It is intentionally small, dark, and consistent across the whole session:
 
 ---
 
-## 🧱 Core stack
+## 🧰 Core stack
 
 | Area | Tooling |
 | --- | --- |
@@ -133,7 +133,7 @@ The config exports Wayland and Sway session variables into D-Bus and systemd use
 - keyboard layout: `gb`
 - touchpad tap: disabled
 - natural scrolling: enabled
-- tap-to-click style scrolling behavior: enabled on pointer and touchpad
+- pointer scrolling: enabled
 - focus follows mouse: disabled
 - cursor theme: Adwaita, size 24
 
@@ -414,34 +414,6 @@ Swaylock is configured to match the rest of the theme:
 | `Mod + Shift + S` | Manual suspend |
 | Lid closed | Disable internal display |
 | Lid opened | Re-enable internal display |
-
----
-
-## 💾 Reproducibility
-
-### Save installed packages
-
-```bash
-pacman -Qqe > packages.txt
-```
-
-### Restore installed packages
-
-```bash
-sudo pacman -S --needed - < packages.txt
-```
-
-### Save AUR packages
-
-```bash
-pacman -Qmq > aur-packages.txt
-```
-
-### Restore AUR packages
-
-```bash
-yay -S --needed - < aur-packages.txt
-```
 
 ---
 
