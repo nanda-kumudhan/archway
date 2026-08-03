@@ -178,7 +178,7 @@ gnome-keyring
 | `Mod + Z`             | Open Zed editor           |
 | `Mod + L`             | Lock screen               |
 | `Mod + Shift + P`     | Open display settings     |
-| `Mod + Q`             | Close focused window      |
+| `Mod + Shift + Q`     | Close focused window      |
 | `Ctrl + Alt + Delete` | Open power menu           |
 
 ### Window Management
