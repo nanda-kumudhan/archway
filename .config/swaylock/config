@@ -28,6 +28,6 @@ text-wrong-color=ffffff
 ignore-empty-password
 show-failed-attempts
 
-image=/home/nanda-kumudhan/Pictures/wallpaper
+image=~/Pictures/wallpaper
 scaling=fill
 
