@@ -76,7 +76,7 @@ exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CU
 exec systemctl --user start sway-session.target
 
 # Wallpaper
-exec swaybg -i '/home/nanda-kumudhan/Pictures/wallpaper'
+exec swaybg -i ~/Pictures/wallpaper
 
 # --- Input ---
 seat * xcursor_theme Adwaita 24
