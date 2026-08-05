@@ -2,24 +2,21 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 24,
+  "exclusive": true,
+  "height": 30,
   "spacing": 0,
 
-  "modules-left": ["sway/workspaces", "sway/scratchpad"],
+  "modules-left": ["sway/workspaces", "sway/scratchpad", "mpris"],
   "modules-center": ["clock"],
   "modules-right": [
-    "tray",
-
-    "mpris",
     "network",
     "bluetooth",
     "wireplumber",
-
-
     "backlight",
     "battery",
     "idle_inhibitor",
-    "privacy"
+    "privacy",
+    "tray"
   ],
 
   "sway/workspaces": {
@@ -87,7 +84,8 @@
     "format-icons": ["", ""],
     "tooltip": true,
     "tooltip-format": "{app}: {title}"
-  },  "mpris": {
+  },
+  "mpris": {
     "format": "{status_icon}",
     "format-paused": "{status_icon}",
     "format-stopped": "",
@@ -121,9 +119,10 @@
         "󰈀"
       ]
     },
+    "format-vpn": "󰖂 {vpn}",
     "tooltip-format": "Interface: {ifname}\nIP: {ipaddr}\nGateway: {gwaddr}\nSignal: {signaldBm} dBm",
     "on-click": "foot -e nmtui",
-    "on-click-middle": "nmcli networking off"
+    "on-click-middle": "nmcli networking toggle"
   },
 
   "bluetooth": {
@@ -209,7 +208,7 @@
   "privacy": {
     "icon-spacing": 6,
     "icon-size": 14,
-    "transition-duration": 0,
+    "transition-duration": 140,
     "modules": [
       {
         "type": "screenshare",
@@ -227,6 +226,7 @@
 
   "clock": {
     "format": "{:%H:%M}",
+    "format-alt": "{:%a %d %b}",
     "tooltip-format": "{:%A, %d %B %Y\n%H:%M}\n\n{calendar}",
     "calendar": {
       "mode": "month",

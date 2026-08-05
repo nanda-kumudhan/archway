@@ -1,39 +1,39 @@
 * {
-    bg:              #000000;
-    bg-alt:          #050505;
-    bg-selected:     #111111;
-    bg-hover:        #0a0a0a;
+    bg:              #121212;
+    bg-alt:          #1d1d1d;
+    bg-selected:     #272727;
+    bg-hover:        #2a2a2a;
 
-    fg:              #e6e6e6;
-    fg-muted:        #9a9a9a;
-    fg-subtle:       #666666;
+    fg:              #e8eaed;
+    fg-muted:        #9aa0a6;
+    fg-subtle:       #6f7378;
 
     border:          #2a2a2a;
-    border-strong:   #4a4a4a;
-    accent:          #d0d0d0;
-    urgent:          #b8b8b8;
+    border-strong:   #8ab4f8;
+    accent:          #8ab4f8;
+    urgent:          #f28b82;
 
     background-color: transparent;
     text-color:       @fg;
-    font:             "JetBrainsMono Nerd Font 12";
+    font:             "JetBrainsMono Nerd Font 11";
 }
 
 window {
-    width:            38%;
+    width:            34%;
     border:           1px;
     border-color:     @border;
     background-color: @bg;
-    padding:          12px;
+    padding:          7px;
 }
 
 mainbox {
-    spacing: 10px;
+    spacing: 8px;
 }
 
 inputbar {
     children: [ prompt, entry ];
-    spacing: 10px;
-    padding: 9px 11px;
+    spacing: 8px;
+    padding: 6px 10px;
     background-color: @bg-alt;
     border: 1px;
     border-color: @border;
@@ -41,7 +41,7 @@ inputbar {
 
 prompt {
     text-color: @accent;
-    font: "JetBrainsMono Nerd Font Bold 12";
+    font: "JetBrainsMono Nerd Font Bold 11";
 }
 
 entry {
@@ -53,7 +53,7 @@ entry {
 listview {
     lines: 12;
     columns: 1;     /* IMPORTANT: keeps it stable list-based */
-    spacing: 3px;
+    spacing: 2px;
     fixed-height: true;
     scrollbar: false;
 }
