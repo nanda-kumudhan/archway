@@ -33,36 +33,36 @@ set $ws9 "9"
 set $ws10 "10"
 xwayland enable
 # --- Theme ---
-set $m_bg #000000
-set $m_active #4a4a4a
+set $m_bg #121212
+set $m_active #8ab4f8
 set $m_inactive #2a2a2a
-set $m_urgent #ffffff
-set $m_text #e6e6e6
+set $m_urgent #f28b82
+set $m_text #e8eaed
 
 font pango:JetBrainsMono Nerd Font 10
-default_border normal 2
-default_floating_border normal 2
-titlebar_border_thickness 1
-titlebar_padding 6 3
+default_border pixel 1
+default_floating_border pixel 1
+titlebar_border_thickness 0
+titlebar_padding 1 0
 title_align center
 show_marks no
-gaps inner 3
-gaps outer 2
+gaps inner 1
+gaps outer 1
 smart_gaps off
 smart_borders on
 hide_edge_borders smart
 
 # Apply theme geometry to already-open windows and workspaces on reload.
-exec_always swaymsg -q '[all] border normal 2'
-exec_always swaymsg -q gaps inner all set 3
-exec_always swaymsg -q gaps outer all set 2
+exec_always swaymsg -q '[all] border pixel 1'
+exec_always swaymsg -q gaps inner all set 1
+exec_always swaymsg -q gaps outer all set 1
 
 exec udiskie --smart-tray --automount
 
-client.focused $m_active $m_bg $m_text $m_active $m_active
-client.focused_inactive $m_inactive $m_bg #9a9a9a $m_inactive $m_inactive
-client.focused_tab_title $m_active $m_bg $m_text
-client.unfocused $m_bg $m_bg #666666 $m_inactive $m_inactive
+client.focused #262626 $m_bg $m_text $m_active #262626
+client.focused_inactive #1f1f1f $m_bg #a0a4a8 #1f1f1f #1f1f1f
+client.focused_tab_title #262626 $m_bg $m_text
+client.unfocused $m_bg $m_bg #6f7378 $m_inactive $m_inactive
 client.urgent $m_urgent $m_bg $m_urgent $m_urgent $m_urgent
 
 # --- Startup ---
@@ -134,7 +134,7 @@ bindsym Mod4+f fullscreen toggle
 bindsym Mod4+d floating toggle
 bindsym Mod4+Shift+d sticky toggle
 bindsym Mod4+Shift+p exec wdisplays
-bindsym Mod4+c move position center
+bindsym Mod4+c floating enable, resize set width 80 ppt height 80 ppt, move position center
 bindsym Mod4+t layout tabbed, exec $layout_titles refresh
 bindsym Mod4+Shift+r reload
 bindsym Mod4+s layout stacking, exec $layout_titles refresh
@@ -235,27 +235,30 @@ bindsym Mod4+n exec foot -e nmtui
 # --- Window Rules ---
 
 # Floating dialogs and utilities
-for_window [app_id="keepassxc"] floating enable, resize set 68% 78%, move position center
-for_window [app_id="thunar"] floating enable, resize set 82% 82%, move position center
-for_window [app_id="Thunar"] floating enable, resize set 82% 82%, move position center
+for_window [app_id="keepassxc"] floating enable, resize set 74% 80%, move position center
+for_window [class="KeePassXC"] floating enable, resize set 74% 80%, move position center
+for_window [app_id="thunar"] floating enable, resize set 84% 84%, move position center
+for_window [app_id="Thunar"] floating enable, resize set 84% 84%, move position center
+for_window [class="Thunar"] floating enable, resize set 84% 84%, move position center
 for_window [app_id="gnome-disks"] floating enable, move position center
 for_window [app_id="wdisplays"] floating enable, move position center
 for_window [app_id="org.gnome.DiskUtility"] floating enable, move position center
-for_window [app_id="mpv"] floating enable, resize set 76% 74%, move position center
-for_window [app_id="imv"] floating enable, resize set 76% 74%, move position center
-for_window [class="imv"] floating enable, resize set 76% 74%, move position center
-for_window [app_id="zathura"] floating enable, resize set 78% 82%, move position center
-for_window [app_id="org.pwmt.zathura"] floating enable, resize set 78% 82%, move position center
-for_window [class="Zathura"] floating enable, resize set 78% 82%, move position center
-for_window [class="Virt-manager"] floating enable, resize set 86% 84%, move position center
-for_window [class="virt-manager"] floating enable, resize set 86% 84%, move position center
-for_window [app_id="foot" title="sysmon"] floating enable, resize set 72% 72%, move position center
-for_window [app_id="scratchpad_term"] floating enable, resize set 80% 70%, move position center
-for_window [class="pavucontrol"] floating enable, resize set 52% 58%, move position center
-for_window [app_id="pavucontrol"] floating enable, resize set 52% 58%, move position center
-for_window [class="blueman-manager"] floating enable, resize set 640 420, move position center
-for_window [app_id="blueman-manager"] floating enable, resize set 640 420, move position center
-for_window [app_id="nmtui"] floating enable, resize set 600 500, move position center
+for_window [app_id="mpv"] floating enable, resize set 78% 76%, move position center
+for_window [app_id="imv"] floating enable, resize set 78% 76%, move position center
+for_window [class="imv"] floating enable, resize set 78% 76%, move position center
+for_window [app_id="zathura"] floating enable, resize set 76% 84%, move position center
+for_window [app_id="org.pwmt.zathura"] floating enable, resize set 76% 84%, move position center
+for_window [class="Zathura"] floating enable, resize set 76% 84%, move position center
+for_window [class="Virt-manager"] floating enable, resize set 88% 86%, move position center
+for_window [class="virt-manager"] floating enable, resize set 88% 86%, move position center
+for_window [app_id="foot" title="sysmon"] floating enable, resize set 78% 78%, move position center
+for_window [app_id="foot" title="fastfetch"] floating enable, resize set 96% 92%, move position center
+for_window [app_id="scratchpad_term"] floating enable, resize set 82% 74%, move position center
+for_window [class="pavucontrol"] floating enable, resize set 56% 60%, move position center
+for_window [app_id="pavucontrol"] floating enable, resize set 56% 60%, move position center
+for_window [class="blueman-manager"] floating enable, resize set 720 460, move position center
+for_window [app_id="blueman-manager"] floating enable, resize set 720 460, move position center
+for_window [app_id="nmtui"] floating enable, resize set 700 520, move position center
 for_window [app_id="brave-origin" title="^Picture-in-Picture$"] floating enable
 
 bar {

@@ -4,14 +4,14 @@
     "type": "builtin",
     "padding": {
       "top": 1,
-      "right": 2,
+      "right": 3,
     },
   },
   "display": {
-    "separator": "  󰇙  ",
+    "separator": "   ─   ",
     "brightColor": false,
     "key": {
-      "width": 14,
+      "width": 15,
     },
     "bar": {
       "char": {
@@ -34,9 +34,34 @@
       "keyColor": "blue",
     },
     {
+      "type": "host",
+      "key": " 󰌢  host",
+      "keyColor": "blue",
+    },
+    {
+      "type": "bios",
+      "key": " 󰷦  bios",
+      "keyColor": "blue",
+    },
+    {
+      "type": "board",
+      "key": " 󰌢  board",
+      "keyColor": "blue",
+    },
+    {
       "type": "kernel",
       "key": " 󰠩  kernel",
       "format": "{release}",
+      "keyColor": "blue",
+    },
+    {
+      "type": "initSystem",
+      "key": " 󰣇  init",
+      "keyColor": "blue",
+    },
+    {
+      "type": "uptime",
+      "key": " 󰅐  uptime",
       "keyColor": "blue",
     },
     {
@@ -46,18 +71,17 @@
       "keyColor": "blue",
     },
     {
-      "type": "uptime",
-      "key": " 󰅐  uptime",
-      "keyColor": "blue",
-    },
-    {
       "type": "shell",
       "key": " 󰆍  shell",
       "keyColor": "blue",
     },
 
     "break",
-
+    {
+      "type": "de",
+      "key": " 󰖟  desktop",
+      "keyColor": "green",
+    },
     {
       "type": "wm",
       "key": " 󰧨  wm",
@@ -74,6 +98,16 @@
       "keyColor": "green",
     },
     {
+      "type": "wmTheme",
+      "key": " 󰟡  wm theme",
+      "keyColor": "green",
+    },
+    {
+      "type": "wallpaper",
+      "key": " 󰸉  wallpaper",
+      "keyColor": "green",
+    },
+    {
       "type": "cursor",
       "key": " 󰇀  cursor",
       "keyColor": "green",
@@ -81,42 +115,46 @@
     {
       "type": "terminal",
       "key": " 󰆍  terminal",
-      "keyColor": "yellow",
+      "keyColor": "green",
     },
     {
       "type": "terminalfont",
       "key": " 󰛖  term font",
-      "keyColor": "yellow",
+      "keyColor": "green",
     },
     {
       "type": "terminaltheme",
       "key": " 󰏘  palette",
-      "keyColor": "yellow",
-    },
-
-    "break",
-
-    {
-      "type": "host",
-      "key": " 󰌢  host",
-      "keyColor": "red",
-    },
-    {
-      "type": "cpu",
-      "key": " 󰻠  cpu",
-      "format": "{name}",
-      "keyColor": "red",
-    },
-    {
-      "type": "gpu",
-      "key": " 󰍛  gpu",
-      "keyColor": "red",
+      "keyColor": "green",
     },
     {
       "type": "display",
       "key": " 󰍹  display",
       "compactType": "original-with-refresh-rate",
-      "keyColor": "red",
+      "keyColor": "green",
+    },
+
+    "break",
+    {
+      "type": "cpu",
+      "key": " 󰻠  cpu",
+      "format": "{name}",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "cpuUsage",
+      "key": " 󰻠  cpu load",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "gpu",
+      "key": " 󰍛  gpu",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "physicalMemory",
+      "key": " 󰧑  dimm",
+      "keyColor": "yellow",
     },
     {
       "type": "memory",
@@ -138,35 +176,67 @@
       "keyColor": "yellow",
     },
     {
+      "type": "btrfs",
+      "key": " 󰋊  btrfs",
+      "keyColor": "yellow",
+    },
+    {
       "type": "battery",
       "key": " 󰁹  battery",
-      "keyColor": "green",
+      "keyColor": "yellow",
     },
-
-    "break",
-
     {
-      "type": "datetime",
-      "key": " 󰃭  date",
-      "format": "{1}-{3}-{11} {14}:{17}",
-      "keyColor": "magenta",
+      "type": "brightness",
+      "key": " 󰃠  brightness",
+      "keyColor": "yellow",
     },
     {
       "type": "sound",
       "key": " 󰕾  audio",
-      "keyColor": "magenta",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "wifi",
+      "key": " 󰤨  wifi",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "localip",
+      "key": " 󰛳  ip",
+      "keyColor": "yellow",
     },
     {
       "type": "player",
-      "key": " 󰥠  player",
-      "keyColor": "magenta",
+      "key": " 󰥠  mpris",
+      "keyColor": "yellow",
     },
     {
       "type": "media",
-      "key": " 󰝚  media",
-      "keyColor": "magenta",
+      "key": " 󰐊  now playing",
+      "keyColor": "yellow",
     },
 
     "break",
+    {
+      "type": "physicalDisk",
+      "key": " 󰋊  disks",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "datetime",
+      "key": " 󰃭  date",
+      "format": "{year}-{month-pretty}-{day-pretty} {hour-pretty}:{minute-pretty}",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "loadavg",
+      "key": " 󰔟  load",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "users",
+      "key": " 󰍹  users",
+      "keyColor": "magenta",
+    }
   ],
 }

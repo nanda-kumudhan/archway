@@ -1,33 +1,32 @@
 font=JetBrainsMono Nerd Font
-font-size=13
+font-size=12
 
-indicator-radius=84
+indicator-radius=88
 indicator-thickness=4
 
-inside-color=000000
-inside-clear-color=000000
-inside-ver-color=1a1a1a
-inside-wrong-color=333333
+inside-color=121212
+inside-clear-color=1d1d1d
+inside-ver-color=1d1d1d
+inside-wrong-color=1d1d1d
 
-ring-color=666666
-ring-clear-color=aaaaaa
-ring-ver-color=eeeeee
-ring-wrong-color=ffffff
+ring-color=2a2a2a
+ring-clear-color=8ab4f8
+ring-ver-color=8ab4f8
+ring-wrong-color=f28b82
 
-line-color=000000
-separator-color=000000
+line-color=2a2a2a
+separator-color=2a2a2a
 
-key-hl-color=eeeeee
-bs-hl-color=aaaaaa
+key-hl-color=e8eaed
+bs-hl-color=8ab4f8
 
-text-color=eeeeee
-text-clear-color=aaaaaa
-text-ver-color=eeeeee
-text-wrong-color=ffffff
+text-color=e8eaed
+text-clear-color=9aa0a6
+text-ver-color=e8eaed
+text-wrong-color=f28b82
 
 ignore-empty-password
 show-failed-attempts
 
 image=~/Pictures/wallpaper
 scaling=fill
-

@@ -1,0 +1,165 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+add_newline = true
+command_timeout = 900
+scan_timeout = 30
+palette = "workbench"
+
+format = "$directory$git_branch$git_status$package$bun$nodejs$deno$python$php$ruby$rust$golang$java$dotnet$c$cpp$cmake$docker_context$status$cmd_duration$jobs\n$character"
+right_format = "$time"
+
+[palettes.workbench]
+base = "#121212"
+surface = "#1d1d1d"
+surface_bright = "#2a2a2a"
+muted = "#a7a7a7"
+text = "#e8eaed"
+red = "#f28b82"
+green = "#81c995"
+yellow = "#fdd663"
+blue = "#8ab4f8"
+purple = "#c58af9"
+cyan = "#83cad8"
+orange = "#ffb86c"
+
+[fill]
+symbol = "─"
+style = "fg:surface_bright"
+
+[directory]
+format = "[ $path]($style)[$read_only]($read_only_style) "
+style = "fg:cyan"
+truncation_length = 3
+truncate_to_repo = true
+home_symbol = "~"
+read_only = " "
+read_only_style = "fg:orange"
+
+[git_branch]
+symbol = ""
+format = "[$symbol $branch]($style) "
+style = "fg:purple"
+truncation_length = 32
+truncation_symbol = "..."
+
+[git_status]
+format = "[$all_status$ahead_behind]($style) "
+style = "fg:yellow"
+conflicted = "="
+ahead = "↑"
+behind = "↓"
+diverged = "↕"
+up_to_date = ""
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "-"
+
+[package]
+symbol = "󰏗"
+format = "[$symbol $version]($style) "
+style = "fg:purple"
+
+[bun]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:yellow"
+
+[nodejs]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:green"
+
+[deno]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:green"
+
+[python]
+symbol = ""
+format = "[$symbol ${version}(\\($virtualenv\\))]($style) "
+style = "fg:yellow"
+
+[php]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:purple"
+
+[ruby]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:red"
+
+[rust]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:orange"
+
+[golang]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:cyan"
+
+[java]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:red"
+
+[dotnet]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:purple"
+
+[c]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:cyan"
+
+[cpp]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:cyan"
+disabled = false
+
+[cmake]
+symbol = ""
+format = "[$symbol $version]($style) "
+style = "fg:cyan"
+
+[docker_context]
+symbol = ""
+format = "[$symbol $context]($style) "
+style = "fg:cyan"
+
+[status]
+disabled = false
+symbol = ""
+format = "[$symbol $status]($style) "
+style = "fg:red"
+
+[cmd_duration]
+min_time = 500
+format = "[󰔟 $duration]($style) "
+style = "fg:muted"
+show_milliseconds = false
+
+[jobs]
+symbol = ""
+format = "[$symbol $number]($style) "
+style = "fg:purple"
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[ $time]($style)"
+style = "fg:muted"
+
+[character]
+success_symbol = "[](fg:green) "
+error_symbol = "[](fg:red) "
+vimcmd_symbol = "[](fg:cyan) "
+vimcmd_replace_one_symbol = "[](fg:purple) "
+vimcmd_replace_symbol = "[](fg:purple) "
+vimcmd_visual_symbol = "[](fg:yellow) "
