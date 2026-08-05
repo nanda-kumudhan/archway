@@ -1,4 +1,4 @@
-adw-gtk-theme
+antimicrox
 apparmor
 autotiling
 base
@@ -20,6 +20,7 @@ efibootmgr
 engrampa
 exfatprogs
 fastfetch
+flatpak
 foot
 fwupd
 git
@@ -58,7 +59,6 @@ networkmanager
 networkmanager-openconnect
 networkmanager-openvpn
 networkmanager-vpnc
-nix
 noto-fonts
 noto-fonts-emoji
 ntfsprogs
@@ -73,10 +73,12 @@ pipewire-jack
 pipewire-pulse
 podman
 podman-desktop
+prismlauncher
+proton-vpn-cli
+proton-vpn-gtk
 qemu-full
 remmina
 rofi
-rpi-imager
 sassc
 sbctl
 seahorse
@@ -96,6 +98,7 @@ tcpdump
 texmaker
 thunar
 tlp
+torbrowser-launcher
 tree
 ttf-dejavu
 ttf-jetbrains-mono-nerd
@@ -105,7 +108,6 @@ usbmuxd
 virt-manager
 vulkan-intel
 waybar
-waydroid
 wdisplays
 wf-recorder
 wget
