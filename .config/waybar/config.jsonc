@@ -9,8 +9,13 @@
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
+
     "mpris",
+    "network",
+    "bluetooth",
     "wireplumber",
+
+
     "backlight",
     "battery",
     "idle_inhibitor",
@@ -98,6 +103,42 @@
       "paused": "󰏤",
       "stopped": "󰓛"
     }
+  },
+
+  "network": {
+    "format-wifi": "{icon} {essid}",
+    "format-ethernet": "{icon} {ipaddr}",
+    "format-disconnected": "{icon} Disconnected",
+    "format-icons": {
+      "wifi": [
+        "󰤯",
+        "󰤟",
+        "󰤢",
+        "󰤥",
+        "󰤨"
+      ],
+      "ethernet": [
+        "󰈀"
+      ]
+    },
+    "tooltip-format": "Interface: {ifname}\nIP: {ipaddr}\nGateway: {gwaddr}\nSignal: {signaldBm} dBm",
+    "on-click": "foot -e nmtui",
+    "on-click-middle": "nmcli networking off"
+  },
+
+  "bluetooth": {
+    "format": "{icon} {status}",
+    "format-connected": "{icon} {device_alias}",
+    "format-disconnected": "{icon} Ready",
+    "format-disabled": "{icon} Off",
+    "format-icons": {
+      "enabled": "󰂯",
+      "disabled": "󰂲",
+      "connected": "󰂱"
+    },
+    "tooltip-format": "Bluetooth: {status}\nDevice: {device_alias}",
+    "on-click": "foot -e bluetoothctl",
+    "on-click-middle": "bluetoothctl power off"
   },
 
   "tray": {
