@@ -95,9 +95,6 @@ input "type:pointer" {
 
 focus_follows_mouse no
 
-exec nm-applet --indicator
-exec blueman-applet
-
 # --- Idle & Power ---
 # Lock and power management
 exec swayidle -w \
