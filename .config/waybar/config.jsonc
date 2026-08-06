@@ -6,17 +6,18 @@
   "height": 30,
   "spacing": 0,
 
-  "modules-left": ["sway/workspaces", "sway/scratchpad", "mpris"],
+  "modules-left": ["sway/workspaces", "sway/scratchpad"],
   "modules-center": ["clock"],
   "modules-right": [
+    "tray",
+    "idle_inhibitor",
+    "mpris",
     "network",
     "bluetooth",
     "wireplumber",
     "backlight",
     "battery",
-    "idle_inhibitor",
-    "privacy",
-    "tray"
+    "privacy"
   ],
 
   "sway/workspaces": {

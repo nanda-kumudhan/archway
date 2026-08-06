@@ -48,7 +48,7 @@ title_align center
 show_marks no
 gaps inner 1
 gaps outer 1
-smart_gaps off
+smart_gaps on
 smart_borders on
 hide_edge_borders smart
 
