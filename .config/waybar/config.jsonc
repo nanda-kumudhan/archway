@@ -55,6 +55,10 @@
       "podman": "󰡨",
       "dbeaver": "󰆼",
 
+      "class<discord>": "󰙯",
+      "class<Spotify>": "󰓇",
+      "class<org.prismlauncher.PrismLauncher>": "󰍹",
+      "class<io.stremio.Stremio>": "󰓹",
 
       "org.localsend.localsend_app": "󰇚",
 
