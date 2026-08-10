@@ -189,7 +189,6 @@ bindsym Mod1+Shift+Tab focus prev window
 bindsym Mod4+Shift+s exec systemctl suspend
 
 # App shortcuts
-bindsym Mod4+b exec blueman-manager
 bindsym Mod4+k exec keepassxc --minimized
 bindsym Mod4+z exec $editor
 
@@ -232,6 +231,9 @@ bindsym Mod4+XF86AudioMute exec pavucontrol
 # Network manager terminal UI
 bindsym Mod4+n exec foot -e nmtui
 
+# Bluetooth terminal UI
+bindsym Mod4+b exec foot -e bluetoothctl
+
 # --- Window Rules ---
 
 # Floating dialogs and utilities
@@ -256,10 +258,9 @@ for_window [app_id="foot" title="fastfetch"] floating enable, resize set 96% 92%
 for_window [app_id="scratchpad_term"] floating enable, resize set 82% 74%, move position center
 for_window [class="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="pavucontrol"] floating enable, resize set 56% 60%, move position center
-for_window [class="blueman-manager"] floating enable, resize set 720 460, move position center
-for_window [app_id="blueman-manager"] floating enable, resize set 720 460, move position center
-for_window [app_id="nmtui"] floating enable, resize set 700 520, move position center
+for_window [app_id="foot --nmtui"] floating enable, resize set 700 520, move position center
 for_window [app_id="brave-origin" title="^Picture-in-Picture$"] floating enable
+for_window [app_id="foot --bluetoothctl"] floating enable, resize set 700 520, move position center
 
 bar {
     position top
