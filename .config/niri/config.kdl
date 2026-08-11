@@ -1,0 +1,201 @@
+// --- Startup ---
+spawn-at-startup "dunst"
+spawn-at-startup "keepassxc" "--minimized"
+spawn-at-startup "gnome-keyring-daemon" "--start" "--components=pkcs11,secrets,ssh"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
+spawn-at-startup "systemctl" "--user" "import-environment" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+spawn-at-startup "udiskie" "--smart-tray" "--automount"
+spawn-at-startup "sh" "-c" "$HOME/.local/bin/start-polkit-agent"
+spawn-at-startup "swaybg" "-i" "~/Pictures/wallpaper"
+spawn-at-startup "waybar"
+
+spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock -f" "timeout" "600" "systemctl suspend" "before-sleep" "swaylock -f" "after-resume" "niri msg action power-on-monitors"
+
+// --- Input ---
+input {
+    keyboard {
+        xkb {
+            layout "gb"
+        }
+    }
+    touchpad {
+        // tap is omitted to remain disabled
+        natural-scroll
+        dwt
+        middle-emulation
+    }
+    mouse {
+        natural-scroll
+    }
+    // focus-follows-mouse is omitted because it is disabled by default
+}
+
+// --- Theme & Layout ---
+layout {
+    gaps 2
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    border {
+        width 1
+        active-color "#8ab4f8"
+        inactive-color "#2a2a2a"
+    }
+
+    focus-ring {
+        off
+    }
+}
+
+// --- Window Rules (Floating) ---
+window-rule {
+    match app-id=r#"keepassxc|thunar|gnome-disks|wdisplays|org.gnome.DiskUtility|mpv|imv|zathura|org.pwmt.zathura|virt-manager|pavucontrol"#
+    match title="^sysmon$"
+    match title="^fastfetch$"
+    match title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// --- Keybinds ---
+binds {
+    // --- Niri Built-in Features ---
+    Super+Shift+Slash { show-hotkey-overlay; }
+    Super+O { toggle-overview; }
+
+    // Launchers
+    Ctrl+Alt+T { spawn "foot"; }
+    Super+E { spawn "rofi" "-show" "filebrowser" "-show-icons" "-icon-theme" "Papirus-Dark"; }
+    Super+Shift+E { spawn "Thunar"; }
+    Super+Space { spawn "rofi" "-show" "drun" "-show-icons" "-icon-theme" "Papirus-Dark" "-drun-display-format" "{name}" "-p" "Apps"; }
+    Super+Shift+Q { close-window; }
+    Super+L { spawn "swaylock"; }
+    Ctrl+Escape { spawn "foot" "-T" "sysmon" "-e" "htop"; }
+    Super+W { spawn "brave-origin"; }
+    Super+K { spawn "keepassxc" "--minimized"; }
+    Super+Z { spawn "zeditor"; }
+    Super+N { spawn "foot" "-e" "nmtui"; }
+    Super+B { spawn "foot" "-e" "bluetoothctl"; }
+
+    // Session & Monitor Power
+    Super+Shift+S { spawn "systemctl" "suspend"; }
+    Ctrl+Alt+Delete { quit; }
+    Super+P { spawn "wdisplays"; }
+    Super+Shift+P { power-off-monitors; }
+
+    // Screenshots
+    Print { screenshot; }
+    Shift+Print { screenshot-window; }
+    Ctrl+Print { spawn "sh" "-c" "mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -f ~/Videos/Recordings/$(date +'%Y-%m-%d_%H-%M-%S').mp4; fi"; }
+    Ctrl+Shift+Print { spawn "sh" "-c" "mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -g \"$(slurp)\" -f ~/Videos/Recordings/$(date +'%Y-%m-%d_%H-%M-%S').mp4; fi"; }
+
+    // Column & Window Management
+    Super+BracketLeft { consume-or-expel-window-left; }
+    Super+BracketRight { consume-or-expel-window-right; }
+
+    Super+R { switch-preset-column-width; }
+    Super+Shift+R { reset-window-height; }
+    Super+C { center-column; }
+
+    Super+F { fullscreen-window; }
+    Super+M { maximize-column; }
+    Super+D { toggle-window-floating; }
+
+    // Column & Window Sizing
+    Super+Equal { set-column-width "+10%"; }
+    Super+Minus { set-column-width "-10%"; }
+    Super+Ctrl+Equal  { set-window-height "+10%"; }
+    Super+Ctrl+Minus { set-window-height "-10%"; }
+
+    // Navigation
+    Super+Left { focus-column-left; }
+    Super+Down { focus-window-down; }
+    Super+Up { focus-window-up; }
+    Super+Right { focus-column-right; }
+
+    Super+Shift+Left { move-column-left; }
+    Super+Shift+Down { move-window-down; }
+    Super+Shift+Up { move-window-up; }
+    Super+Shift+Right { move-column-right; }
+
+    // Workspaces - Fixed Numbers
+    Super+1 { focus-workspace 1; }
+    Super+2 { focus-workspace 2; }
+    Super+3 { focus-workspace 3; }
+    Super+4 { focus-workspace 4; }
+    Super+5 { focus-workspace 5; }
+    Super+6 { focus-workspace 6; }
+    Super+7 { focus-workspace 7; }
+    Super+8 { focus-workspace 8; }
+    Super+9 { focus-workspace 9; }
+    Super+0 { focus-workspace 10; }
+
+    Super+Shift+1 { move-column-to-workspace 1; }
+    Super+Shift+2 { move-column-to-workspace 2; }
+    Super+Shift+3 { move-column-to-workspace 3; }
+    Super+Shift+4 { move-column-to-workspace 4; }
+    Super+Shift+5 { move-column-to-workspace 5; }
+    Super+Shift+6 { move-column-to-workspace 6; }
+    Super+Shift+7 { move-column-to-workspace 7; }
+    Super+Shift+8 { move-column-to-workspace 8; }
+    Super+Shift+9 { move-column-to-workspace 9; }
+    Super+Shift+0 { move-column-to-workspace 10; }
+
+    // Workspaces - Relative Navigation & Moving
+    Super+Tab { focus-workspace-down; }
+    Super+Shift+Tab { focus-workspace-up; }
+
+    Super+Page_Down { focus-workspace-down; }
+    Super+Page_Up   { focus-workspace-up; }
+
+    Super+Shift+Page_Down { move-column-to-workspace-down; }
+    Super+Shift+Page_Up   { move-column-to-workspace-up; }
+
+    // Audio & Media
+    XF86AudioMute { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    Super+XF86AudioMute { spawn "pavucontrol"; }
+    XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "1%-"; }
+    XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "1%+"; }
+    XF86AudioMicMute { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    XF86Tools { spawn "pavucontrol"; }
+    XF86Display { spawn "wdisplays"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioStop { spawn "playerctl" "stop"; }
+
+    XF86MonBrightnessDown { spawn "brightnessctl" "s" "3%-" "-n" "0.3l%"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+3%"; }
+}
+
+animations {
+    slowdown 0.5
+
+    workspace-switch {
+        spring stiffness=1200 damping-ratio=1.0 epsilon=0.0001
+    }
+    horizontal-view-movement {
+        spring stiffness=1200 damping-ratio=1.0 epsilon=0.0001
+    }
+    window-movement {
+        spring stiffness=1200 damping-ratio=1.0 epsilon=0.0001
+    }
+
+    window-open {
+        duration-ms 120
+        curve "ease-out-quad"
+    }
+    window-close {
+        duration-ms 120
+        curve "ease-out-quad"
+    }
+}
+
+output "eDP-1" {
+    scale 1.0
+}
