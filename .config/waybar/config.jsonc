@@ -1,4 +1,3 @@
-[
 {
   "layer": "top",
   "position": "top",
@@ -6,8 +5,16 @@
   "height": 30,
   "spacing": 0,
 
-  "modules-left": ["sway/workspaces", "sway/scratchpad"],
-  "modules-center": ["clock"],
+  "modules-left": [
+    /*"sway/workspaces",
+      "sway/scratchpad"
+    */
+    "niri/workspaces",
+    "niri/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "tray",
     "idle_inhibitor",
@@ -19,7 +26,7 @@
     "battery",
     "privacy"
   ],
-
+/*
   "sway/workspaces": {
     "format": "{name} {windows}",
     "format-window-separator": " ",
@@ -77,6 +84,39 @@
     "tooltip": true,
     "tooltip-format": "{app}: {title}"
   },
+  */
+
+  // --- Niri Modules ---
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+          "active": "",
+          "default": ""
+        },
+    "all-outputs": false,
+    "disable-click": false
+  },
+
+  "niri/window": {
+    "format": "{}",
+    "max-length": 45,
+    "separate-outputs": true,
+    "rewrite": {
+      "(.*) — Brave": "󰖟 $1",
+      "(.*) - foot": " $1",
+      "wdisplays": "󰍹",
+      "texmaker": "",
+      "keepassxc": "󰌆",
+      "dev.zed.Zed": "",
+      "imv": "󰋩",
+      "org.pwmt.zathura": "󰈙",
+      "mpv": "󰐊",
+      "Thunar": "󰉋",
+      "pavucontrol": "󰕾"
+    }
+  },
+
+  // --- Media ---
   "mpris": {
     "format": "{status_icon}",
     "format-paused": "{status_icon}",
@@ -95,6 +135,7 @@
     }
   },
 
+  // --- Network ---
   "network": {
     "format-wifi": "{icon} {essid}",
     "format-ethernet": "{icon} {ipaddr}",
@@ -117,6 +158,7 @@
     "on-click-middle": "nmcli networking toggle"
   },
 
+  // --- Bluetooth ---
   "bluetooth": {
     "format": "{icon} {status}",
     "format-connected": "{icon} {device_alias}",
@@ -137,6 +179,7 @@
     "spacing": 10
   },
 
+  // --- Power & System ---
   "battery": {
     "interval": 5,
     "states": {
@@ -229,4 +272,3 @@
     }
   }
 }
-]
