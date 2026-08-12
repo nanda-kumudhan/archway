@@ -73,8 +73,8 @@ It is intentionally small, dark, and consistent across the whole session:
 | Audio | PipeWire + WirePlumber |
 | Keyring | GNOME Keyring |
 | Removable media | Udiskie |
-| Bluetooth | Blueman |
-| Network | NetworkManager + nm-applet |
+| Bluetooth | bluez + bluetoothctl |
+| Network | NetworkManager + nmtui |
 | Secrets manager | KeePassXC |
 
 ---
@@ -111,11 +111,9 @@ Sway starts the desktop session with these services:
 - `keepassxc --minimized`
 - `gnome-keyring-daemon`
 - `udiskie --smart-tray --automount`
-- `nm-applet --indicator`
-- `blueman-applet`
 - `swayidle`
 - `swaybg`
-- custom polkit agent
+- `custom polkit agent`
 - `sway-session.target`
 
 ### Session integration
