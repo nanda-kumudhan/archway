@@ -22,8 +22,8 @@
     "backlight",
     "battery",
     "privacy",
-    "tray",
     "idle_inhibitor",
+    "tray",
   ],
 
   "sway/workspaces": {
