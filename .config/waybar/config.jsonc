@@ -14,15 +14,16 @@
     "clock"
   ],
   "modules-right": [
-    "tray",
-    "idle_inhibitor",
+
     "mpris",
     "network",
     "bluetooth",
     "wireplumber",
     "backlight",
     "battery",
-    "privacy"
+    "privacy",
+    "tray",
+    "idle_inhibitor",
   ],
 
   "sway/workspaces": {
