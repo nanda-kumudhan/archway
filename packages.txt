@@ -21,6 +21,7 @@ egl-wayland
 engrampa
 exfatprogs
 fastfetch
+firefox
 flatpak
 foot
 fwupd
