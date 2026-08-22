@@ -47,8 +47,8 @@ titlebar_padding 1 0
 title_align center
 show_marks no
 
-gaps inner 4
-gaps outer 4
+gaps inner 2
+gaps outer 2
 smart_gaps off
 smart_borders on
 hide_edge_borders smart
