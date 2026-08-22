@@ -46,16 +46,12 @@ titlebar_border_thickness 0
 titlebar_padding 1 0
 title_align center
 show_marks no
-gaps inner 1
-gaps outer 1
-smart_gaps on
+
+gaps inner 4
+gaps outer 4
+smart_gaps off
 smart_borders on
 hide_edge_borders smart
-
-# Apply theme geometry to already-open windows and workspaces on reload.
-exec_always swaymsg -q '[all] border pixel 1'
-exec_always swaymsg -q gaps inner all set 1
-exec_always swaymsg -q gaps outer all set 1
 
 exec udiskie --smart-tray --automount
 
