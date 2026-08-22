@@ -155,8 +155,14 @@
       "critical": 15
     },
     "format": "{icon} {capacity}%",
+    "format-alt": "{icon} {time}",
+
     "format-charging": "󰂄 {capacity}%",
+    "format-charging-alt": "󰂄 {time}",
+
     "format-plugged": "󰚥 {capacity}%",
+    "format-plugged-alt": "󰚥 {time}",
+
     "format-icons": [
       "󰂎",
       "󰁺",
@@ -168,7 +174,7 @@
       "󰂁",
       "󰁹"
     ],
-    "tooltip-format": "Capacity: {capacity}%\nPower draw: {power}W\nTime remaining: {time}"
+    "tooltip-format": "Capacity: {capacity}%\nPower draw: {power}W\nTime remaining: {time}",
   },
 
   "backlight": {
