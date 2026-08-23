@@ -1,8 +1,7 @@
 set $term foot
 set $file_manager Thunar
 set $file_menu exec rofi -show filebrowser -show-icons -icon-theme "Papirus-Dark"
-set $power_menu swaynag -t warning -m "Do you want to exit Sway?" \
-  -B "Logout" "swaymsg exit"
+set $power_menu exec sh -c 'choice=$(printf "Logout\nCancel" | rofi -dmenu -i -p "Session"); [ "$choice" = "Logout" ] && swaymsg exit'
 set $editor zeditor
 
 exec dunst
