@@ -20,11 +20,6 @@ egl-wayland
 engrampa
 exfatprogs
 fastfetch
-fcitx5
-fcitx5-configtool
-fcitx5-gtk
-fcitx5-m17n
-fcitx5-qt
 firefox
 flatpak
 foot
