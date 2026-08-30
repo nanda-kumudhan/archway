@@ -93,6 +93,7 @@ focus_follows_mouse no
 # --- Idle & Power ---
 # Lock and power management
 exec swayidle -w \
+    timeout 300 'swaylock -f' \
     before-sleep 'swaylock -f'
 
 # --- Keybinds ---
