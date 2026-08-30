@@ -93,10 +93,7 @@ focus_follows_mouse no
 # --- Idle & Power ---
 # Lock and power management
 exec swayidle -w \
-    timeout 300 'swaylock -f' \
-    timeout 600 'systemctl suspend' \
-    before-sleep 'swaylock -f' \
-    after-resume 'swaymsg "output * power on"'
+    before-sleep 'swaylock -f'
 
 # --- Keybinds ---
 
@@ -110,7 +107,6 @@ bindsym Mod4+Shift+q kill
 bindsym Mod4+l exec swaylock
 bindsym Ctrl+Escape exec $term -T "sysmon" -e htop
 bindsym Mod4+w exec brave-origin
-
 
 # Full screenshot
 bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
