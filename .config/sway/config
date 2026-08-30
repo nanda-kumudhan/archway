@@ -2,7 +2,7 @@ set $term foot
 set $file_manager Thunar
 set $file_menu exec rofi -show filebrowser -show-icons -icon-theme "Papirus-Dark"
 set $power_menu exec sh -c 'choice=$(printf "Logout\nCancel" | rofi -dmenu -i -p "Session"); [ "$choice" = "Logout" ] && swaymsg exit'
-set $editor zeditor
+set $editor zed
 
 exec dunst
 exec kanshi
@@ -107,7 +107,7 @@ bindsym Mod4+space exec $launcher
 bindsym Mod4+Shift+q kill
 bindsym Mod4+l exec swaylock
 bindsym Ctrl+Escape exec $term -T "sysmon" -e htop
-bindsym Mod4+w exec brave-origin
+bindsym Mod4+w exec firefox
 
 # Full screenshot
 bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
@@ -251,7 +251,8 @@ for_window [app_id="scratchpad_term"] floating enable, resize set 82% 74%, move 
 for_window [class="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="foot --nmtui"] floating enable, resize set 700 520, move position center
-for_window [app_id="brave-origin" title="^Picture-in-Picture$"] floating enable
+for_window [app_id="brave" title="^Picture-in-Picture$"] floating enable
+for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable
 for_window [app_id="foot --bluetoothctl"] floating enable, resize set 700 520, move position center
 
 bar {
