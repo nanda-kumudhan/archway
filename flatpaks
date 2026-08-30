@@ -1,28 +1,34 @@
   flatpak list
-Name                                               Application ID                                      Version                               Branch                   Installation
-Discord                                            com.discordapp.Discord                              1.0.155                               stable                   system
-Stremio                                            com.stremio.Stremio                                 1.2.0                                 stable                   system
-Transmission                                       com.transmissionbt.Transmission                     4.1.2                                 stable                   system
-Podman Desktop                                     io.podman_desktop.PodmanDesktop                     1.29.1                                stable                   system
-Freedesktop Platform                               org.freedesktop.Platform                            freedesktop-sdk-25.08.16              25.08                    system
-Mesa                                               org.freedesktop.Platform.GL.default                 26.1.6                                25.08                    system
-Mesa (Extra)                                       org.freedesktop.Platform.GL.default                 26.1.6                                25.08-extra              system
-Intel VAAPI driver                                 org.freedesktop.Platform.VAAPI.Intel                                                      25.08                    system
-Codecs Extra Extension                             org.freedesktop.Platform.codecs-extra                                                     25.08-extra              system
-GNOME Application Platform version 50              org.gnome.Platform                                                                        50                       system
-Materia-dark GTK theme                             org.gtk.Gtk3theme.Materia-dark                                                            3.22                     system
-Materia-dark-compact GTK theme                     org.gtk.Gtk3theme.Materia-dark-compact                                                    3.22                     system
-Adwaita theme                                      org.kde.KStyle.Adwaita                                                                    5.15-25.08               system
-Adwaita theme                                      org.kde.KStyle.Adwaita                                                                    6.10                     system
-Adwaita theme                                      org.kde.KStyle.Adwaita                                                                    6.11                     system
-KDE Application Platform                           org.kde.Platform                                                                          5.15-25.08               system
-KDE Application Platform                           org.kde.Platform                                                                          6.10                     system
-KDE Application Platform                           org.kde.Platform                                                                          6.11                     system
-KeePassXC                                          org.keepassxc.KeePassXC                             2.7.12                                stable                   system
-LibreOffice                                        org.libreoffice.LibreOffice                         26.2.5.2                              stable                   system
-LocalSend                                          org.localsend.localsend_app                         1.18.2                                stable                   system
-Prism Launcher                                     org.prismlauncher.PrismLauncher                     11.0.3                                stable                   system
-Tor Browser Launcher                               org.torproject.torbrowser-launcher                  0.3.9                                 stable                   system
+Name               Application ID            Version                  Branch      Origin  Installation
+Discord            com.discordapp.Discord    1.0.155                  stable      flathub system
+Stremio            com.stremio.Stremio       1.2.0                    stable      flathub system
+Transmission       …nsmissionbt.Transmission 4.1.2                    stable      flathub system
+Podman Desktop     …an_desktop.PodmanDesktop 1.29.1                   stable      flathub system
+Fedora Platform    …g.fedoraproject.Platform 44                       f44         fedora  system
+Mesa               …ject.Platform.CL.default                          f44         fedora  system
+Mesa               …ject.Platform.GL.default                          f44         fedora  system
+fedoraproject pla… …aproject.Platform.Locale                          f44         fedora  system
+The Intel Media D… …ect.Platform.VAAPI.Intel                          f44         fedora  system
+Freedesktop Platf… org.freedesktop.Platform  freedesktop-sdk-25.08.16 25.08       flathub system
+Mesa               …ktop.Platform.GL.default 26.1.6                   25.08       flathub system
+Mesa (Extra)       …ktop.Platform.GL.default 26.1.6                   25.08-extra flathub system
+Intel VAAPI driver …top.Platform.VAAPI.Intel                          25.08       flathub system
+Codecs Extra Exte… …op.Platform.codecs-extra                          25.08-extra flathub system
+GNOME Application… org.gnome.Platform                                 50          flathub system
+Materia-dark GTK … …k.Gtk3theme.Materia-dark                          3.22        flathub system
+Materia-dark-comp… …eme.Materia-dark-compact                          3.22        flathub system
+Adwaita theme      org.kde.KStyle.Adwaita                             5.15-25.08  flathub system
+Adwaita theme      org.kde.KStyle.Adwaita                             6.10        flathub system
+Adwaita theme      org.kde.KStyle.Adwaita                             6.11        flathub system
+KDE Application P… org.kde.Platform                                   5.15-25.08  flathub system
+KDE Application P… org.kde.Platform                                   6.10        flathub system
+KDE Application P… org.kde.Platform                                   6.11        flathub system
+KeePassXC          org.keepassxc.KeePassXC   2.7.12                   stable      flathub system
+LibreOffice        ….libreoffice.LibreOffice 26.2.5.2                 stable      flathub system
+LocalSend          ….localsend.localsend_app 1.18.2                   stable      flathub system
+Prism Launcher     …smlauncher.PrismLauncher 11.0.3                   stable      flathub system
+Remmina            org.remmina.Remmina       1.4.41                   stable      fedora  system
+Tor Browser Launc… …ject.torbrowser-launcher 0.3.9                    stable      flathub system
 
  ~ 
   
