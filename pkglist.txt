@@ -27,6 +27,7 @@ github-cli
 gnome-disk-utility
 gnome-keyring
 go
+gradle
 grim
 gst-plugin-pipewire
 htop
@@ -46,6 +47,7 @@ lldb
 localsend-bin
 ly
 materia-gtk-theme
+maven
 mkinitcpio
 mpv
 nano
