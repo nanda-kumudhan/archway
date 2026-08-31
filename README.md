@@ -39,7 +39,7 @@ The desktop is intentionally small, dark, and consistent across the whole sessio
 
 | Area | Tooling |
 | --- | --- |
-| Base system | Arch/Fedora |
+| Base system | Arch Linux |
 | Compositor | Sway |
 | Bar | Waybar |
 | Terminal | Foot |
