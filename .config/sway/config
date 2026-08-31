@@ -6,7 +6,7 @@ set $editor zed
 
 exec blueman-applet
 exec nm-applet --indicator
-exec --no-startup-id flatpak run org.keepassxc.KeePassXC
+exec --no-startup-id keepassxc
 
 exec autotiling
 exec dunst
@@ -184,7 +184,7 @@ bindsym Mod1+Shift+Tab focus prev window
 bindsym Mod4+Shift+s exec systemctl suspend
 
 # App shortcuts
-bindsym Mod4+k exec flatpak run org.keepassxc.KeePassXC --minimized
+bindsym Mod4+k exec keepassxc --minimized
 bindsym Mod4+z exec $editor
 
 # Scratchpad: hide/show any focused window
