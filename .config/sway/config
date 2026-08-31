@@ -4,9 +4,12 @@ set $file_menu exec rofi -show filebrowser -show-icons -icon-theme "Papirus-Dark
 set $power_menu exec sh -c 'choice=$(printf "Logout\nCancel" | rofi -dmenu -i -p "Session"); [ "$choice" = "Logout" ] && swaymsg exit'
 set $editor zed
 
+exec blueman-applet
+exec nm-applet --indicator
+exec --no-startup-id flatpak run org.keepassxc.KeePassXC
+
 exec dunst
 exec kanshi
-exec autotiling
 
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP PATH
@@ -187,7 +190,6 @@ bindsym Mod4+z exec $editor
 bindsym Mod4+Shift+grave move scratchpad
 bindsym Mod4+grave scratchpad show
 
-
 # --- Function Keys ---
 
 # Audio
@@ -253,6 +255,8 @@ for_window [app_id="foot --nmtui"] floating enable, resize set 700 520, move pos
 for_window [app_id="brave" title="^Picture-in-Picture$"] floating enable
 for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable
 for_window [app_id="foot --bluetoothctl"] floating enable, resize set 700 520, move position center
+for_window [app_id="blueman-manager"] floating enable, resize set 70% 75%, move position center
+for_window [class="Blueman-manager"] floating enable, resize set 70% 75%, move position center
 
 bar {
     position top
