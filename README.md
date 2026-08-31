@@ -3,7 +3,7 @@
 
 # 🌊 Archway
 
-**A minimal, keyboard-driven Sway desktop for Fedora Atomic**
+**A minimal, keyboard-driven Sway desktop for Arch Linux**
 
 </div>
 
@@ -20,9 +20,7 @@
 
 ## 🌿 Overview
 
-Archway is a minimal Wayland desktop built around **Sway** on **Fedora Atomic**.
-
-It is designed around an immutable base system with a small number of layered packages for system-level tools, virtualization, networking, media, and desktop utilities.
+Archway is a minimal Wayland desktop built around **Sway** on **Arch Linux**.
 
 The desktop is intentionally small, dark, and consistent across the whole session:
 
@@ -41,7 +39,7 @@ The desktop is intentionally small, dark, and consistent across the whole sessio
 
 | Area | Tooling |
 | --- | --- |
-| Base system | Fedora Atomic |
+| Base system | Arch/Fedora |
 | Compositor | Sway |
 | Bar | Waybar |
 | Terminal | Foot |
