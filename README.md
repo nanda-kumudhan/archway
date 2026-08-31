@@ -1,4 +1,3 @@
-Yep — so the README should explicitly say it’s built around Fedora Atomic Sway, Firefox replaces Brave Origin, and those packages are layered onto the base system rather than installed as Flatpaks.
 
 <div align="center">
 
