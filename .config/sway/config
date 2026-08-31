@@ -8,6 +8,7 @@ exec blueman-applet
 exec nm-applet --indicator
 exec --no-startup-id flatpak run org.keepassxc.KeePassXC
 
+exec autotiling
 exec dunst
 exec kanshi
 
