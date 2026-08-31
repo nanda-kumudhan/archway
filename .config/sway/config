@@ -66,7 +66,7 @@ client.urgent $m_urgent $m_bg $m_urgent $m_urgent $m_urgent
 # --- Startup ---
 
 # --- Session Services ---
-exec $HOME/.local/bin/start-polkit-agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Export the Wayland session to DBus/systemd.
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
