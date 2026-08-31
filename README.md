@@ -1,60 +1,166 @@
-<div align="center">
-🌊 Archway
+Yep — so the README should explicitly say it’s built around Fedora Atomic Sway, Firefox replaces Brave Origin, and those packages are layered onto the base system rather than installed as Flatpaks.
 
-A minimal, keyboard-driven Sway desktop
+<div align="center">
+
+# 🌊 Archway
+
+**A minimal, keyboard-driven Sway desktop for Fedora Atomic**
 
 </div>
-📸 Preview
-<div align="center"> <img width="1920" height="1080" alt="2026-08-05_17-23-09" src="https://github.com/user-attachments/assets/62281113-1e35-43b8-aefd-4a359f43ed07" /> </div>
-📋 Table of Contents
-Overview
-Core stack
-Theme
-Sway configuration
-Keybindings
-Waybar
-Rofi
-Foot terminal
-Dunst notifications
-Swaylock
-Screenshots and recording
-Power management
-Repository layout
-Philosophy
-License
-🌿 Overview
 
-Archway is a minimal Wayland desktop built around Sway and tuned for a keyboard-first workflow.
+---
 
-It is intentionally small, dark, and consistent across the whole session:
+## 📸 Preview
 
-black backgrounds
-muted greys
-JetBrains Mono Nerd Font
-simple borders and gaps
-workspace-focused navigation
-a compact top bar with useful indicators
-🧰 Core stack
-Area	Tooling
-Compositor	Sway
-Bar	Waybar
-Terminal	Foot
-Launcher	Rofi
-File manager	Thunar
-Notifications	Dunst
-Output management	Kanshi
-Automatic tiling	Autotiling
-Screen locker	Swaylock
-Idle / power	Swayidle
-Wallpaper	Swaybg
-Screenshots	Grim + Slurp
-Recording	wf-recorder
-Audio	PipeWire + WirePlumber
-Keyring	GNOME Keyring
-Removable media	Udiskie
-Bluetooth	BlueZ + Blueman
-Network	NetworkManager + NetworkManager applet + nmtui
-Secrets manager	KeePassXC
+<div align="center">
+
+<img width="1920" height="1080" alt="2026-08-05_17-23-09" src="https://github.com/user-attachments/assets/62281113-1e35-43b8-aefd-4a359f43ed07" />
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [Overview](#-overview)
+- [Core stack](#-core-stack)
+- [Layered packages](#-layered-packages)
+- [Theme](#-theme)
+- [Sway configuration](#-sway-configuration)
+- [Keybindings](#-keybindings)
+- [Waybar](#-waybar)
+- [Rofi](#-rofi)
+- [Foot terminal](#-foot-terminal)
+- [Dunst notifications](#-dunst-notifications)
+- [Swaylock](#-swaylock)
+- [Screenshots and recording](#-screenshots-and-recording)
+- [Power management](#-power-management)
+- [Repository layout](#-repository-layout)
+- [Philosophy](#-philosophy)
+- [License](#-license)
+
+---
+
+## 🌿 Overview
+
+Archway is a minimal Wayland desktop built around **Sway** on **Fedora Atomic**.
+
+It is designed around an immutable base system with a small number of layered packages for system-level tools, virtualization, networking, media, and desktop utilities.
+
+The desktop is intentionally small, dark, and consistent across the whole session:
+
+- black backgrounds
+- muted greys
+- JetBrains Mono Nerd Font
+- simple borders and gaps
+- workspace-focused navigation
+- a compact top bar with useful indicators
+- keyboard-first workflow
+- immutable base with declarative-feeling configuration
+
+---
+
+## 🧰 Core stack
+
+| Area | Tooling |
+| --- | --- |
+| Base system | Fedora Atomic |
+| Compositor | Sway |
+| Bar | Waybar |
+| Terminal | Foot |
+| Launcher | Rofi |
+| File manager | Thunar |
+| Browser | Firefox |
+| Notifications | Dunst |
+| Output management | Kanshi |
+| Automatic tiling | Autotiling |
+| Screen locker | Swaylock |
+| Idle / power | Swayidle |
+| Wallpaper | Swaybg |
+| Screenshots | Grim + Slurp |
+| Recording | wf-recorder |
+| Audio | PipeWire + WirePlumber |
+| Keyring | GNOME Keyring |
+| Secrets manager | KeePassXC |
+| Removable media | Udiskie |
+| Bluetooth | BlueZ + Blueman |
+| Network | NetworkManager + nm-applet + nmtui |
+| Virtualization | QEMU/KVM + libvirt + virt-manager |
+| Media player | MPV |
+| PDF / document viewer | Zathura |
+
+---
+
+## 📦 Layered packages
+
+The following packages are layered onto the Fedora Atomic base system.
+
+They are intentionally kept as system packages rather than Flatpaks because they provide system-level functionality, command-line tools, virtualization support, networking, or desktop integration.
+
+```text
+brave-browser
+fastfetch
+gnome-disk-utility
+htop
+libvirt
+libvirt-daemon-config-network
+mpv
+NetworkManager-tui
+proton-vpn-cli
+qemu-kvm
+seahorse
+virt-manager
+wdisplays
+wf-recorder
+zathura
+
+Layering
+
+The packages can be added to the system with:
+
+rpm-ostree install \
+  brave-browser \
+  fastfetch \
+  gnome-disk-utility \
+  htop \
+  libvirt \
+  libvirt-daemon-config-network \
+  mpv \
+  NetworkManager-tui \
+  proton-vpn-cli \
+  qemu-kvm \
+  seahorse \
+  virt-manager \
+  wdisplays \
+  wf-recorder \
+  zathura
+
+
+After layering packages, reboot into the new deployment:
+
+systemctl reboot
+
+Why these are layered
+
+These packages provide functionality that benefits from being available directly on the host:
+
+QEMU/KVM + libvirt — virtualization
+virt-manager — graphical VM management
+libvirt-daemon-config-network — libvirt networking
+NetworkManager-tui — keyboard-driven network management
+proton-vpn-cli — VPN command-line management
+wf-recorder — Wayland screen recording
+wdisplays — display configuration
+gnome-disk-utility — disk and partition management
+htop — terminal system monitoring
+fastfetch — system information
+mpv — media playback
+zathura — keyboard-driven document viewing
+seahorse — keyring and secret management
+brave-browser — secondary browser
+
+Firefox remains the primary browser used by the desktop configuration.
+
 🎨 Theme
 
 The whole desktop shares a monochrome look.
@@ -122,7 +228,7 @@ Ctrl + Alt + T	Open terminal (foot)
 Mod + Space	Application launcher
 Mod + E	Rofi file browser
 Mod + Shift + E	Open Thunar
-Mod + W	Open Brave Origin
+Mod + W	Open Firefox
 Mod + Z	Open Zed
 Mod + L	Lock screen
 Mod + Shift + P	Display settings (wdisplays)
@@ -194,7 +300,7 @@ Virt-manager
 pavucontrol
 Blueman manager
 nmtui
-Brave picture-in-picture windows
+Firefox picture-in-picture windows
 📊 Waybar
 
 Waybar is configured as a compact top bar.
@@ -220,7 +326,7 @@ Common app IDs are replaced with icons so workspace usage is easier to read.
 Examples include:
 
 Foot
-Brave Origin
+Firefox
 Zed
 Thunar
 Zathura
@@ -345,8 +451,11 @@ visually consistent
 easy to restore
 transparent in configuration
 practical for everyday laptop use
+designed around an immutable base system
 
-The goal is to provide a clean, flexible Sway desktop with a declarative-feeling configuration while keeping the underlying system unobtrusive.
+The goal is to keep the underlying system stable while providing a clean, flexible, and highly customized Sway desktop.
+
+System-level software is layered onto the base only when necessary, while the rest of the desktop remains lightweight and user-configurable.
 
 📄 License
 
