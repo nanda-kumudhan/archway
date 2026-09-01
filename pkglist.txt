@@ -136,6 +136,7 @@ wget
 wireplumber
 wmenu
 wpa_supplicant
+xdg-desktop-portal-wlr
 xdg-utils
 xorg-xwayland
 yay-bin
