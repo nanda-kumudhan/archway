@@ -52,6 +52,7 @@ maven
 mkinitcpio
 mpv
 nano
+neovim
 network-manager-applet
 networkmanager
 noto-fonts
@@ -107,6 +108,7 @@ tree
 ttf-jetbrains-mono-nerd
 udiskie
 ufw
+vim
 virt-manager
 vulkan-intel
 waybar
