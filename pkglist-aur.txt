@@ -1,0 +1,4 @@
+brave-bin
+localsend-bin
+yay-bin
+yay-bin-debug

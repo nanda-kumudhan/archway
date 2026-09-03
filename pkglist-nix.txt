@@ -1,0 +1,8 @@
+Name:               [1mcowsay[0m
+Flake attribute:    legacyPackages.x86_64-linux.cowsay
+Original flake URL: flake:nixpkgs
+Locked flake URL:   https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1063758.e8be7818e19a/nixexprs.tar.xz?narHash=sha256-qeiZaY%2B0tpZXliRA9odCNx%2BsOfIOhnkcUq9t%2BctPrRA%3D
+Store paths:        /nix/store/hvyn8z7zmk4m36rpc2q7nlwkmviijm20-cowsay-3.8.4 /nix/store/i7gygfmwxj0jv65szaji5pg8k8nnzr0n-cowsay-3.8.4-man
+
+Name:               [1mhello[0m
+Store paths:        /nix/store/wzr035k31pmpn2caabq8qwv1npg571z9-hello-2.12.3
