@@ -22,7 +22,7 @@ flatpak
 foot
 fprintd
 fuse2
-fwupdmgr
+fwupd
 gcc
 git
 github-cli
