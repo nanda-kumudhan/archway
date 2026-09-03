@@ -5,7 +5,6 @@ base-devel
 blueman
 bluez
 bluez-utils
-brave-bin
 brightnessctl
 btrfs-progs
 clang
@@ -46,7 +45,6 @@ linux
 linux-firmware
 linux-lts
 lldb
-localsend-bin
 ly
 materia-gtk-theme
 maven
@@ -132,6 +130,7 @@ vim
 virt-manager
 vulkan-intel
 waybar
+waydroid
 wdisplays
 wf-recorder
 wget
@@ -141,8 +140,6 @@ wpa_supplicant
 xdg-desktop-portal-wlr
 xdg-utils
 xorg-xwayland
-yay-bin
-yay-bin-debug
 zathura
 zed
 zram-generator
