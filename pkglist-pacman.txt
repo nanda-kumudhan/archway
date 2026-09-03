@@ -76,6 +76,7 @@ prismlauncher
 proton-vpn-cli
 python-pip
 qemu-base
+qemu-full
 remmina
 rofi
 rpi-imager
