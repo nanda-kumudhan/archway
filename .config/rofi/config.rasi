@@ -1,4 +1,4 @@
 configuration {
 }
 
-@theme "/home/zenith/.config/rofi/mono.rasi"
+@theme "~/.config/rofi/mono.rasi"
