@@ -1,3 +1,5 @@
+7zip
+anki
 apparmor
 autotiling
 base
@@ -12,8 +14,11 @@ cups
 cups-pk-helper
 dbeaver
 distrobox
+docker
+docker-compose
 dunst
 efibootmgr
+ex-vi-compat
 exfatprogs
 fastfetch
 firefox
@@ -30,6 +35,7 @@ gnome-keyring
 go
 gradle
 grim
+grml-zsh-config
 gst-plugin-pipewire
 htop
 imv
@@ -38,6 +44,8 @@ intel-ucode
 jdk-openjdk
 kanshi
 keepassxc
+kind
+kubectl
 libpulse
 libreoffice-fresh
 libva-intel-driver
@@ -126,6 +134,8 @@ tree
 ttf-jetbrains-mono-nerd
 udiskie
 ufw
+unrar
+unzip
 vim
 virt-manager
 vulkan-intel
@@ -137,9 +147,18 @@ wget
 wireplumber
 wmenu
 wpa_supplicant
+xarchiver
 xdg-desktop-portal-wlr
 xdg-utils
 xorg-xwayland
 zathura
 zed
 zram-generator
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-doc
+zsh-history-substring-search
+zsh-lovers
+zsh-syntax-highlighting
+zshdb
