@@ -136,6 +136,7 @@ udiskie
 ufw
 unrar
 unzip
+vi
 vim
 virt-manager
 vulkan-intel
@@ -154,11 +155,3 @@ xorg-xwayland
 zathura
 zed
 zram-generator
-zsh
-zsh-autosuggestions
-zsh-completions
-zsh-doc
-zsh-history-substring-search
-zsh-lovers
-zsh-syntax-highlighting
-zshdb
