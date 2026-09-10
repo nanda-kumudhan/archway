@@ -4,7 +4,6 @@ apparmor
 autotiling
 base
 base-devel
-blueman
 bluez
 bluez-utils
 brightnessctl
@@ -35,7 +34,6 @@ gnome-keyring
 go
 gradle
 grim
-grml-zsh-config
 gst-plugin-pipewire
 htop
 imv
@@ -43,7 +41,6 @@ intel-media-driver
 intel-ucode
 jdk-openjdk
 kanshi
-keepassxc
 kind
 kubectl
 libpulse
@@ -60,7 +57,6 @@ mkinitcpio
 mpv
 nano
 neovim
-network-manager-applet
 networkmanager
 nix
 noto-fonts
@@ -78,11 +74,11 @@ podman
 podman-desktop
 polkit-gnome
 powertop
-prismlauncher
 proton-vpn-cli
 python-pip
 qemu-base
 qemu-full
+qrencode
 remmina
 rofi
 rpi-imager
@@ -136,7 +132,6 @@ udiskie
 ufw
 unrar
 unzip
-vi
 vim
 virt-manager
 vulkan-intel
@@ -155,3 +150,5 @@ xorg-xwayland
 zathura
 zed
 zram-generator
+zsh-doc
+zsh-lovers
