@@ -39,10 +39,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "tooltip-format-disabled": "Network disabled",
 
-    "format-alt": "{ifname}: {ipaddr}",
-    "on-click": "nm-connection-editor",
-    "on-click-right": "nmcli radio wifi off && nmcli radio wifi on",
-    "on-click-middle": "kitty -e nmtui"
+
   },
 
   "bluetooth": {
@@ -56,10 +53,7 @@
     "tooltip-format": "Bluetooth: {status}",
     "tooltip-format-connected": "Connected: {device_alias}\nBattery: {device_battery_percentage}%",
 
-    "format-alt": "{device_alias}",
-    "on-click": "blueman-manager",
-    "on-click-right": "bluetoothctl power off && sleep 1 && bluetoothctl power on",
-    "on-click-middle": "blueman-manager"
+
   },
 
 
@@ -194,8 +188,8 @@
       "󰃟",
       "󰃠"
     ],
-    "scroll-step": 1,
-    "tooltip-format": "Brightness: {percent}%"
+
+
   },
 
   "wireplumber": {
@@ -207,11 +201,6 @@
       "󰕾"
     ],
     "max-volume": 100,
-    "scroll-step": 1,
-    "tooltip-format": "Volume: {volume}%\nNode: {node_name}",
-    "on-click": "$HOME/.config/rofi/pipewire-output",
-    "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-right": "pavucontrol"
   },
 
   "idle_inhibitor": {
