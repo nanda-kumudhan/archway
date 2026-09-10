@@ -19,10 +19,49 @@
     "backlight",
     "battery",
     "privacy",
+    "network",
+    "bluetooth",
     "power-profiles-daemon",
     "idle_inhibitor",
     "tray"
   ],
+
+  "network": {
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀",
+    "format-linked": "󰈀",
+    "format-disconnected": "󰖪",
+    "format-disabled": "󰖪",
+
+    "tooltip-format-wifi": "Wi-Fi: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
+    "tooltip-format-ethernet": "Ethernet\nIP: {ipaddr}",
+    "tooltip-format-linked": "Connected\nInterface: {ifname}\nIP: {ipaddr}",
+    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format-disabled": "Network disabled",
+
+    "format-alt": "{ifname}: {ipaddr}",
+    "on-click": "nm-connection-editor",
+    "on-click-right": "nmcli radio wifi off && nmcli radio wifi on",
+    "on-click-middle": "kitty -e nmtui"
+  },
+
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱 {device_alias}",
+    "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
+
+    "tooltip-format": "Bluetooth: {status}",
+    "tooltip-format-connected": "Connected: {device_alias}\nBattery: {device_battery_percentage}%",
+
+    "format-alt": "{device_alias}",
+    "on-click": "blueman-manager",
+    "on-click-right": "bluetoothctl power off && sleep 1 && bluetoothctl power on",
+    "on-click-middle": "blueman-manager"
+  },
+
 
   "sway/workspaces": {
     "format": "{name} {windows}",
