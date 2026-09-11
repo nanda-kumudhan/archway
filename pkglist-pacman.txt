@@ -4,6 +4,7 @@ apparmor
 autotiling
 base
 base-devel
+bluetui
 bluez
 bluez-utils
 brightnessctl
