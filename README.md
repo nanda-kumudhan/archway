@@ -31,7 +31,6 @@ The desktop is intentionally small, dark, and consistent across the whole sessio
 - workspace-focused navigation
 - a compact top bar with useful indicators
 - keyboard-first workflow
-- immutable base with declarative-feeling configuration
 
 ---
 
@@ -56,13 +55,13 @@ The desktop is intentionally small, dark, and consistent across the whole sessio
 | Recording | wf-recorder |
 | Audio | PipeWire + WirePlumber |
 | Keyring | GNOME Keyring |
-| Secrets manager | KeePassXC |
+| Secrets manager | Gnome Keyring |
 | Removable media | Udiskie |
-| Bluetooth | BlueZ + Blueman |
+| Bluetooth | BlueZ + Blueman + bluetui |
 | Network | NetworkManager + nm-applet + nmtui |
 | Virtualization | QEMU/KVM + libvirt + virt-manager |
-| Media player | MPV |
+| Image viewer | imv |
+| Media player | mpv |
 | PDF / document viewer | Zathura |
 
 ---
-
