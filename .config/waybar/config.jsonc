@@ -80,11 +80,6 @@
       "podman": "󰡨",
       "dbeaver": "󰆼",
 
-      "class<discord>": "󰙯",
-      "class<Spotify>": "󰓇",
-      "class<org.prismlauncher.PrismLauncher>": "󰍹",
-      "class<io.stremio.Stremio>": "󰓹",
-
       "org.localsend.localsend_app": "󰇚",
 
       "imv": "󰋩",
@@ -101,10 +96,16 @@
       "libreoffice-draw": "󰕳",
       "libreoffice-math": "󰙩",
 
-      "blueman": "󰂯",
+
       "virt-manager": "󰢹",
       "pavucontrol": "󰕾",
-      "nm-connection-editor": "󰛳"
+
+      "transmission-gtk": "󰇚",
+      "torbrowser-launcher": "󰗹",
+      "system-config-printer": "󰐪",
+      "xarchiver": "󰗄",
+      "Anki": "󰗚",
+
     }
   },
 
