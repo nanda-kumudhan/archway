@@ -55,7 +55,7 @@ The desktop is intentionally small, dark, and consistent across the whole sessio
 | Recording | wf-recorder |
 | Audio | PipeWire + WirePlumber |
 | Keyring | GNOME Keyring |
-| Secrets manager | Gnome Keyring |
+| Secrets manager | KeePassXC |
 | Removable media | Udiskie |
 | Bluetooth | BlueZ + Blueman + bluetui |
 | Network | NetworkManager + nm-applet + nmtui |
