@@ -4,12 +4,10 @@ set $file_menu exec rofi -show filebrowser -show-icons -icon-theme "Papirus-Dark
 set $power_menu exec sh -c 'choice=$(printf "Logout\nCancel" | rofi -dmenu -i -p "Session"); [ "$choice" = "Logout" ] && swaymsg exit'
 set $editor zeditor
 
-
 exec autotiling
 exec dunst
 exec kanshi
 exec --no-startup-id keepassxc --minimized
-
 
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP PATH
@@ -95,7 +93,9 @@ focus_follows_mouse no
 # --- Idle & Power ---
 # Lock and power management
 exec swayidle -w \
-    timeout 300 'swaylock -f' \
+    timeout 300 'swaylock -f && swaymsg "output * power off"' \
+        resume 'swaymsg "output * power on"' \
+    timeout 900 'systemctl suspend' \
     before-sleep 'swaylock -f'
 
 # --- Keybinds ---
@@ -110,6 +110,7 @@ bindsym Mod4+Shift+q kill
 bindsym Mod4+l exec swaylock
 bindsym Ctrl+Escape exec $term -T "sysmon" -e htop
 bindsym Mod4+w exec firefox
+bindsym Mod4+k exec keepassxc
 
 # Full screenshot
 bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
