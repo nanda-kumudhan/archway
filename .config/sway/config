@@ -93,7 +93,7 @@ focus_follows_mouse no
 # --- Idle & Power ---
 # Lock and power management
 exec swayidle -w \
-    timeout 300 'swaylock -f && swaymsg "output * power off"' \
+    timeout 300 'swaylock -fcl && swaymsg "output * power off"' \
         resume 'swaymsg "output * power on"' \
     timeout 900 'systemctl suspend' \
     before-sleep 'swaylock -f'
@@ -143,7 +143,6 @@ bindsym Mod4+Up focus up
 bindsym Mod4+Right focus right
 bindsym Mod4+a focus parent
 bindsym Mod4+Shift+a focus child
-
 
 bindsym Mod4+Shift+Left move left
 bindsym Mod4+Shift+Down move down

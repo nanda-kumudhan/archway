@@ -23,7 +23,6 @@
     "bluetooth",
     "power-profiles-daemon",
     "idle_inhibitor",
-    "tray"
   ],
 
   "network": {
@@ -55,7 +54,6 @@
     "tooltip-format-connected": "Connected: {device_alias}\nBattery: {device_battery_percentage}%",
 
   },
-
 
   "sway/workspaces": {
     "format": "{name} {windows}",
@@ -189,6 +187,7 @@
       "󰃟",
       "󰃠"
     ],
+
 
 
   },
