@@ -20,7 +20,7 @@
 
 ## 🌿 Overview
 
-Archway is a minimal Wayland desktop built around **Sway** on **Arch Linux**.
+Minimal Wayland desktop built around **Fedora Sway Spin**.
 
 The desktop is intentionally small, dark, and consistent across the whole session:
 
@@ -38,7 +38,7 @@ The desktop is intentionally small, dark, and consistent across the whole sessio
 
 | Area | Tooling |
 | --- | --- |
-| Base system | Arch Linux |
+| Base system | Fedora |
 | Compositor | Sway |
 | Bar | Waybar |
 | Terminal | Foot |
@@ -47,7 +47,6 @@ The desktop is intentionally small, dark, and consistent across the whole sessio
 | Browser | Firefox |
 | Notifications | Dunst |
 | Output management | Kanshi |
-| Automatic tiling | Autotiling |
 | Screen locker | Swaylock |
 | Idle / power | Swayidle |
 | Wallpaper | Swaybg |
@@ -57,7 +56,7 @@ The desktop is intentionally small, dark, and consistent across the whole sessio
 | Keyring | GNOME Keyring |
 | Secrets manager | KeePassXC |
 | Removable media | Udiskie |
-| Bluetooth | BlueZ + Blueman + bluetui |
+| Bluetooth | BlueZ + Blueman |
 | Network | NetworkManager + nm-applet + nmtui |
 | Virtualization | QEMU/KVM + libvirt + virt-manager |
 | Image viewer | imv |
