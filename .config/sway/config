@@ -6,6 +6,7 @@ set $editor zed
 
 exec nm-applet --indicator
 exec blueman-applet
+exec /usr/libexec/sway-service /usr/libexec/lxqt-policykit-agent
 exec dunst
 exec kanshi
 exec --no-startup-id keepassxc --minimized
