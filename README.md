@@ -1,9 +1,9 @@
 
 <div align="center">
 
-# 🌊 Archway
+# 🌊 Sway
 
-**A minimal, keyboard-driven Sway desktop for Arch Linux**
+**A minimal, keyboard-driven Sway desktop for Linux**
 
 </div>
 
