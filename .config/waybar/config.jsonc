@@ -19,41 +19,10 @@
     "backlight",
     "battery",
     "privacy",
-    "network",
-    "bluetooth",
+    "tray",
     "power-profiles-daemon",
     "idle_inhibitor",
   ],
-
-  "network": {
-    "format-wifi": "󰖩 {essid}",
-    "format-ethernet": "󰈀",
-    "format-linked": "󰈀",
-    "format-disconnected": "󰖪",
-    "format-disabled": "󰖪",
-    "on-click": "nmcli radio wifi on",
-    "on-click-middle": "nmcli radio wifi off",
-    "tooltip-format-wifi": "Wi-Fi: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
-    "tooltip-format-ethernet": "Ethernet\nIP: {ipaddr}",
-    "tooltip-format-linked": "Connected\nInterface: {ifname}\nIP: {ipaddr}",
-    "tooltip-format-disconnected": "Disconnected",
-    "tooltip-format-disabled": "Network disabled",
-
-  },
-
-  "bluetooth": {
-    "format": "󰂯",
-    "format-disabled": "󰂲",
-    "format-off": "󰂲",
-    "format-on": "󰂯",
-    "format-connected": "󰂱 {device_alias}",
-    "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
-    "on-click": "bluetoothctl power on",
-    "on-click-middle": "bluetoothctl power off",
-    "tooltip-format": "Bluetooth: {status}",
-    "tooltip-format-connected": "Connected: {device_alias}\nBattery: {device_battery_percentage}%",
-
-  },
 
   "sway/workspaces": {
     "format": "{name} {windows}",
