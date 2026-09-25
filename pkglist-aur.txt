@@ -1,4 +1,6 @@
 brave-bin
+libgnome-keyring
+libgnome-keyring-debug
 localsend-bin
-yay-bin
-yay-bin-debug
+yay
+yay-debug
