@@ -13,7 +13,6 @@ bluez-utils
 brave-bin
 brightnessctl
 btrfs-progs
-btrfsmaintenance
 clang
 cowsay
 cups
@@ -104,8 +103,6 @@ sbctl
 seahorse
 slurp
 smartmontools
-snap-pac
-snapper
 sof-firmware
 spotify-launcher
 starship
