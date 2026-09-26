@@ -1,3 +1,7 @@
+
+ ~ 
+  cat pkglist.txt
+=== PACMAN ===
 7zip
 android-tools
 anki
@@ -10,9 +14,9 @@ blueman
 bluetui
 bluez
 bluez-utils
-brave-bin
 brightnessctl
 btrfs-progs
+btrfsmaintenance
 clang
 cowsay
 cups
@@ -45,19 +49,19 @@ imv
 intel-media-driver
 intel-ucode
 jdk-openjdk
+jupyterlab
 kanshi
 keepassxc
 kind
 kubectl
 libayatana-indicator
-libgnome-keyring
 libpulse
 libreoffice-fresh
+libva-intel-driver
 linux
 linux-firmware
 linux-lts
 lldb
-localsend-bin
 ly
 man-db
 man-pages
@@ -67,6 +71,7 @@ mkinitcpio
 mpv
 nano
 neovim
+network-manager-applet
 networkmanager
 networkmanager-openconnect
 nix
@@ -137,8 +142,8 @@ texlive-publishers
 texlive-xetex
 texstudio
 thunar
+tlp
 tlp-pd
-tlp-rdw
 tor
 torbrowser-launcher
 torsocks
@@ -155,6 +160,8 @@ unzip
 vim
 virt-manager
 vulkan-intel
+vulkan-nouveau
+vulkan-radeon
 waybar
 waydroid
 wdisplays
@@ -166,9 +173,16 @@ wpa_supplicant
 xarchiver
 xdg-desktop-portal-wlr
 xdg-utils
+xf86-video-amdgpu
+xf86-video-ati
+xf86-video-nouveau
 xorg-xwayland
-yay
-yay-debug
 zathura
 zed
 zram-generator
+=== AUR ===
+brave-bin
+libgnome-keyring
+localsend-bin
+yay
+yay-debug
