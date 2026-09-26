@@ -1,6 +1,3 @@
-
- ~ 
-  cat pkglist.txt
 === PACMAN ===
 7zip
 android-tools
