@@ -1,6 +1,7 @@
 7zip
 android-tools
 anki
+apfsprogs
 apparmor
 autotiling
 base
@@ -11,6 +12,7 @@ bluez-utils
 brave-bin
 brightnessctl
 btrfs-progs
+btrfsmaintenance
 clang
 cowsay
 cups
@@ -20,6 +22,7 @@ discord
 distrobox
 docker
 docker-compose
+dosfstools
 dunst
 efibootmgr
 exfatprogs
@@ -50,13 +53,14 @@ libayatana-indicator
 libgnome-keyring
 libpulse
 libreoffice-fresh
-libva-intel-driver
 linux
 linux-firmware
 linux-lts
 lldb
 localsend-bin
 ly
+man-db
+man-pages
 materia-gtk-theme
 maven
 mkinitcpio
@@ -68,6 +72,7 @@ networkmanager-openconnect
 nix
 noto-fonts
 noto-fonts-emoji
+ntfs-3g
 ntfsprogs
 nwg-look
 openconnect
@@ -89,6 +94,7 @@ python-pipx
 qemu-base
 qemu-full
 qrencode
+reflector
 remmina
 rofi
 rpi-imager
@@ -140,8 +146,10 @@ torbrowser-launcher
 torsocks
 transmission-gtk
 tree
+ttf-croscore
 ttf-dejavu
 ttf-jetbrains-mono-nerd
+ttf-liberation
 udiskie
 ufw
 unrar
