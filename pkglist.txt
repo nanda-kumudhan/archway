@@ -6,6 +6,7 @@ apparmor
 autotiling
 base
 base-devel
+blueman
 bluetui
 bluez
 bluez-utils
