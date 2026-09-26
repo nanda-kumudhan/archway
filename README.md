@@ -1,7 +1,7 @@
 
 <div align="center">
 
-# 🌊 Sway
+# 🌊 Archway
 
 **A minimal, keyboard-driven Sway desktop for Linux**
 
@@ -20,7 +20,7 @@
 
 ## 🌿 Overview
 
-Minimal Wayland desktop built around **Fedora Sway Spin**.
+Minimal Wayland desktop built around **Arch Linux/Fedora Sway Spin**.
 
 The desktop is intentionally small, dark, and consistent across the whole session:
 
@@ -38,7 +38,7 @@ The desktop is intentionally small, dark, and consistent across the whole sessio
 
 | Area | Tooling |
 | --- | --- |
-| Base system | Fedora |
+| Base system | Arch/Fedora |
 | Compositor | Sway |
 | Bar | Waybar |
 | Terminal | Foot |
