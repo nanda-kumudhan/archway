@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "vim_mode": false,
+  "modeline_lines": 5,
   "disable_ai": true,
   "proxy": "",
   "ui_font_size": 16,
