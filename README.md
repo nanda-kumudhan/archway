@@ -74,13 +74,16 @@ This repo is meant to be used as a dotfiles repo, not as a packaged app.
 git clone https://github.com/nanda-kumudhan/dotfiles.git ~/.dotfiles
 ```
 
-2. Symlink the files or configuration directories you want into your home directory:
+2. Symlink the tracked dotfiles into your home directory:
 
 ```bash
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
-ln -s ~/.dotfiles/.config/sway ~/.config/sway
-ln -s ~/.dotfiles/.config/waybar ~/.config/waybar
+for path in ~/.dotfiles/.config/*; do
+    ln -s "$path" "$HOME/.config/$(basename "$path")"
+done
 ```
+
+Back up any existing files or directories before creating the links. The repository contains both configuration directories and individual files such as `.config/starship.toml`.
 
 3. Install the system packages listed in `pkglist.txt`:
 
