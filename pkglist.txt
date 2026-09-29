@@ -12,8 +12,8 @@ bluez
 bluez-utils
 brave-bin
 brightnessctl
-btrfsmaintenance
 btrfs-progs
+btrfsmaintenance
 clang
 cowsay
 cups
@@ -21,6 +21,7 @@ cups-pk-helper
 dbeaver
 discord
 distrobox
+dmidecode
 docker
 docker-compose
 dosfstools
@@ -71,8 +72,8 @@ mkinitcpio
 mpv
 nano
 neovim
-networkmanager
 network-manager-applet
+networkmanager
 networkmanager-openconnect
 nix
 noto-fonts
@@ -147,6 +148,7 @@ tlp-pd
 tor
 torbrowser-launcher
 torsocks
+tpm2-tools
 transmission-gtk
 tree
 ttf-croscore
