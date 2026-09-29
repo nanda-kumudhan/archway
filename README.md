@@ -8,8 +8,9 @@ Personal dotfiles and desktop configuration for a minimal, keyboard-first Linux 
 This repository contains the config files I use for my daily machine, including:
 
 - shell setup in `.bashrc`
-- Sway and Wayland configuration under `.config/`
-- app settings for tools such as `foot`, `rofi`, `waybar`, `dunst`, `mpv`, `kanshi`, and `swaylock`
+- Sway configuration under `.config/sway/`
+- Waybar configuration and styling under `.config/waybar/`
+- app settings for tools such as `foot`, `rofi`, `dunst`, `mpv`, `kanshi`, and `swaylock`
 - a full package list in `pkglist.txt`
 - browser and helper config extras such as `keepassxc-browser_settings.json` and `my-ublock-static-filters.txt`
 
@@ -28,8 +29,13 @@ This repository contains the config files I use for my daily machine, including:
 │   ├── nix/
 │   ├── rofi/
 │   ├── sway/
+│   │   ├── config
+│   │   ├── outputs
+│   │   └── workspaces
 │   ├── swaylock/
 │   ├── waybar/
+│   │   ├── config.jsonc
+│   │   └── style.css
 │   ├── xdg-desktop-portal-wlr/
 │   └── zed/
 ├── keepassxc-browser_settings.json
@@ -68,11 +74,12 @@ This repo is meant to be used as a dotfiles repo, not as a packaged app.
 git clone https://github.com/nanda-kumudhan/dotfiles.git ~/.dotfiles
 ```
 
-2. Symlink the files you want into your home directory:
+2. Symlink the files or configuration directories you want into your home directory:
 
 ```bash
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
-ln -s ~/.dotfiles/.config ~/.config
+ln -s ~/.dotfiles/.config/sway ~/.config/sway
+ln -s ~/.dotfiles/.config/waybar ~/.config/waybar
 ```
 
 3. Install the system packages listed in `pkglist.txt`:
