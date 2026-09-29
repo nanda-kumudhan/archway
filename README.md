@@ -1,66 +1,94 @@
 
-<div align="center">
+# Archway Dotfiles
 
-# 🌊 Archway
+Personal dotfiles and desktop configuration for a minimal, keyboard-first Linux setup built around Sway/Wayland on Arch.
 
-**A minimal, keyboard-driven Sway desktop for Linux**
+## What is in this repo
 
-</div>
+This repository contains the config files I use for my daily machine, including:
 
----
+- shell setup in `.bashrc`
+- Sway and Wayland configuration under `.config/`
+- app settings for tools such as `foot`, `rofi`, `waybar`, `dunst`, `mpv`, `kanshi`, and `swaylock`
+- a full package list in `pkglist.txt`
+- browser and helper config extras such as `keepassxc-browser_settings.json` and `my-ublock-static-filters.txt`
 
-## 📸 Preview
+## Repo layout
 
-<div align="center">
+```text
+.
+├── .bashrc
+├── .config/
+│   ├── dunst/
+│   ├── fastfetch/
+│   ├── foot/
+│   ├── kanshi/
+│   ├── keepassxc/
+│   ├── mpv/
+│   ├── nix/
+│   ├── rofi/
+│   ├── sway/
+│   ├── swaylock/
+│   ├── waybar/
+│   ├── xdg-desktop-portal-wlr/
+│   └── zed/
+├── keepassxc-browser_settings.json
+├── my-ublock-static-filters.txt
+├── pkglist.txt
+├── README.md
+└── .git/
+```
 
-<img width="1920" height="1080" alt="2026-08-05_17-23-09" src="https://github.com/user-attachments/assets/62281113-1e35-43b8-aefd-4a359f43ed07" />
+## Core desktop stack
 
-</div>
+- OS: Arch Linux
+- Compositor: Sway
+- Bar: Waybar
+- Terminal: Foot
+- Launcher: Rofi
+- Notifications: Dunst
+- Screen locker: Swaylock
+- Wallpaper: Swaybg
+- Display management: Kanshi
+- Audio: PipeWire + WirePlumber
+- Browser: Firefox
+- File manager: Thunar
+- Image viewer: imv
+- Media player: mpv
+- PDF viewer: Zathura
+- Clipboard / utilities: various Wayland-friendly tools
 
+## Installation
 
-## 🌿 Overview
+This repo is meant to be used as a dotfiles repo, not as a packaged app.
 
-Minimal Wayland desktop built around **Arch Linux/Fedora Sway Spin**.
+1. Clone the repo somewhere convenient:
 
-The desktop is intentionally small, dark, and consistent across the whole session:
+```bash
+git clone https://github.com/nanda-kumudhan/dotfiles.git ~/.dotfiles
+```
 
-- black backgrounds
-- muted greys
-- JetBrains Mono Nerd Font
-- simple borders and gaps
-- workspace-focused navigation
-- a compact top bar with useful indicators
-- keyboard-first workflow
+2. Symlink the files you want into your home directory:
 
----
+```bash
+ln -s ~/.dotfiles/.bashrc ~/.bashrc
+ln -s ~/.dotfiles/.config ~/.config
+```
 
-## 🧰 Core stack
+3. Install the system packages listed in `pkglist.txt`:
 
-| Area | Tooling |
-| --- | --- |
-| Base system | Arch/Fedora |
-| Compositor | Sway |
-| Bar | Waybar |
-| Terminal | Foot |
-| Launcher | Rofi |
-| File manager | Thunar |
-| Browser | Firefox |
-| Notifications | Dunst |
-| Output management | Kanshi |
-| Screen locker | Swaylock |
-| Idle / power | Swayidle |
-| Wallpaper | Swaybg |
-| Screenshots | Grim + Slurp |
-| Recording | wf-recorder |
-| Audio | PipeWire + WirePlumber |
-| Keyring | GNOME Keyring |
-| Secrets manager | KeePassXC |
-| Removable media | Udiskie |
-| Bluetooth | BlueZ + Blueman |
-| Network | NetworkManager + nm-applet + nmtui |
-| Virtualization | QEMU/KVM + libvirt + virt-manager |
-| Image viewer | imv |
-| Media player | mpv |
-| PDF / document viewer | Zathura |
+```bash
+sudo pacman -S --needed - < pkglist.txt
+```
 
----
+If you use an AUR helper like `yay`, you can also install additional packages from the same list as needed for your environment.
+
+## Notes
+
+- This is a personal setup and may not fit every machine out of the box.
+- Some files may contain machine-specific paths or preferences.
+- Review config files before applying them to a new system.
+
+## License
+
+This repository is for personal configuration and is shared as-is for reference and reuse.
