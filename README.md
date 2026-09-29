@@ -5,7 +5,11 @@ Personal dotfiles for a minimal, keyboard-first Arch Linux desktop built around 
 
 ## Preview
 
-![Archway desktop preview](assets/archway-desktop.png)
+![Fastfetch](assets/archway-desktop.png)
+
+![htop](assets/archway-desktop-221535.png)
+
+![Rofi](assets/archway-desktop-221520.png)
 
 ## What is in this repo
 
@@ -49,7 +53,9 @@ Edit the files in the cloned repository, not separate copies under `$HOME`. The 
 ├── my-ublock-static-filters.txt
 ├── pkglist.txt
 ├── assets/
-│   └── archway-desktop.png
+│   ├── archway-desktop.png
+│   ├── archway-desktop-221535.png
+│   └── archway-desktop-221520.png
 ├── README.md
 ```
 
