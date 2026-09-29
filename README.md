@@ -1,18 +1,24 @@
 
 # Archway Dotfiles
 
-Personal dotfiles and desktop configuration for a minimal, keyboard-first Linux setup built around Sway/Wayland on Arch.
+Personal dotfiles for a minimal, keyboard-first Arch Linux desktop built around Sway and Wayland.
+
+## Preview
+
+![Archway desktop preview](assets/archway-desktop.png)
 
 ## What is in this repo
 
-This repository contains the config files I use for my daily machine, including:
+This repository is the source of truth for the desktop configuration used on my daily machine. It includes:
 
 - shell setup in `.bashrc`
 - Sway configuration under `.config/sway/`
 - Waybar configuration and styling under `.config/waybar/`
-- app settings for tools such as `foot`, `rofi`, `dunst`, `mpv`, `kanshi`, and `swaylock`
-- a full package list in `pkglist.txt`
-- browser and helper config extras such as `keepassxc-browser_settings.json` and `my-ublock-static-filters.txt`
+- application settings for Foot, Rofi, Dunst, MPV, Kanshi, Swaylock, and Zed
+- the package inventory in `pkglist.txt`
+- KeePassXC Browser and uBlock Origin helper files
+
+Edit the files in the cloned repository, not separate copies under `$HOME`. The home-directory entries are symlinks to this repository.
 
 ## Repo layout
 
@@ -42,8 +48,9 @@ This repository contains the config files I use for my daily machine, including:
 ├── keepassxc-browser_settings.json
 ├── my-ublock-static-filters.txt
 ├── pkglist.txt
+├── assets/
+│   └── archway-desktop.png
 ├── README.md
-└── .git/
 ```
 
 ## Core desktop stack
@@ -67,36 +74,28 @@ This repository contains the config files I use for my daily machine, including:
 - PDF viewer: Zathura
 - Clipboard / utilities: various Wayland-friendly tools
 
-## Installation
+## Installation and symlinks
 
-This repo is meant to be used as a dotfiles repo, not as a packaged app.
+These steps install the packages and connect the configuration to your home directory.
 
-1. Clone the repo somewhere convenient:
-
-```bash
-git clone https://github.com/nanda-kumudhan/dotfiles.git ~/.dotfiles
-```
-
-2. Symlink the tracked dotfiles into your home directory:
+1. Clone the repository:
 
 ```bash
-ln -s ~/.dotfiles/.bashrc ~/.bashrc
-for path in ~/.dotfiles/.config/*; do
-    ln -s "$path" "$HOME/.config/$(basename "$path")"
-done
-```
-
-Back up any existing files or directories before creating the links. The repository contains both configuration directories and individual files such as `.config/starship.toml`.
-
-These commands create **absolute symlinks** using the repository's current path. If you clone this repository on another device, run the commands again from the new clone so `$PWD` points to the correct local repository:
-
-```bash
+git clone https://github.com/nanda-kumudhan/dotfiles.git ~/Github/dotfiles
 cd ~/Github/dotfiles
-ln -s "$PWD/.bashrc" ~/.bashrc
+```
+
+2. Back up any existing files or directories before creating the links. The commands below use the repository's current path and create **absolute symlinks**:
+
+```bash
+mkdir -p "$HOME/.config"
+ln -s "$PWD/.bashrc" "$HOME/.bashrc"
 for path in "$PWD"/.config/*; do
     ln -s "$path" "$HOME/.config/$(basename "$path")"
 done
 ```
+
+The repository contains both configuration directories and individual files such as `.config/starship.toml`. On another device, run these commands again from that device's clone; `$PWD` ensures the links point to the correct local path. Do not run them over existing paths without backing those paths up first.
 
 3. Install the system packages listed in `pkglist.txt`:
 
@@ -105,6 +104,20 @@ sudo pacman -S --needed - < pkglist.txt
 ```
 
 If you use an AUR helper like `yay`, you can also install additional packages from the same list as needed for your environment.
+
+4. Reload Sway after changing its configuration:
+
+```text
+Super+Shift+r
+```
+
+Changes to the symlinked files are immediately available to the relevant applications. Commit and push changes from the repository:
+
+```bash
+git add .
+git commit -m "update desktop configuration"
+git push
+```
 
 ## Common command-line tools
 
@@ -224,13 +237,15 @@ Sway uses `Mod4` as the **Super/Windows key** and `Mod1` as **Alt**. The shortcu
 | `XF86AudioLowerVolume` / `XF86AudioRaiseVolume` | Lower/raise speaker volume |
 | `XF86AudioMicMute` | Toggle microphone mute |
 | `XF86Tools` | Open the audio mixer |
-| `XF86Display` | Open `wdisplays` |
+| `XF86Display` (F7) | Open `wdisplays` |
 | `XF86AudioPrev` / `XF86AudioNext` | Previous/next media track |
 | `XF86AudioPlay` | Play/pause media |
 | `XF86AudioStop` | Stop media |
 | `XF86MonBrightnessDown` / `XF86MonBrightnessUp` | Lower/raise screen brightness |
 
 Three-finger touchpad swipes control media: swipe left for previous track, right for next track, and up for play/pause. Closing the laptop lid disables the internal display; opening it enables the display again.
+
+The settings/tools key currently opens the audio mixer (`pavucontrol`). It can also be assigned to a display layout tool such as `wdisplays`, the NetworkManager UI (`nmtui`), the Bluetooth UI (`bluetui`), or a custom settings launcher.
 
 ## Notes
 
