@@ -10,7 +10,6 @@ blueman
 bluetui
 bluez
 bluez-utils
-brave-bin
 brightnessctl
 btrfs-progs
 btrfsmaintenance
@@ -54,7 +53,6 @@ keepassxc
 kind
 kubectl
 libayatana-indicator
-libgnome-keyring
 libpulse
 libreoffice-fresh
 libva-intel-driver
@@ -62,7 +60,6 @@ linux
 linux-firmware
 linux-lts
 lldb
-localsend-bin
 ly
 man-db
 man-pages
@@ -118,6 +115,7 @@ swaybg
 swayidle
 swaylock
 system-config-printer
+systemd-ukify
 telegram-desktop
 texlive-basic
 texlive-bibtexextra
@@ -179,8 +177,12 @@ xf86-video-amdgpu
 xf86-video-ati
 xf86-video-nouveau
 xorg-xwayland
-yay
-yay-debug
 zathura
+zathura-pdf-poppler
 zed
 zram-generator
+brave-bin
+libgnome-keyring
+localsend-bin
+yay
+yay-debug
