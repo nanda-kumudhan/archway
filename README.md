@@ -1,7 +1,7 @@
 
-# Archway Dotfiles
+# Desktop Dotfiles
 
-Personal dotfiles for a minimal, keyboard-first Arch Linux desktop built around Sway and Wayland.
+Personal dotfiles for a minimal, keyboard-first desktop built around Sway and Wayland.
 
 ## Preview
 
