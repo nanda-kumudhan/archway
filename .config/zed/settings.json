@@ -9,7 +9,7 @@
 {
   "vim_mode": false,
   "modeline_lines": 5,
-  "disable_ai": true,
+  "disable_ai": false,
   "proxy": "",
   "ui_font_size": 16,
   "buffer_font_size": 15,
@@ -17,5 +17,5 @@
     "mode": "system",
     "light": "One Light",
     "dark": "GitHub Dark Default",
-  }
+  },
 }
