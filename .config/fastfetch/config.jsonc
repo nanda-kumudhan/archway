@@ -12,7 +12,7 @@
     "separator": "  ─  ",
     "brightColor": false,
     "key": {
-      "width": 14,
+      "width": 16,
     },
     "bar": {
       "char": {
@@ -64,6 +64,11 @@
       "keyColor": "cyan",
     },
     {
+      "type": "locale",
+      "key": " 󰗊  locale",
+      "keyColor": "cyan",
+    },
+    {
       "type": "command",
       "key": " 󰃰  installed",
       "keyColor": "cyan",
@@ -72,10 +77,25 @@
 
     "break",
 
-    // ── Environment ────────────────────────────────────────────────────────
+    // ── Desktop ────────────────────────────────────────────────────────────
     {
       "type": "wm",
       "key": " 󰧨  wm",
+      "keyColor": "green",
+    },
+    {
+      "type": "theme",
+      "key": " 󰔎  gtk theme",
+      "keyColor": "green",
+    },
+    {
+      "type": "icons",
+      "key": " 󰀻  icons",
+      "keyColor": "green",
+    },
+    {
+      "type": "cursor",
+      "key": " 󰇀  cursor",
       "keyColor": "green",
     },
     {
@@ -86,6 +106,11 @@
     {
       "type": "terminalfont",
       "key": " 󰛖  font",
+      "keyColor": "green",
+    },
+    {
+      "type": "terminaltheme",
+      "key": " 󰏘  palette",
       "keyColor": "green",
     },
     {
@@ -101,7 +126,11 @@
     {
       "type": "cpu",
       "key": " 󰻠  cpu",
-      "format": "{name}",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "cpuUsage",
+      "key": " 󰻠  cpu load",
       "keyColor": "yellow",
     },
     {
@@ -116,6 +145,12 @@
       "keyColor": "yellow",
     },
     {
+      "type": "swap",
+      "key": " 󰓡  swap",
+      "format": "{used} / {total} ({percentage})",
+      "keyColor": "yellow",
+    },
+    {
       "type": "disk",
       "key": " 󰋊  disk",
       "folders": "/",
@@ -123,8 +158,23 @@
       "keyColor": "yellow",
     },
     {
+      "type": "physicalDisk",
+      "key": " 󰒍  drive",
+      "keyColor": "yellow",
+    },
+    {
       "type": "battery",
       "key": " 󰁹  battery",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "brightness",
+      "key": " 󰃠  brightness",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "sound",
+      "key": " 󰕾  audio",
       "keyColor": "yellow",
     },
 
@@ -145,6 +195,16 @@
       "type": "localip",
       "key": " 󰛳  local ip",
       "keyColor": "blue",
+    },
+
+    "break",
+
+    // ── Snapshot ───────────────────────────────────────────────────────────
+    {
+      "type": "datetime",
+      "key": " 󰃭  date",
+      "format": "{year}-{month-pretty}-{day-pretty}  {hour-pretty}:{minute-pretty}:{second-pretty}",
+      "keyColor": "magenta",
     },
 
     "break",
