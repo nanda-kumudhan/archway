@@ -2,114 +2,80 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "type": "builtin",
+    "source": "nixos",
     "padding": {
       "top": 1,
       "right": 3,
     },
   },
   "display": {
-    "separator": "   ─   ",
+    "separator": "  ─  ",
     "brightColor": false,
     "key": {
-      "width": 15,
+      "width": 14,
     },
     "bar": {
       "char": {
         "elapsed": "█",
         "total": "░",
       },
-      "width": 18,
+      "width": 15,
     },
   },
   "modules": [
     "break",
+
+    // ── System ─────────────────────────────────────────────────────────────
     {
       "type": "title",
       "key": " 󰀄  user",
-      "keyColor": "blue",
+      "keyColor": "cyan",
     },
     {
       "type": "os",
       "key": " 󰌽  distro",
-      "keyColor": "blue",
-    },
-    {
-      "type": "host",
-      "key": " 󰌢  host",
-      "keyColor": "blue",
-    },
-    {
-      "type": "bios",
-      "key": " 󰷦  bios",
-      "keyColor": "blue",
-    },
-    {
-      "type": "board",
-      "key": " 󰌢  board",
-      "keyColor": "blue",
+      "keyColor": "cyan",
     },
     {
       "type": "kernel",
       "key": " 󰠩  kernel",
       "format": "{release}",
-      "keyColor": "blue",
+      "keyColor": "cyan",
     },
     {
-      "type": "initSystem",
-      "key": " 󰣇  init",
-      "keyColor": "blue",
+      "type": "host",
+      "key": " 󰌢  host",
+      "keyColor": "cyan",
     },
     {
       "type": "uptime",
       "key": " 󰅐  uptime",
-      "keyColor": "blue",
+      "keyColor": "cyan",
     },
     {
       "type": "packages",
       "key": " 󰏗  packages",
       "combined": true,
-      "keyColor": "blue",
+      "keyColor": "cyan",
     },
     {
       "type": "shell",
       "key": " 󰆍  shell",
-      "keyColor": "blue",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "command",
+      "key": " 󰃰  installed",
+      "keyColor": "cyan",
+      "text": "python3 -c \"from datetime import date; d=open('/var/log/pacman.log').read()[1:11]; t=date.fromisoformat(d); print('{} ({} days ago)'.format(d,(date.today()-t).days))\"",
     },
 
     "break",
-    {
-      "type": "de",
-      "key": " 󰖟  desktop",
-      "keyColor": "green",
-    },
+
+    // ── Environment ────────────────────────────────────────────────────────
     {
       "type": "wm",
       "key": " 󰧨  wm",
-      "keyColor": "green",
-    },
-    {
-      "type": "theme",
-      "key": " 󰔎  gtk",
-      "keyColor": "green",
-    },
-    {
-      "type": "icons",
-      "key": " 󰀻  icons",
-      "keyColor": "green",
-    },
-    {
-      "type": "wmTheme",
-      "key": " 󰟡  wm theme",
-      "keyColor": "green",
-    },
-    {
-      "type": "wallpaper",
-      "key": " 󰸉  wallpaper",
-      "keyColor": "green",
-    },
-    {
-      "type": "cursor",
-      "key": " 󰇀  cursor",
       "keyColor": "green",
     },
     {
@@ -119,12 +85,7 @@
     },
     {
       "type": "terminalfont",
-      "key": " 󰛖  term font",
-      "keyColor": "green",
-    },
-    {
-      "type": "terminaltheme",
-      "key": " 󰏘  palette",
+      "key": " 󰛖  font",
       "keyColor": "green",
     },
     {
@@ -135,15 +96,12 @@
     },
 
     "break",
+
+    // ── Hardware ───────────────────────────────────────────────────────────
     {
       "type": "cpu",
       "key": " 󰻠  cpu",
       "format": "{name}",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "cpuUsage",
-      "key": " 󰻠  cpu load",
       "keyColor": "yellow",
     },
     {
@@ -152,19 +110,8 @@
       "keyColor": "yellow",
     },
     {
-      "type": "physicalMemory",
-      "key": " 󰧑  dimm",
-      "keyColor": "yellow",
-    },
-    {
       "type": "memory",
       "key": " 󰾆  memory",
-      "format": "{used} / {total} ({percentage})",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "swap",
-      "key": " 󰓡  swap",
       "format": "{used} / {total} ({percentage})",
       "keyColor": "yellow",
     },
@@ -176,67 +123,31 @@
       "keyColor": "yellow",
     },
     {
-      "type": "btrfs",
-      "key": " 󰋊  btrfs",
-      "keyColor": "yellow",
-    },
-    {
       "type": "battery",
       "key": " 󰁹  battery",
       "keyColor": "yellow",
     },
-    {
-      "type": "brightness",
-      "key": " 󰃠  brightness",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "sound",
-      "key": " 󰕾  audio",
-      "keyColor": "yellow",
-    },
+
+    "break",
+
+    // ── Network ────────────────────────────────────────────────────────────
     {
       "type": "wifi",
       "key": " 󰤨  wifi",
-      "keyColor": "yellow",
+      "keyColor": "blue",
+    },
+    {
+      "type": "bluetooth",
+      "key": " 󰂯  bluetooth",
+      "keyColor": "blue",
     },
     {
       "type": "localip",
-      "key": " 󰛳  ip",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "player",
-      "key": " 󰥠  mpris",
-      "keyColor": "yellow",
-    },
-    {
-      "type": "media",
-      "key": " 󰐊  now playing",
-      "keyColor": "yellow",
+      "key": " 󰛳  local ip",
+      "keyColor": "blue",
     },
 
     "break",
-    {
-      "type": "physicalDisk",
-      "key": " 󰋊  disks",
-      "keyColor": "magenta",
-    },
-    {
-      "type": "datetime",
-      "key": " 󰃭  date",
-      "format": "{year}-{month-pretty}-{day-pretty} {hour-pretty}:{minute-pretty}",
-      "keyColor": "magenta",
-    },
-    {
-      "type": "loadavg",
-      "key": " 󰔟  load",
-      "keyColor": "magenta",
-    },
-    {
-      "type": "users",
-      "key": " 󰍹  users",
-      "keyColor": "magenta",
-    }
+    "colors",
   ],
 }
