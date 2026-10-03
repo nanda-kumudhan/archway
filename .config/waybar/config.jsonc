@@ -116,7 +116,6 @@
     "tooltip-format": "{app}: {title}"
   },
 
-  // --- Media ---
   "mpris": {
     "format": "{status_icon}",
     "format-paused": "{status_icon}",
@@ -151,7 +150,6 @@
     "spacing": 10
   },
 
-  // --- Power & System ---
   "battery": {
     "interval": 5,
     "states": {
