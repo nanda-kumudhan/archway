@@ -40,6 +40,7 @@ gnome-disk-utility
 gnome-keyring
 gradle
 greetd
+greetd-tuigreet
 grim
 gst-plugin-pipewire
 helix
@@ -61,6 +62,7 @@ linux
 linux-firmware
 linux-lts
 lldb
+lvm2
 man-db
 man-pages
 materia-gtk-theme
@@ -153,7 +155,6 @@ ttf-croscore
 ttf-dejavu
 ttf-jetbrains-mono-nerd
 ttf-liberation
-tuigreet
 udiskie
 ufw
 unrar
