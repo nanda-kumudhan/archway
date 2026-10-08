@@ -8,7 +8,7 @@ exec autotiling
 exec dunst
 exec kanshi
 
-exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+exec --no-startup-id eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh); dbus-update-activation-environment --systemd SSH_AUTH_SOCK; systemctl --user import-environment SSH_AUTH_SOCK
 exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP PATH
 exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP
 
