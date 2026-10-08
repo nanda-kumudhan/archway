@@ -22,6 +22,7 @@ btrfs-progs
 btrfsmaintenance
 cups
 cups-pk-helper
+ddcutil
 direnv
 discord
 distrobox
@@ -122,6 +123,9 @@ telegram-desktop
 texlab
 thermald
 thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-volman
 tlp
 tlp-pd
 tlp-rdw
@@ -136,6 +140,7 @@ ttf-croscore
 ttf-dejavu
 ttf-jetbrains-mono-nerd
 ttf-liberation
+tumbler
 udiskie
 ufw
 unrar
