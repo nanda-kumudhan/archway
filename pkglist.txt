@@ -24,7 +24,6 @@ cups
 cups-pk-helper
 ddcutil
 direnv
-discord
 distrobox
 dmidecode
 dosfstools
@@ -119,7 +118,6 @@ swaylock
 system-config-printer
 systemd-ukify
 tectonic
-telegram-desktop
 texlab
 thermald
 thunar
