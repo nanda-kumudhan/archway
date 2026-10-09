@@ -64,52 +64,54 @@
     "all-outputs": false,
 
     "window-rewrite-default": "󰋙",
+    // Match window app IDs/classes for desktop applications in pkglist.txt.
+    // CLI programs share their terminal's app ID and use the Foot icon.
     "window-rewrite": {
-      "wdisplays": "󰍹",
-      "texstudio": "",
+      "[Aa]nki": "󰗚",
+      "blueman-manager": "󰂯",
+      "blueman-adapters": "󰂯",
       "brave-browser": "󰖟",
-      "keepassxc": "󰌆",
-      "dev.zed.Zed": "",
-      "firefox": "󰈹",
-      "foot": "",
-      "org.remmina.Remmina": "󰢹",
-
-      "org.gnome.DiskUtility": "󰋊",
-      "org.gnome.seahorse": "󰌋",
-      "podman": "󰡨",
       "dbeaver": "󰆼",
-
-      "org.localsend.localsend_app": "󰇚",
-
-      "imv": "󰋩",
-      "org.pwmt.zathura": "󰈙",
-      "mpv": "󰐊",
-
-      "Thunar": "󰉋",
-
-
+      "(firefox|org.mozilla.firefox)": "󰈹",
+      "foot(-client)?": "",
+      "(imv|imv-dir)": "󰋩",
+      "(keepassxc|org[.]keepassxc[.]KeePassXC)": "󰌆",
       "libreoffice": "󰏆",
+      "libreoffice-startcenter": "󰏆",
+      "libreoffice-base": "󰆼",
       "libreoffice-writer": "󰈬",
       "libreoffice-calc": "",
       "libreoffice-impress": "",
       "libreoffice-draw": "󰕳",
       "libreoffice-math": "󰙩",
-
-
-      "virt-manager": "󰢹",
-      "pavucontrol": "󰕾",
-
-      "transmission-gtk": "󰇚",
-      "torbrowser-launcher": "󰗹",
+      "org[.]localsend[.]localsend_app": "󰇚",
+      "mpv": "󰐊",
+      "nm-applet": "󰖩",
+      "nm-connection-editor": "󰖩",
+      "nwg-look": "󰏘",
+      "(pavucontrol|org[.]pulseaudio[.]pavucontrol)": "󰕾",
+      "(podman|podman-desktop|Podman Desktop|io[.]podman_desktop[.]PodmanDesktop)": "󰡨",
+      "(PrismLauncher|org[.]prismlauncher[.]PrismLauncher)": "󰍳",
+      "(qemu|qemu-system-.*)": "󰢹",
+      "(rofi|rofi-theme-selector)": "󰍉",
+      "(rpi-imager|org[.]raspberrypi[.]rpi-imager|com[.]raspberrypi[.]rpi-imager)": "",
+      "org[.]remmina[.]Remmina": "󰢹",
       "system-config-printer": "󰐪",
+      "([Tt]hunar|org[.]xfce[.]Thunar|thunar-settings|thunar-bulk-rename)": "󰉋",
+      "thunar-volman-settings": "󱊞",
+      "(torbrowser-launcher|torbrowser|Tor Browser|org[.]torproject[.]torbrowser-launcher([.]settings)?)": "󰗹",
+      "virt-manager": "󰢹",
+      "([Ww]aydroid.*)": "󰀲",
+      "(wdisplays|network[.]cycles[.]wdisplays)": "󰍹",
       "xarchiver": "󰗄",
-      "Anki": "󰗚",
-
+      "org[.]pwmt[.]zathura": "󰈙",
+      "dev[.]zed[.]Zed": "",
+      "polkit-gnome-authentication-agent-1": "󰌋"
     },
   },
 
   "sway/scratchpad": {
-    "format": "{icon}{count}",
+    "format": "{icon} {count}",
     "show-empty": false,
     "format-icons": ["", ""],
     "tooltip": true,

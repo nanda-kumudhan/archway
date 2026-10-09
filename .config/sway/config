@@ -80,6 +80,7 @@ input "type:pointer" {
 }
 
 focus_follows_mouse no
+floating_modifier Mod4 normal
 
 exec swayidle -w \
     timeout 300 'swaylock -fcl && swaymsg "output * power off"' \
@@ -119,6 +120,8 @@ bindsym Mod4+s layout stacking
 
 bindsym Mod4+plus resize grow width 40 px
 bindsym Mod4+minus resize shrink width 40 px
+bindsym Mod4+Ctrl+plus resize grow height 40 px
+bindsym Mod4+Ctrl+minus resize shrink height 40 px
 
 bindsym Mod4+Left focus left
 bindsym Mod4+Down focus down
@@ -157,10 +160,10 @@ bindsym Mod4+Shift+0 move container to workspace number $ws10
 bindsym Mod4+Ctrl+Right move workspace to output right
 bindsym Mod4+Ctrl+Left move workspace to output left
 
-bindsym Mod4+Tab workspace next
-bindsym Mod4+Shift+Tab workspace prev
-bindsym Mod1+Tab focus next window
-bindsym Mod1+Shift+Tab focus prev window
+bindsym Mod4+Tab workspace back_and_forth
+bindsym Mod4+Shift+Tab workspace back_and_forth
+bindsym Mod1+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
+bindsym Mod1+Shift+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
 
 bindsym Mod4+Shift+s exec systemctl suspend
 
@@ -202,9 +205,7 @@ bindsym Mod4+b exec foot --app-id=bluetui -e bluetui
 for_window [app_id="thunar"] floating enable, resize set 84% 84%, move position center
 for_window [app_id="Thunar"] floating enable, resize set 84% 84%, move position center
 for_window [class="Thunar"] floating enable, resize set 84% 84%, move position center
-for_window [app_id="gnome-disks"] floating enable, move position center
 for_window [app_id="wdisplays"] floating enable, move position center
-for_window [app_id="org.gnome.DiskUtility"] floating enable, move position center
 for_window [app_id="mpv"] floating enable, resize set 78% 76%, move position center
 for_window [app_id="imv"] floating enable, resize set 78% 76%, move position center
 for_window [class="imv"] floating enable, resize set 78% 76%, move position center
@@ -213,15 +214,44 @@ for_window [app_id="org.pwmt.zathura"] floating enable, resize set 76% 84%, move
 for_window [class="Zathura"] floating enable, resize set 76% 84%, move position center
 for_window [class="Virt-manager"] floating enable, resize set 88% 86%, move position center
 for_window [class="virt-manager"] floating enable, resize set 88% 86%, move position center
+# Foot uses its configured character dimensions to fit Fastfetch.
+for_window [app_id="^foot$"] floating enable, move position center
 for_window [app_id="foot" title="sysmon"] floating enable, resize set 78% 78%, move position center
-for_window [app_id="foot" title="fastfetch"] floating enable, resize set 96% 92%, move position center
+for_window [app_id="foot" title="fastfetch"] floating enable, move position center
 for_window [app_id="scratchpad_term"] floating enable, resize set 82% 74%, move position center
 for_window [class="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="nmtui"] floating enable, resize set 700 520, move position center
-for_window [app_id="brave" title="^Picture-in-Picture$"] floating enable
-for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable
 for_window [app_id="bluetui"] floating enable, resize set 700 520, move position center
+
+# Utility windows are easier to use as centered floating windows.
+for_window [app_id="^(org\.keepassxc\.KeePassXC|keepassxc)$"] floating enable, resize set 76% 80%, move position center
+for_window [class="^KeePassXC$"] floating enable, resize set 76% 80%, move position center
+for_window [app_id="^org\.localsend\.localsend_app$"] floating enable, resize set 700 620, move position center
+for_window [app_id="^(rpi-imager|org\.raspberrypi\.rpi-imager|com\.raspberrypi\.rpi-imager)$"] floating enable, move position center
+for_window [class="^[Rr]pi-imager$"] floating enable, move position center
+for_window [app_id="^(xarchiver|nwg-look|nm-connection-editor|blueman-manager|blueman-adapters|system-config-printer)$"] floating enable, move position center
+for_window [class="^(Xarchiver|Nm-connection-editor|Blueman-manager|Blueman-adapters|System-config-printer.py)$"] floating enable, move position center
+
+# Authentication and application dialogs retain their requested dimensions.
+# window_type and window_role apply to XWayland; Wayland transient dialogs
+# are already floated automatically by Sway.
+for_window [window_type="dialog"] floating enable, move position center
+for_window [window_type="utility"] floating enable, move position center
+for_window [window_role="(?i)^(pop-up|dialog|preferences|filechooser|GtkFileChooserDialog)$"] floating enable, move position center
+for_window [app_id="^polkit-gnome-authentication-agent-1$"] floating enable, move position center
+for_window [class="(?i)^polkit-gnome-authentication-agent-1$"] floating enable, move position center
+
+# Alternate application IDs/classes used by installed utility apps.
+for_window [app_id="^org\.pulseaudio\.pavucontrol$"] floating enable, resize set 56% 60%, move position center
+for_window [class="(?i)^(localsend|org\.localsend\.localsend_app)$"] floating enable, resize set 700 620, move position center
+for_window [app_id="^org\.raspberrypi\.rpi-imager\.rpi-imager$"] floating enable, move position center
+for_window [app_id="^(org\.blueman\.(Manager|Adapters)|org\.xfce\.Xarchiver|org\.fedoraproject\.Config\.Printing)$"] floating enable, move position center
+for_window [class="(?i)^(wdisplays|nwg-look|system-config-printer)$"] floating enable, move position center
+
+# Match only browser PiP windows; preserve their video aspect ratio and size.
+for_window [app_id="(?i)^(firefox|org\.mozilla\.firefox|brave|brave-browser|com\.brave\.Browser)$" title="(?i)^Picture[ -]in[ -]Picture$"] floating enable, sticky enable
+for_window [class="(?i)^(firefox|brave|brave-browser|com\.brave\.Browser)$" title="(?i)^Picture[ -]in[ -]Picture$"] floating enable, sticky enable
 
 bar {
     position top
