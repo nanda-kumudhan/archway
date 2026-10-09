@@ -208,12 +208,14 @@ Sway uses `Mod4` as the **Super/Windows key** and `Mod1` as **Alt**. The shortcu
 | `Super+Shift+r` | Reload the Sway configuration |
 | `Super+Plus` | Grow the window width |
 | `Super+Minus` | Shrink the window width |
+| `Super+Ctrl+Plus/Minus` | Grow/shrink the window height |
+| `Super+Left/Right mouse drag` | Move/resize a floating window |
 | `Super+Arrow` | Focus a window in that direction |
 | `Super+a` | Focus the parent container |
 | `Super+Shift+a` | Focus the child container |
 | `Super+Shift+Arrow` | Move the window in that direction |
-| `Alt+Tab` | Focus the next window |
-| `Alt+Shift+Tab` | Focus the previous window |
+| `Alt+Tab` | Open Rofi’s built-in window switcher |
+| `Alt+Shift+Tab` | Open Rofi’s built-in window switcher |
 
 ### Workspaces
 
@@ -222,8 +224,8 @@ Sway uses `Mod4` as the **Super/Windows key** and `Mod1` as **Alt**. The shortcu
 | `Super+1` through `Super+0` | Switch to workspaces 1 through 10 |
 | `Super+Shift+1` through `Super+Shift+0` | Move the focused window to workspaces 1 through 10 |
 | `Super+Ctrl+Left/Right` | Move the current workspace to the left/right output |
-| `Super+Tab` | Switch to the next workspace |
-| `Super+Shift+Tab` | Switch to the previous workspace |
+| `Super+Tab` | Toggle between the current and previous workspace |
+| `Super+Shift+Tab` | Toggle between the current and previous workspace |
 
 ### Scratchpad and controls
 
