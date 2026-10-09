@@ -162,6 +162,7 @@ udiskie
 ufw
 unrar
 unzip
+veracrypt
 vim
 virt-manager
 vpl-gpu-rt
