@@ -223,7 +223,8 @@ Sway uses `Mod4` as the **Super/Windows key** and `Mod1` as **Alt**. The shortcu
 | --- | --- |
 | `Super+1` through `Super+0` | Switch to workspaces 1 through 10 |
 | `Super+Shift+1` through `Super+Shift+0` | Move the focused window to workspaces 1 through 10 |
-| `Super+Ctrl+Left/Right` | Move the current workspace to the left/right output |
+| `Super+Ctrl+Left/Right` | Switch to the previous/next workspace on the current monitor |
+| `Super+Ctrl+Shift+Left/Right` | Move the current workspace to the left/right output |
 | `Super+Tab` | Toggle between the current and previous workspace |
 | `Super+Shift+Tab` | Toggle between the current and previous workspace |
 
