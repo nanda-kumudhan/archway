@@ -1,0 +1,22 @@
+font=JetBrainsMono Nerd Font 12
+edge=top
+
+[warning]
+background=121212
+text=e8eaed
+button-background=2a2a2a
+button-text=e8eaed
+border=8ab4f8
+border-bottom=8ab4f8
+message-padding=10
+button-padding=8
+
+[error]
+background=121212
+text=e8eaed
+button-background=2a2a2a
+button-text=e8eaed
+border=f28b82
+border-bottom=f28b82
+message-padding=10
+button-padding=8
