@@ -26,36 +26,6 @@
     "idle_inhibitor",
   ],
 
-  "network": {
-    "format-wifi": "󰖩 {essid}",
-    "format-ethernet": "󰈀",
-    "format-linked": "󰈀",
-    "format-disconnected": "󰖪",
-    "format-disabled": "󰖪",
-    "on-click": "nmcli radio wifi on",
-    "on-click-middle": "nmcli radio wifi off",
-    "tooltip-format-wifi": "Wi-Fi: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
-    "tooltip-format-ethernet": "Ethernet\nIP: {ipaddr}",
-    "tooltip-format-linked": "Connected\nInterface: {ifname}\nIP: {ipaddr}",
-    "tooltip-format-disconnected": "Disconnected",
-    "tooltip-format-disabled": "Network disabled",
-
-  },
-
-  "bluetooth": {
-    "format": "󰂯",
-    "format-disabled": "󰂲",
-    "format-off": "󰂲",
-    "format-on": "󰂯",
-    "format-connected": "󰂱 {device_alias}",
-    "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
-    "on-click": "bluetoothctl power on",
-    "on-click-middle": "bluetoothctl power off",
-    "tooltip-format": "Bluetooth: {status}",
-    "tooltip-format-connected": "Connected: {device_alias}\nBattery: {device_battery_percentage}%",
-
-  },
-
   "sway/workspaces": {
     "format": "{name} {windows}",
     "format-window-separator": " ",
@@ -118,6 +88,19 @@
     "tooltip-format": "{app}: {title}"
   },
 
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%a %d %b}",
+    "tooltip-format": "{:%A, %d %B %Y\n%H:%M}\n\n{calendar}",
+    "calendar": {
+      "mode": "month",
+      "on-scroll": 1,
+      "format": {
+        "today": "<span color='#e6e6e6'>{}</span>"
+      }
+    }
+  },
+
   "mpris": {
     "format": "{status_icon}",
     "format-paused": "{status_icon}",
@@ -136,20 +119,29 @@
     }
   },
 
-  "power-profiles-daemon": {
-      "format": "{icon}",
-      "format-icons": {
-          "default": "󰾆",
-          "performance": "󰓅",
-          "balanced": "󰾅",
-          "power-saver": "󰾆"
-      },
-      "tooltip-format": "Power profile: {profile}"
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 {volume}%",
+    "format-icons": [
+      "󰕿",
+      "󰖀",
+      "󰕾"
+    ],
+    "max-volume": 100,
+    "on-click": "pavucontrol",
+    "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
 
-  "tray": {
-    "icon-size": 14,
-    "spacing": 10
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+
+
+
   },
 
   "battery": {
@@ -181,41 +173,6 @@
     "tooltip-format": "Capacity: {capacity}%\nPower draw: {power}W\nTime remaining: {time}",
   },
 
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": [
-      "󰃞",
-      "󰃟",
-      "󰃠"
-    ],
-
-
-
-  },
-
-  "wireplumber": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰖁 {volume}%",
-    "format-icons": [
-      "󰕿",
-      "󰖀",
-      "󰕾"
-    ],
-    "max-volume": 100,
-    "on-click": "pavucontrol",
-    "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-  },
-
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "󰛊",
-      "deactivated": "󰛉"
-    },
-    "tooltip-format-activated": "Idle inhibitor is on",
-    "tooltip-format-deactivated": "Idle inhibitor is off"
-  },
-
   "privacy": {
     "icon-spacing": 6,
     "icon-size": 14,
@@ -235,16 +192,59 @@
     "ignore-monitor": true
   },
 
-  "clock": {
-    "format": "{:%H:%M}",
-    "format-alt": "{:%a %d %b}",
-    "tooltip-format": "{:%A, %d %B %Y\n%H:%M}\n\n{calendar}",
-    "calendar": {
-      "mode": "month",
-      "on-scroll": 1,
-      "format": {
-        "today": "<span color='#e6e6e6'>{}</span>"
-      }
-    }
+  "network": {
+    "format-wifi": "󰖩 {essid}",
+    "format-ethernet": "󰈀",
+    "format-linked": "󰈀",
+    "format-disconnected": "󰖪",
+    "format-disabled": "󰖪",
+    "on-click": "nmcli radio wifi on",
+    "on-click-middle": "nmcli radio wifi off",
+    "tooltip-format-wifi": "Wi-Fi: {essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
+    "tooltip-format-ethernet": "Ethernet\nIP: {ipaddr}",
+    "tooltip-format-linked": "Connected\nInterface: {ifname}\nIP: {ipaddr}",
+    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format-disabled": "Network disabled",
+
+  },
+
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱 {device_alias}",
+    "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
+    "on-click": "bluetoothctl power on",
+    "on-click-middle": "bluetoothctl power off",
+    "tooltip-format": "Bluetooth: {status}",
+    "tooltip-format-connected": "Connected: {device_alias}\nBattery: {device_battery_percentage}%",
+
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  },
+
+  "power-profiles-daemon": {
+      "format": "{icon}",
+      "format-icons": {
+          "default": "󰾆",
+          "performance": "󰓅",
+          "balanced": "󰾅",
+          "power-saver": "󰾆"
+      },
+      "tooltip-format": "Power profile: {profile}"
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰛊",
+      "deactivated": "󰛉"
+    },
+    "tooltip-format-activated": "Idle inhibitor is on",
+    "tooltip-format-deactivated": "Idle inhibitor is off"
   }
 }
