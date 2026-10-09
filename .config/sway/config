@@ -82,7 +82,7 @@ input "type:pointer" {
 focus_follows_mouse no
 floating_modifier Mod4 normal
 
-exec swayidle -w -C ~/.config/swaylock/swayidle.conf
+exec swayidle -w
 
 
 
