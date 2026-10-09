@@ -3,20 +3,7 @@ set $file_manager Thunar
 set $file_menu exec rofi -show filebrowser -show-icons -icon-theme "Papirus-Dark"
 set $power_menu exec sh -c 'choice=$(printf "Logout\nCancel" | rofi -dmenu -i -p "Session"); [ "$choice" = "Logout" ] && swaymsg exit'
 set $editor zeditor
-
-exec autotiling
-exec dunst
-exec kanshi
-
-exec --no-startup-id eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh); dbus-update-activation-environment --systemd SSH_AUTH_SOCK; systemctl --user import-environment SSH_AUTH_SOCK
-exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP PATH
-exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP
-
-exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
 set $launcher exec rofi -show drun -show-icons -icon-theme "Papirus-Dark" -drun-display-format "{name}" -p "Apps"
-
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -27,13 +14,13 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-xwayland enable
 set $m_bg #121212
 set $m_active #8ab4f8
 set $m_inactive #2a2a2a
 set $m_urgent #f28b82
 set $m_text #e8eaed
 
+xwayland enable
 font pango:JetBrainsMono Nerd Font 10
 default_border pixel 1
 default_floating_border pixel 1
@@ -41,77 +28,64 @@ titlebar_border_thickness 0
 titlebar_padding 1 0
 title_align center
 show_marks no
-
 gaps inner 2
 gaps outer 2
 smart_gaps off
 smart_borders on
 hide_edge_borders smart
-
-exec udiskie --smart-tray --automount
-
 client.focused #262626 $m_bg $m_text $m_active #262626
 client.focused_inactive #1f1f1f $m_bg #a0a4a8 #1f1f1f #1f1f1f
 client.focused_tab_title #262626 $m_bg $m_text
 client.unfocused $m_bg $m_bg #6f7378 $m_inactive $m_inactive
 client.urgent $m_urgent $m_bg $m_urgent $m_urgent $m_urgent
 
-
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
-exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
-exec systemctl --user start sway-session.target
-
-exec swaybg -i ~/Pictures/wallpaper
-
 seat * xcursor_theme Adwaita 24
 input * xkb_layout gb
-
 input "type:touchpad" {
     tap disabled
     natural_scroll enabled
     dwt enabled
     middle_emulation enabled
 }
-
 input "type:pointer" {
 	natural_scroll enabled
 }
-
 focus_follows_mouse no
 floating_modifier Mod4 normal
-
-exec swayidle -w
-
-
 
 bindsym Ctrl+Mod1+t exec $term
 bindsym Mod4+e exec $file_menu
 bindsym Mod4+Shift+e exec $file_manager
 bindsym Mod4+space exec $launcher
-bindsym Mod4+Shift+q kill
-bindsym Mod4+l exec swaylock
 bindsym Ctrl+Escape exec $term -T "sysmon" -e htop
 bindsym Mod4+w exec firefox
 bindsym Mod4+k exec keepassxc
+bindsym Mod4+Shift+p exec wdisplays
+bindsym Mod1+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
+bindsym Mod1+Shift+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
+bindsym Mod4+z exec $editor
+bindsym Mod4+n exec foot --app-id=nmtui -e nmtui
+bindsym Mod4+b exec foot --app-id=bluetui -e bluetui
+
+bindsym Mod4+Shift+q kill
+bindsym Mod4+l exec swaylock
+bindsym Mod4+Shift+r reload
+bindsym Mod4+Shift+s exec systemctl suspend
+bindsym Ctrl+Alt+Delete exec $power_menu
 
 bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
-
 bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
-
 bindsym Ctrl+Print exec sh -c 'mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -f ~/Videos/Recordings/$(date +'"'"'%Y-%m-%d_%H-%M-%S'"'"').mp4; fi'
 bindsym Ctrl+Shift+Print exec sh -c 'mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -g "$(slurp)" -f ~/Videos/Recordings/$(date +'"'"'%Y-%m-%d_%H-%M-%S'"'"').mp4; fi'
+
 bindsym Mod4+h splith
 bindsym Mod4+v splitv
 bindsym Mod4+r layout toggle split
 bindsym Mod4+f fullscreen toggle
 bindsym Mod4+d floating toggle
 bindsym Mod4+Shift+d sticky toggle
-bindsym Mod4+Shift+p exec wdisplays
 bindsym Mod4+c floating enable, resize set width 80 ppt height 80 ppt, move position center
 bindsym Mod4+t layout tabbed
-bindsym Mod4+Shift+r reload
 bindsym Mod4+s layout stacking
 
 bindsym Mod4+plus resize grow width 40 px
@@ -141,7 +115,6 @@ bindsym Mod4+7 workspace number $ws7
 bindsym Mod4+8 workspace number $ws8
 bindsym Mod4+9 workspace number $ws9
 bindsym Mod4+0 workspace number $ws10
-
 bindsym Mod4+Shift+1 move container to workspace number $ws1
 bindsym Mod4+Shift+2 move container to workspace number $ws2
 bindsym Mod4+Shift+3 move container to workspace number $ws3
@@ -152,30 +125,20 @@ bindsym Mod4+Shift+7 move container to workspace number $ws7
 bindsym Mod4+Shift+8 move container to workspace number $ws8
 bindsym Mod4+Shift+9 move container to workspace number $ws9
 bindsym Mod4+Shift+0 move container to workspace number $ws10
-
 bindsym Mod4+Ctrl+Right workspace next_on_output
 bindsym Mod4+Ctrl+Left workspace prev_on_output
 bindsym Mod4+Ctrl+Shift+Right move workspace to output right
 bindsym Mod4+Ctrl+Shift+Left move workspace to output left
-
 bindsym Mod4+Tab workspace back_and_forth
 bindsym Mod4+Shift+Tab workspace back_and_forth
-bindsym Mod1+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
-bindsym Mod1+Shift+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
-
-bindsym Mod4+Shift+s exec systemctl suspend
-
-bindsym Mod4+z exec $editor
 
 bindsym Mod4+Shift+grave move scratchpad
 bindsym Mod4+grave scratchpad show
-
 
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 bindsym XF86AudioRaiseVolume exec "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 2%+"
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-
 bindsym XF86Tools exec pavucontrol
 bindsym XF86Display exec wdisplays
 bindsym XF86AudioPrev exec playerctl previous
@@ -184,21 +147,14 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86MonBrightnessDown exec "brightnessctl s 5%- -n 0.3l%"
 bindsym XF86MonBrightnessUp exec "brightnessctl set +5%"
 bindsym XF86AudioStop exec playerctl stop
+bindsym Mod4+XF86AudioMute exec pavucontrol
 
-bindsym Ctrl+Alt+Delete exec $power_menu
 bindswitch --reload --locked lid:on output eDP-1 disable
 bindswitch --reload --locked lid:off output eDP-1 enable
 
 bindgesture swipe:3:left exec playerctl previous
 bindgesture swipe:3:right exec playerctl next
 bindgesture swipe:3:up exec playerctl play-pause
-
-bindsym Mod4+XF86AudioMute exec pavucontrol
-
-bindsym Mod4+n exec foot --app-id=nmtui -e nmtui
-
-bindsym Mod4+b exec foot --app-id=bluetui -e bluetui
-
 
 for_window [app_id="thunar"] floating enable, resize set 84% 84%, move position center
 for_window [app_id="Thunar"] floating enable, resize set 84% 84%, move position center
@@ -254,3 +210,19 @@ bar {
     position top
     swaybar_command waybar
 }
+
+exec autotiling
+exec dunst
+exec kanshi
+exec --no-startup-id eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh); dbus-update-activation-environment --systemd SSH_AUTH_SOCK; systemctl --user import-environment SSH_AUTH_SOCK
+exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP PATH
+exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec udiskie --smart-tray --automount
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec systemctl --user start sway-session.target
+exec swaybg -i ~/Pictures/wallpaper
+exec swayidle -w
