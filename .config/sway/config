@@ -82,11 +82,7 @@ input "type:pointer" {
 focus_follows_mouse no
 floating_modifier Mod4 normal
 
-exec swayidle -w \
-    timeout 300 'swaylock -fcl && swaymsg "output * power off"' \
-        resume 'swaymsg "output * power on"' \
-    timeout 900 'systemctl suspend' \
-    before-sleep 'swaylock -f'
+exec swayidle -w -C ~/.config/swaylock/swayidle.conf
 
 
 
