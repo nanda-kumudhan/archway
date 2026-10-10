@@ -89,6 +89,7 @@
   },
 
   "clock": {
+    "interval": 60,
     "format": "{:%H:%M}",
     "format-alt": "{:%a %d %b}",
     "tooltip-format": "{:%A, %d %B %Y\n%H:%M}\n\n{calendar}",
@@ -133,6 +134,8 @@
   },
 
   "backlight": {
+    // Keep periodic hardware checks infrequent to reduce wakeups.
+    "interval": 60,
     "format": "{icon} {percent}%",
     "format-icons": [
       "󰃞",
@@ -145,7 +148,8 @@
   },
 
   "battery": {
-    "interval": 5,
+    // Battery percentage and power estimates do not need rapid polling.
+    "interval": 60,
     "states": {
       "warning": 30,
       "critical": 15
@@ -176,7 +180,7 @@
   "privacy": {
     "icon-spacing": 6,
     "icon-size": 14,
-    "transition-duration": 140,
+    "transition-duration": 0,
     "modules": [
       {
         "type": "screenshare",
@@ -193,6 +197,8 @@
   },
 
   "network": {
+    // Connection changes still arrive through network events.
+    "interval": 120,
     "format-wifi": "󰖩 {essid}",
     "format-ethernet": "󰈀",
     "format-linked": "󰈀",
