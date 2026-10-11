@@ -9,4 +9,5 @@ These instructions apply to work on the Archway dotfiles in the user's home dire
 - Repository-only files such as `README.md`, `assets/`, and `pkglist.txt` stay in the repository unless explicitly requested otherwise.
 - Keep this `AGENTS.md` identical at `$HOME/AGENTS.md` and `$HOME/Github/archway/AGENTS.md` when updating these instructions.
 - Check that the synchronized files match, perform appropriate configuration validation, and reload the affected application when possible. Report if reloading is unavailable.
-- Do not commit or push changes unless requested.
+- After completing and validating requested Archway changes, use Git commands to stage only the files relevant to the task and commit them with a descriptive message. Preserve unrelated uncommitted changes.
+- Do not push changes unless requested.

@@ -215,7 +215,7 @@ for_window [class="virt-manager"] floating enable, resize set 88% 86%, move posi
 # Regular Foot terminals tile; dedicated utility terminals float.
 for_window [app_id="foot" title="sysmon"] floating enable, resize set 78% 78%, move position center
 for_window [app_id="foot" title="fastfetch"] floating enable, move position center
-for_window [app_id="scratchpad_term"] floating enable, resize set 82% 74%, move position center
+for_window [app_id="scratchpad_term"] floating enable, resize set 75% 80%, move position center
 for_window [class="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="nmtui"] floating enable, resize set 700 520, move position center
