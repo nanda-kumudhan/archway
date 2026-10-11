@@ -73,7 +73,7 @@
       "(torbrowser-launcher|torbrowser|Tor Browser|org[.]torproject[.]torbrowser-launcher([.]settings)?)": "󰗹",
       "virt-manager": "󰢹",
       "([Ww]aydroid.*)": "󰀲",
-      "(wdisplays|network[.]cycles[.]wdisplays)": "󰍹",
+      "nwg-displays": "󰍹",
       "xarchiver": "󰗄",
       "org[.]pwmt[.]zathura": "󰈙",
       "dev[.]zed[.]Zed": "",

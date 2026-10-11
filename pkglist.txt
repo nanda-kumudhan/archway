@@ -171,7 +171,7 @@ vulkan-nouveau
 vulkan-radeon
 waybar
 waydroid
-wdisplays
+nwg-displays
 wf-recorder
 wget
 wireplumber
