@@ -75,7 +75,6 @@ libvpl
 linux
 linux-firmware
 linux-lts
-localsend-bin
 lsb-release
 lsof
 lvm2

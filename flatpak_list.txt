@@ -1,0 +1,4 @@
+com.discordapp.Discord
+com.stremio.Stremio
+org.localsend.localsend_app
+org.telegram.desktop
