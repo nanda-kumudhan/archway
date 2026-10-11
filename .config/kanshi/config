@@ -1,3 +1,8 @@
+profile iiyama-above-laptop {
+    output "Iiyama North America PL2792Q *" enable mode 2560x1440 scale 1 position 0,0
+    output eDP-1 enable mode 1920x1080 scale 1 position 320,1440
+}
+
 profile docked {
     output eDP-1 disable
     output "*" enable mode preferred position 0,0
