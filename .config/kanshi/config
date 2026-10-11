@@ -3,9 +3,9 @@ profile iiyama-above-laptop {
     output eDP-1 enable mode 1920x1080 scale 1 position 320,1440
 }
 
-profile asus-left-of-laptop {
-    output "* VP247* *" enable mode 1920x1080 scale 1 position 0,0
-    output eDP-1 enable mode 1920x1080 scale 1 position 1920,0
+profile laptop-left-of-asus {
+    output "* VP247* *" enable mode 1920x1080 scale 1 position 1920,0
+    output eDP-1 enable mode 1920x1080 scale 1 position 0,0
 }
 
 profile docked {
