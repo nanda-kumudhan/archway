@@ -9,7 +9,8 @@
     "sway/workspaces",
     "sway/scratchpad",
     "custom/cpu",
-    "memory"
+    "memory",
+    "systemd-failed-units"
 
   ],
   "modules-center": [
@@ -119,6 +120,14 @@
     "format-alt": "󰍛 {used:.1f} GiB",
     "format-alt-click": 1,
     "tooltip-format": "Memory: {used:.1f} / {total:.1f} GiB ({percentage}%)\nLeft-click: toggle percentage / GiB"
+  },
+
+  "systemd-failed-units": {
+    "interval": 60,
+    "hide-on-ok": true,
+    "format": " {nr_failed}",
+    "system": true,
+    "user": true
   },
 
   "mpris": {

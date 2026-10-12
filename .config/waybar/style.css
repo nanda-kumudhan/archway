@@ -75,6 +75,7 @@
 #clock,
 #custom-cpu,
 #memory,
+#systemd-failed-units,
 #mpris,
 #custom-launcher,
 #custom-pomodoro,
@@ -129,6 +130,10 @@
 }
 
 #power-profiles-daemon.performance {
+    color: @urgent;
+}
+
+#systemd-failed-units.degraded {
     color: @urgent;
 }
 
