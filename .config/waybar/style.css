@@ -21,47 +21,56 @@
     transition: none;
     animation: none;
 }
+
 #waybar {
     color: @foreground;
     background-color: @background;
     border-bottom: 1px solid @border;
 }
+
 #workspaces {
-    padding-left: 0.45em;
+    padding-left: 4px;
 }
+
 #workspaces button {
     color: @foreground;
     background: transparent;
-    padding: 0 0.6em;
+    padding: 0 10px;
     margin: 0;
     min-width: 2.2em;
     min-height: 0;
     border-bottom: 2px solid transparent;
 }
+
 #workspaces button label {
     min-width: 2.2em;
 }
+
 #workspaces button.empty,
 #workspaces button.persistent {
     color: @foreground-inactive;
     background: transparent;
 }
+
 #workspaces button:hover {
     color: @foreground;
     background: @background-raised;
     border-bottom-color: @foreground-inactive;
 }
+
 #workspaces button.focused,
 #workspaces button.active {
     color: @foreground;
     background: @background-selected;
     border-bottom-color: @accent;
 }
+
 #workspaces button.urgent {
     color: @foreground;
     background: @urgent;
     border-bottom-color: @urgent;
 }
+
 #scratchpad,
 #clock,
 #cpu,
@@ -81,14 +90,17 @@
 #tray,
 #power-profiles-daemon {
     color: @foreground;
-    background: @background;
-    padding: 0 0.7em;
+    background: transparent;
+    /* Equal padding keeps gaps consistent across text and icon modules. */
+    padding: 0 10px;
     min-height: 0;
 }
+
 #clock {
     color: @accent;
     font-weight: 500;
 }
+
 #mpris,
 #scratchpad,
 #cpu,
@@ -98,12 +110,7 @@
 #tray {
     color: @foreground-inactive;
 }
-#mpris {
-    padding-left: 0;
-}
-#custom-pomodoro {
-    padding-right: 0;
-}
+
 #mpris.paused,
 #custom-pomodoro.idle,
 #custom-pomodoro.paused,
@@ -112,6 +119,7 @@
 #bluetooth.disabled {
     color: @foreground-muted;
 }
+
 #custom-pomodoro.work,
 #custom-pomodoro.break,
 #idle_inhibitor.activated,
@@ -119,18 +127,19 @@
 #battery.critical:not(.charging) {
     color: @foreground;
 }
+
 #power-profiles-daemon.performance {
     color: @urgent;
 }
+
 #power-profiles-daemon.balanced {
     color: @foreground;
 }
+
 #power-profiles-daemon.power-saver {
     color: @accent;
 }
-#mpris.stopped {
-    padding-left: 0;
-}
+
 tooltip,
 #tray menu {
     color: @foreground;
@@ -138,10 +147,20 @@ tooltip,
     border: 1px solid @border;
     border-radius: 4px;
 }
+
 tooltip {
     padding: 0;
 }
+
 tooltip label {
     color: @foreground;
-    padding: 0.45em;
+    padding: 6px 8px;
+}
+
+#tray menu menuitem {
+    padding: 6px 10px;
+}
+
+#tray menu menuitem:hover {
+    background: @background-selected;
 }
