@@ -7,15 +7,15 @@
 
   "modules-left": [
     "sway/workspaces",
-    "sway/scratchpad"
+    "sway/scratchpad",
+    "cpu",
+    "memory"
 
   ],
   "modules-center": [
     "clock"
   ],
   "modules-right": [
-    "cpu",
-    "memory",
     "mpris",
     "wireplumber",
     "backlight",
