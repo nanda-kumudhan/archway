@@ -8,7 +8,7 @@
   "modules-left": [
     "sway/workspaces",
     "sway/scratchpad",
-    "cpu",
+    "custom/cpu",
     "memory"
 
   ],
@@ -105,16 +105,20 @@
     }
   },
 
-  "cpu": {
-    // Once-minute sampling keeps monitoring wakeups infrequent.
-    "interval": 60,
-    "format": " {usage}%"
+  "custom/cpu": {
+    // The reader samples every 60 seconds, including tooltip-only details.
+    "exec": "python3 $HOME/.config/waybar/scripts/cpu.py",
+    "return-type": "json",
+    "format": " {text}",
+    "restart-interval": 60
   },
 
   "memory": {
     "interval": 60,
     "format": "󰍛 {percentage}%",
-    "tooltip-format": "Memory: {used:.1f} / {total:.1f} GiB ({percentage}%)"
+    "format-alt": "󰍛 {used:.1f} GiB",
+    "format-alt-click": 1,
+    "tooltip-format": "Memory: {used:.1f} / {total:.1f} GiB ({percentage}%)\nLeft-click: toggle percentage / GiB"
   },
 
   "mpris": {
