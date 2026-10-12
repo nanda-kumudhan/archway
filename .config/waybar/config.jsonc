@@ -14,6 +14,8 @@
     "clock"
   ],
   "modules-right": [
+    "cpu",
+    "memory",
     "mpris",
     "wireplumber",
     "backlight",
@@ -101,6 +103,18 @@
         "today": "<span color='#e6e6e6'>{}</span>"
       }
     }
+  },
+
+  "cpu": {
+    // Once-minute sampling keeps monitoring wakeups infrequent.
+    "interval": 60,
+    "format": " {usage}%"
+  },
+
+  "memory": {
+    "interval": 60,
+    "format": "󰍛 {percentage}%",
+    "tooltip-format": "Memory: {used:.1f} / {total:.1f} GiB ({percentage}%)"
   },
 
   "mpris": {

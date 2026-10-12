@@ -64,6 +64,8 @@
 }
 #scratchpad,
 #clock,
+#cpu,
+#memory,
 #mpris,
 #custom-launcher,
 #custom-pomodoro,
@@ -86,6 +88,15 @@
 #clock {
     color: @accent;
     font-weight: 500;
+}
+#cpu,
+#memory {
+    color: @foreground-inactive;
+    font-size: 12px;
+    padding: 0 0.4em;
+}
+#memory {
+    margin-right: 0.5em;
 }
 #mpris,
 #scratchpad,
