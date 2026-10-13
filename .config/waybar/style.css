@@ -1,12 +1,15 @@
-@define-color foreground #e8eaed;
-@define-color foreground-inactive #9aa0a6;
-@define-color foreground-muted #6f7378;
-@define-color background #121212;
-@define-color background-raised #1d1d1d;
-@define-color background-selected #272727;
-@define-color border #2a2a2a;
-@define-color accent #8ab4f8;
-@define-color urgent #f28b82;
+/* Cool charcoal with restrained blue accents; layout stays fixed below. */
+@define-color foreground #e2e8f0;
+@define-color foreground-inactive #a1adbf;
+@define-color foreground-muted #778397;
+@define-color background #151a23;
+@define-color background-raised #1e2633;
+@define-color background-selected #26354b;
+@define-color border #303c50;
+@define-color accent #93b9f5;
+@define-color success #9acbad;
+@define-color warning #e7c58a;
+@define-color urgent #f1949e;
 * {
     font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", monospace;
     font-size: 15px;
@@ -60,13 +63,13 @@
 
 #workspaces button.focused,
 #workspaces button.active {
-    color: @foreground;
+    color: @accent;
     background: @background-selected;
     border-bottom-color: @accent;
 }
 
 #workspaces button.urgent {
-    color: @foreground;
+    color: @background;
     background: @urgent;
     border-bottom-color: @urgent;
 }
@@ -117,16 +120,47 @@
 #custom-pomodoro.paused,
 #wireplumber.muted,
 #network.disconnected,
-#bluetooth.disabled {
+#network.disabled,
+#bluetooth.disabled,
+#bluetooth.off {
     color: @foreground-muted;
 }
 
 #custom-pomodoro.work,
 #custom-pomodoro.break,
-#idle_inhibitor.activated,
-#battery.warning,
-#battery.critical:not(.charging) {
-    color: @foreground;
+#idle_inhibitor.activated {
+    color: @accent;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @success;
+}
+
+#battery.warning:not(.charging):not(.plugged) {
+    color: @warning;
+}
+
+#battery.critical:not(.charging):not(.plugged),
+#privacy {
+    color: @urgent;
+}
+
+#mpris.playing,
+#bluetooth.connected {
+    color: @accent;
+}
+
+/* Background-only hover feedback cannot change module widths. */
+#wireplumber:hover,
+#backlight:hover,
+#battery:hover,
+#network:hover,
+#bluetooth:hover,
+#mpris:hover,
+#power-profiles-daemon:hover,
+#idle_inhibitor:hover {
+    background: @background-raised;
 }
 
 #power-profiles-daemon.performance {
