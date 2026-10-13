@@ -42,7 +42,7 @@
 
 #workspaces button {
     color: @foreground;
-    background: transparent;
+    background-color: transparent;
     padding: 0 12px;
     margin: 0;
     min-width: 2.2em;
@@ -57,25 +57,25 @@
 #workspaces button.empty,
 #workspaces button.persistent {
     color: @foreground-inactive;
-    background: transparent;
+    background-color: transparent;
 }
 
 #workspaces button:hover {
     color: @foreground;
-    background: @background-raised;
+    background-color: @background-raised;
     border-bottom-color: @foreground-inactive;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
     color: @accent;
-    background: @background-selected;
+    background-color: @background-selected;
     border-bottom-color: @accent;
 }
 
 #workspaces button.urgent {
     color: @background;
-    background: @urgent;
+    background-color: @urgent;
     border-bottom-color: @urgent;
 }
 
@@ -99,7 +99,7 @@
 #tray,
 #power-profiles-daemon {
     color: @foreground;
-    background: transparent;
+    background-color: transparent;
     /* Equal padding keeps gaps consistent across text and icon modules. */
     padding: 0 12px;
     min-height: 0;
@@ -166,7 +166,7 @@
 #mpris:hover,
 #power-profiles-daemon:hover,
 #idle_inhibitor:hover {
-    background: @background-raised;
+    background-color: @background-raised;
 }
 
 #power-profiles-daemon.performance {
@@ -186,8 +186,20 @@
 }
 
 /* Static, short dividers painted inside existing space: no added width. */
-.modules-left > widget > .module:not(#workspaces),
-.modules-right > widget > .module,
+#scratchpad,
+#custom-cpu,
+#memory,
+#systemd-failed-units,
+#mpris,
+#wireplumber,
+#backlight,
+#battery,
+#privacy,
+#network,
+#bluetooth,
+#tray,
+#power-profiles-daemon,
+#idle_inhibitor,
 #workspaces button {
     background-image: linear-gradient(to bottom, @separator, @separator);
     background-size: 1px 12px;
@@ -206,7 +218,7 @@
 tooltip,
 #tray menu {
     color: @foreground;
-    background: @background-raised;
+    background-color: @background-raised;
     border: 1px solid @border;
     border-radius: 4px;
 }
@@ -225,5 +237,5 @@ tooltip label {
 }
 
 #tray menu menuitem:hover {
-    background: @background-selected;
+    background-color: @background-selected;
 }
