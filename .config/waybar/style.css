@@ -1,4 +1,4 @@
-/* Black base with restrained blue accents; layout stays fixed below. */
+/* Black base with restrained blue accents and consistent module spacing. */
 @define-color foreground #e2e8f0;
 @define-color foreground-inactive #a1adbf;
 @define-color foreground-muted #778397;
@@ -32,14 +32,18 @@
     border-bottom: 1px solid @border;
 }
 
-#workspaces {
-    padding-left: 4px;
+.modules-left {
+    padding-left: 6px;
+}
+
+.modules-right {
+    padding-right: 6px;
 }
 
 #workspaces button {
     color: @foreground;
     background: transparent;
-    padding: 0 10px;
+    padding: 0 12px;
     margin: 0;
     min-width: 2.2em;
     min-height: 0;
@@ -97,13 +101,8 @@
     color: @foreground;
     background: transparent;
     /* Equal padding keeps gaps consistent across text and icon modules. */
-    padding: 0 10px;
+    padding: 0 12px;
     min-height: 0;
-}
-
-/* Give right-side items equal breathing room and consistent icon slots. */
-.modules-right > widget > .module {
-    padding: 0 14px;
     min-width: 24px;
 }
 
