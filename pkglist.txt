@@ -6,7 +6,6 @@ anki
 ansible
 apparmor
 arduino-cli
-autotiling
 aws-cli-v2
 azure-cli
 base
