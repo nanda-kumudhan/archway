@@ -101,6 +101,12 @@
     min-height: 0;
 }
 
+/* Give right-side items equal breathing room and consistent icon slots. */
+.modules-right > widget > .module {
+    padding: 0 14px;
+    min-width: 24px;
+}
+
 #clock {
     color: @accent;
     font-weight: 500;
