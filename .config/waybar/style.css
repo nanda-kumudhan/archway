@@ -6,6 +6,7 @@
 @define-color background-raised #171717;
 @define-color background-selected #252525;
 @define-color border #2a2a2a;
+@define-color separator #202020;
 @define-color accent #93b9f5;
 @define-color success #9acbad;
 @define-color warning #e7c58a;
@@ -177,6 +178,24 @@
 
 #power-profiles-daemon.power-saver {
     color: @accent;
+}
+
+/* Static, short dividers painted inside existing space: no added width. */
+.modules-left > widget > .module:not(#workspaces),
+.modules-right > widget > .module,
+#workspaces button {
+    background-image: linear-gradient(to bottom, @separator, @separator);
+    background-size: 1px 12px;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+#clock {
+    background-image: linear-gradient(to bottom, @separator, @separator),
+                      linear-gradient(to bottom, @separator, @separator);
+    background-size: 1px 12px;
+    background-position: left center, right center;
+    background-repeat: no-repeat;
 }
 
 tooltip,
