@@ -196,7 +196,6 @@ bindsym Mod4+XF86AudioMute exec pavucontrol
 
 bindsym Mod4+n exec foot --app-id=nmtui -e nmtui
 
-bindsym Mod4+b exec foot --app-id=bluetui -e bluetui
 
 
 for_window [app_id="thunar"] floating enable, resize set 84% 84%, move position center
@@ -218,7 +217,6 @@ for_window [app_id="scratchpad_term"] floating enable, resize set 75% 80%, move 
 for_window [class="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="nmtui"] floating enable, resize set 700 520, move position center
-for_window [app_id="bluetui"] floating enable, resize set 700 520, move position center
 
 # Utility windows are easier to use as centered floating windows.
 for_window [app_id="^(org\.keepassxc\.KeePassXC|keepassxc)$"] floating enable, resize set 76% 80%, move position center
@@ -226,7 +224,7 @@ for_window [class="^KeePassXC$"] floating enable, resize set 76% 80%, move posit
 for_window [app_id="^org\.localsend\.localsend_app$"] floating enable, resize set 700 620, move position center
 for_window [app_id="^(rpi-imager|org\.raspberrypi\.rpi-imager|com\.raspberrypi\.rpi-imager)$"] floating enable, move position center
 for_window [class="^[Rr]pi-imager$"] floating enable, move position center
-for_window [app_id="^(xarchiver|nwg-look|nm-connection-editor|blueman-manager|blueman-adapters|system-config-printer)$"] floating enable, move position center
+for_window [app_id="^(xarchiver|wdisplays|nm-connection-editor|blueman-manager|blueman-adapters|system-config-printer)$"] floating enable, move position center
 for_window [class="^(Xarchiver|Nm-connection-editor|Blueman-manager|Blueman-adapters|System-config-printer.py)$"] floating enable, move position center
 
 # Authentication and application dialogs retain their requested dimensions.
@@ -243,7 +241,7 @@ for_window [app_id="^org\.pulseaudio\.pavucontrol$"] floating enable, resize set
 for_window [class="(?i)^(localsend|org\.localsend\.localsend_app)$"] floating enable, resize set 700 620, move position center
 for_window [app_id="^org\.raspberrypi\.rpi-imager\.rpi-imager$"] floating enable, move position center
 for_window [app_id="^(org\.blueman\.(Manager|Adapters)|org\.xfce\.Xarchiver|org\.fedoraproject\.Config\.Printing)$"] floating enable, move position center
-for_window [class="(?i)^(nwg-displays|nwg-look|system-config-printer)$"] floating enable, move position center
+for_window [class="(?i)^(nwg-displays|wdisplays|system-config-printer)$"] floating enable, move position center
 
 # Match only browser PiP windows; preserve their video aspect ratio and size.
 for_window [app_id="(?i)^(firefox|org\.mozilla\.firefox|brave|brave-browser|com\.brave\.Browser)$" title="(?i)^Picture[ -]in[ -]Picture$"] floating enable, sticky enable

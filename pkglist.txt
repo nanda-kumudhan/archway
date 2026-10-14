@@ -15,7 +15,6 @@ bat
 bc
 bind
 blueman
-bluetui
 bluez
 bluez-utils
 brave-bin
@@ -92,7 +91,7 @@ noto-fonts
 noto-fonts-emoji
 ntfs-3g
 ntfsprogs
-nwg-look
+wdisplays
 openai-codex
 opencode
 openconnect
