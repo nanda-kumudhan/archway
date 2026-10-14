@@ -1,4 +1,5 @@
 com.discordapp.Discord
 com.stremio.Stremio
+org.keepassxc.KeePassXC
 org.localsend.localsend_app
 org.telegram.desktop

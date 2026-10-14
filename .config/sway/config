@@ -56,7 +56,7 @@ client.unfocused $m_bg $m_bg #6f7378 $m_inactive $m_inactive
 client.urgent $m_urgent $m_bg $m_urgent $m_urgent $m_urgent
 
 
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec sh ~/.config/sway/scripts/polkit-agent.sh
 
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 exec systemctl --user import-environment WAYLAND_DISPLAY DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
@@ -107,7 +107,7 @@ bindsym Mod4+r layout toggle split
 bindsym Mod4+f fullscreen toggle
 bindsym Mod4+d floating toggle
 bindsym Mod4+Shift+d sticky toggle
-bindsym Mod4+Shift+p exec nwg-displays
+bindsym Mod4+Shift+p exec wdisplays
 bindsym Mod4+c floating enable, resize set width 80 ppt height 80 ppt, move position center
 bindsym Mod4+t layout tabbed
 bindsym Mod4+Shift+r reload
@@ -176,7 +176,7 @@ bindsym XF86AudioRaiseVolume exec "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 bindsym XF86Tools exec pavucontrol
-bindsym XF86Display exec nwg-displays
+bindsym XF86Display exec wdisplays
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPlay exec playerctl play-pause

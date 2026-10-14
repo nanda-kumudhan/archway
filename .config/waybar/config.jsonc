@@ -38,7 +38,7 @@
     "all-outputs": false,
 
     "window-rewrite-default": "󰋙",
-    // Match window app IDs/classes for desktop applications in pkglist.txt.
+    // Match window app IDs/classes for desktop applications across native and Flatpak installations.
     // CLI programs share their terminal's app ID and use the Foot icon.
     "window-rewrite": {
       "[Aa]nki": "󰗚",
