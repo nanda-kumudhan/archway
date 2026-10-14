@@ -93,7 +93,7 @@ bindsym Mod4+Shift+q kill
 bindsym Mod4+l exec swaylock
 bindsym Ctrl+Escape exec $term -T "sysmon" -e htop
 bindsym Mod4+w exec firefox
-bindsym Mod4+k exec keepassxc
+bindsym Mod4+k exec flatpak run org.keepassxc.KeePassXC
 
 bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
 
