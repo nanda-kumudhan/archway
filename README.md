@@ -24,7 +24,7 @@ Validate with `sway --validate --config ~/.config/sway/config`, then reload with
 
 ## Package references
 
-[packages/arch.txt](packages/arch.txt) preserves the native package list from the previous Arch installation, including development tools and system packages. It is a historical reference, not a portable installation manifest. [DEPENDENCIES.md](DEPENDENCIES.md) describes the tools used by the desktop configuration.
+[DEPENDENCIES.md](DEPENDENCIES.md) describes the tools used by the desktop configuration.
 
 ## Screenshots
 
