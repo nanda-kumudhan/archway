@@ -1,3 +1,9 @@
+# Development environment
+
+- The user runs Fedora Atomic Sway.
+- Perform development work inside a Toolbox container by using `toolbox enter`. Run development commands, builds, and tests in that container.
+- Install development tools and packages inside the Toolbox container, using `sudo dnf install` there as needed.
+
 # Sway dotfiles workflow
 
 These instructions apply to work on the Sway dotfiles in the user's home directory and in `$HOME/Github/archway` (currently `/home/zenith/Github/archway`). The checkout currently retains its existing archway directory name. These instructions do not require synchronizing unrelated projects or home files.
