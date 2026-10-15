@@ -1,12 +1,14 @@
 # Development environment
 
-- The user runs Fedora Atomic Sway.
-- Perform development work inside a Toolbox container by using `toolbox enter`. Run development commands, builds, and tests in that container.
-- Install development tools and packages inside the Toolbox container, using `sudo dnf install` there as needed.
+- These dotfiles target Arch Linux with Sway.
+- Run development commands, builds, and tests in the Arch Linux environment.
+- Use `pacman` for official repository packages and an AUR helper such as `yay` for AUR packages.
+- Keep native package references in `packages/arch.txt` and Flatpak application IDs in `flatpak_list.txt` up to date when changing desktop dependencies.
+- Use native application commands for desktop launchers, including `zeditor` for Zed and `keepassxc` for KeePassXC. Sway starts `autotiling`; Meta+B opens `bluetui`, and Meta+N opens `nmtui` from NetworkManager.
 
 # Sway dotfiles workflow
 
-These instructions apply to work on the Sway dotfiles in the user's home directory and in `$HOME/Github/archway` (currently `/home/zenith/Github/archway`). The checkout currently retains its existing archway directory name. These instructions do not require synchronizing unrelated projects or home files.
+These instructions apply to work on the Sway dotfiles in the user's home directory and in `$HOME/Github/archway`. The checkout uses the archway directory name. These instructions do not require synchronizing unrelated projects or home files.
 
 - When asked to change a Sway desktop configuration, keep the live home copy and the repository copy synchronized as part of the task. Copying the relevant files in either direction is authorized; no additional confirmation is needed for routine configuration updates.
 - Paths in the repository mirror paths relative to `$HOME`: for example, `$HOME/.config/waybar/config.jsonc` corresponds to `$HOME/Github/archway/.config/waybar/config.jsonc`, and `.bashrc` maps the same way.
