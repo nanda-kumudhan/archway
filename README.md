@@ -1,12 +1,14 @@
-# Sway dotfiles
+# Arch Linux Sway dotfiles
 
-My personal Sway and Wayland desktop configuration for development work as a computer science student. The setup is organized around desktop tools rather than a particular Linux distribution.
+My personal Arch Linux Sway and Wayland desktop configuration for development work as a computer science student.
 
-Uses Foot, Waybar, Rofi, Dunst, Kanshi, Swayidle, and Swaylock, with application preferences and a Bash/Starship setup. These dotfiles can be adapted to distributions that provide Sway and the required tools. The current session integration uses systemd, D-Bus, NetworkManager, and PipeWire/WirePlumber.
+Uses Foot, Waybar, Rofi, Dunst, Kanshi, Swayidle, and Swaylock, with application preferences and a Bash/Starship setup. The setup uses systemd, D-Bus, NetworkManager, and PipeWire/WirePlumber, with native Arch application commands.
 
-## Package reference
+## Package lists
 
-[packages/arch.txt](packages/arch.txt) preserves the package list from the previous Arch installation. It is a historical reference, with additions for the current desktop tools, rather than a portable installation manifest.
+[packages/arch.txt](packages/arch.txt) lists native Arch packages, including desktop applications, development tools, and system packages. It includes both official repository and AUR packages.
+
+[flatpak_list.txt](flatpak_list.txt) lists the remaining Flatpak applications. KeePassXC uses the native Arch package.
 
 ## Desktop shortcuts and tools
 
