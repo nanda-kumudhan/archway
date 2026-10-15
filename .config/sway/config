@@ -2,8 +2,9 @@ set $term foot
 set $file_manager Thunar
 set $file_menu exec rofi -show filebrowser -show-icons -icon-theme "Papirus-Dark"
 set $power_menu exec sh -c 'choice=$(printf "Logout\nCancel" | rofi -dmenu -i -p "Session"); [ "$choice" = "Logout" ] && swaymsg exit'
-set $editor zed
+set $editor zeditor
 
+exec autotiling
 exec dunst
 exec kanshi
 
@@ -93,7 +94,7 @@ bindsym Mod4+Shift+q kill
 bindsym Mod4+l exec swaylock
 bindsym Ctrl+Escape exec $term -T "sysmon" -e htop
 bindsym Mod4+w exec firefox
-bindsym Mod4+k exec flatpak run org.keepassxc.KeePassXC
+bindsym Mod4+k exec keepassxc
 
 bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
 
@@ -194,6 +195,7 @@ bindgesture swipe:3:up exec playerctl play-pause
 
 bindsym Mod4+XF86AudioMute exec pavucontrol
 
+bindsym Mod4+b exec foot --app-id=bluetui -e bluetui
 bindsym Mod4+n exec foot --app-id=nmtui -e nmtui
 
 
@@ -216,6 +218,7 @@ for_window [app_id="foot" title="fastfetch"] floating enable, move position cent
 for_window [app_id="scratchpad_term"] floating enable, resize set 75% 80%, move position center
 for_window [class="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="pavucontrol"] floating enable, resize set 56% 60%, move position center
+for_window [app_id="bluetui"] floating enable, resize set 700 520, move position center
 for_window [app_id="nmtui"] floating enable, resize set 700 520, move position center
 
 # Utility windows are easier to use as centered floating windows.
@@ -251,3 +254,11 @@ bar {
     position top
     swaybar_command waybar
 }
+
+# Force GTK Theme Variable for XFCE/Thunar
+exec_always {
+    systemctl --user import-environment GTK_THEME
+    hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --all
+}
+set $gnome-schema org.gnome.desktop.interface
+exec_always gsettings set $gnome-schema gtk-theme 'Materia-dark'

@@ -6,6 +6,7 @@ anki
 ansible
 apparmor
 arduino-cli
+autotiling
 aws-cli-v2
 azure-cli
 base
@@ -15,6 +16,7 @@ bat
 bc
 bind
 blueman
+bluetui
 bluez
 bluez-utils
 brave-bin
@@ -104,6 +106,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+playerctl
 podman
 podman-desktop
 polkit-gnome
