@@ -93,7 +93,8 @@ noto-fonts
 noto-fonts-emoji
 ntfs-3g
 ntfsprogs
-wdisplays
+nwg-displays
+nwg-look
 openai-codex
 opencode
 openconnect
