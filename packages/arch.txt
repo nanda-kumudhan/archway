@@ -175,6 +175,7 @@ nwg-displays
 wf-recorder
 wget
 wireplumber
+wl-clipboard
 wmenu
 wpa_supplicant
 xarchiver
