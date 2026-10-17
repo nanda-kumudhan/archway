@@ -4,7 +4,7 @@
 - Run development commands, builds, and tests in the Arch Linux environment.
 - Use `pacman` for official repository packages and an AUR helper such as `yay` for AUR packages.
 - Keep native package references in `packages/arch.txt` and Flatpak application IDs in `flatpak_list.txt` up to date when changing desktop dependencies.
-- Use native application commands for desktop launchers, including `zeditor` for Zed and `keepassxc` for KeePassXC. Sway starts `autotiling`; Meta+B opens `bluetui`, and Meta+N opens `nmtui` from NetworkManager.
+- Use native application commands for desktop launchers, including `zeditor` for Zed and `keepassxc` for KeePassXC. Meta+B opens `bluetoothctl` in a terminal, and Meta+N opens `nmtui` from NetworkManager.
 
 # Sway dotfiles workflow
 
