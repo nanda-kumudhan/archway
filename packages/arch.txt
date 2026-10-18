@@ -6,8 +6,8 @@ anki
 ansible
 apparmor
 arduino-cli
+autotiling
 aws-cli-v2
-azure-cli
 base
 base-devel
 bash-completion
@@ -15,6 +15,7 @@ bat
 bc
 bind
 blueman
+bluetui
 bluez
 bluez-utils
 brave-bin
@@ -91,6 +92,7 @@ noto-fonts
 noto-fonts-emoji
 ntfs-3g
 ntfsprogs
+nwg-displays
 nwg-look
 openai-codex
 opencode
@@ -104,7 +106,6 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
-playerctl
 podman
 podman-desktop
 polkit-gnome
@@ -169,7 +170,6 @@ vulkan-nouveau
 vulkan-radeon
 waybar
 waydroid
-nwg-displays
 wf-recorder
 wget
 wireplumber
