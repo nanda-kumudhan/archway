@@ -199,6 +199,7 @@ bindsym Mod4+b exec foot --app-id=bluetoothctl -e bluetoothctl
 bindsym Mod4+n exec foot --app-id=nmtui -e nmtui
 
 
+for_window [shell=".*"] inhibit_idle fullscreen
 
 for_window [app_id="thunar"] floating enable, resize set 84% 84%, move position center
 for_window [app_id="Thunar"] floating enable, resize set 84% 84%, move position center
