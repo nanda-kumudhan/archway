@@ -15,7 +15,9 @@ bat
 bc
 bind
 blueman
+bluetui
 bluez
+bluez-tools
 bluez-utils
 brave-bin
 brightnessctl
@@ -48,17 +50,18 @@ git
 git-lfs
 github-cli
 gnome-keyring
-gvfs
 greetd
 greetd-tuigreet
 grim
 gst-plugin-pipewire
+gvfs
 helm
 htop
-imv
 impala
+imv
 intel-media-driver
 intel-ucode
+iwd
 jq
 just
 k9s
@@ -75,6 +78,7 @@ libvpl
 linux
 linux-firmware
 linux-lts
+localsend-bin
 lsb-release
 lsof
 lvm2
@@ -187,6 +191,7 @@ xorg-xwayland
 yay
 yay-debug
 yq
+yt-dlp
 zathura
 zathura-pdf-poppler
 zed
