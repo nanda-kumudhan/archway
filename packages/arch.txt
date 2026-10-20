@@ -48,6 +48,7 @@ git
 git-lfs
 github-cli
 gnome-keyring
+gvfs
 greetd
 greetd-tuigreet
 grim
