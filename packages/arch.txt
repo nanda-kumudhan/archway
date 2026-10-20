@@ -56,6 +56,7 @@ gst-plugin-pipewire
 helm
 htop
 imv
+impala
 intel-media-driver
 intel-ucode
 jq
