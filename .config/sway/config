@@ -206,6 +206,7 @@ bindsym XF86MonBrightnessUp exec "brightnessctl set +5%"
 bindsym XF86AudioStop exec playerctl stop
 
 bindsym Ctrl+Alt+Delete exec $power_menu
+bindsym XF86PowerOff exec $power_menu
 bindswitch --reload --locked lid:on output eDP-1 disable
 bindswitch --reload --locked lid:off output eDP-1 enable
 
