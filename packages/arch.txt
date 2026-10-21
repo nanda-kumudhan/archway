@@ -15,7 +15,6 @@ bat
 bc
 bind
 blueman
-bluetui
 bluez
 bluez-tools
 bluez-utils
@@ -57,7 +56,6 @@ gst-plugin-pipewire
 gvfs
 helm
 htop
-impala
 imv
 intel-media-driver
 intel-ucode

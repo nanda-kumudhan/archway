@@ -196,8 +196,7 @@ bindgesture swipe:3:up exec playerctl play-pause
 
 bindsym Mod4+XF86AudioMute exec pavucontrol
 
-bindsym Mod4+b exec foot --app-id=bluetui -e bluetui
-bindsym Mod4+n exec foot --app-id=impala -e impala
+bindsym Mod4+n exec foot --app-id=nmtui -e nmtui
 
 
 for_window [shell=".*"] inhibit_idle fullscreen
@@ -220,9 +219,7 @@ for_window [app_id="foot" title="fastfetch"] floating enable, move position cent
 for_window [app_id="scratchpad_term"] floating enable, resize set 75% 80%, move position center
 for_window [class="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="pavucontrol"] floating enable, resize set 56% 60%, move position center
-for_window [app_id="nmtui"] floating enable, resize set 700 520, move position center
-for_window [app_id="bluetui"] floating enable, resize set 700 520, move position center
-for_window [app_id="impala"] floating enable, resize set 700 520, move position center
+for_window [app_id="nmtui"] floating enable, resize set 1000 700, move position center
 
 # Utility windows are easier to use as centered floating windows.
 for_window [app_id="^(org\.keepassxc\.KeePassXC|keepassxc)$"] floating enable, resize set 76% 80%, move position center
