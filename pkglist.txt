@@ -59,7 +59,6 @@ htop
 imv
 intel-media-driver
 intel-ucode
-iwd
 jq
 just
 k9s

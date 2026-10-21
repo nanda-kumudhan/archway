@@ -6,11 +6,11 @@ set $editor zeditor
 
 exec dunst
 exec kanshi
-exec_always autotiling
+exec autotiling
 exec gvfsd
 
 exec --no-startup-id eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh); dbus-update-activation-environment --systemd SSH_AUTH_SOCK; systemctl --user import-environment SSH_AUTH_SOCK
-exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP PATH
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP PATH
 exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP
 
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -97,9 +97,9 @@ bindsym Mod4+Escape exec $term -T "sysmon" -e htop
 bindsym Mod4+w exec firefox
 bindsym Mod4+k exec keepassxc
 
-bindsym Print exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
+bindsym Print exec sh ~/.config/sway/scripts/screenshot.sh
 
-bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +'%Y-%m-%d_%H-%M-%S').png
+bindsym Shift+Print exec sh ~/.config/sway/scripts/screenshot.sh area
 
 bindsym Ctrl+Print exec sh -c 'mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -f ~/Videos/Recordings/$(date +'"'"'%Y-%m-%d_%H-%M-%S'"'"').mp4; fi'
 bindsym Ctrl+Shift+Print exec sh -c 'mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -g "$(slurp)" -f ~/Videos/Recordings/$(date +'"'"'%Y-%m-%d_%H-%M-%S'"'"').mp4; fi'
@@ -199,7 +199,9 @@ bindsym Mod4+XF86AudioMute exec pavucontrol
 bindsym Mod4+n exec foot --app-id=nmtui -e nmtui
 
 
-for_window [shell=".*"] inhibit_idle fullscreen
+# Keep fullscreen videos and PDF presentations awake.
+for_window [app_id="^(mpv|zathura|org\.pwmt\.zathura)$"] inhibit_idle fullscreen
+for_window [class="(?i)^(mpv|zathura)$"] inhibit_idle fullscreen
 
 for_window [app_id="thunar"] floating enable, resize set 84% 84%, move position center
 for_window [app_id="Thunar"] floating enable, resize set 84% 84%, move position center
@@ -256,9 +258,9 @@ bar {
 }
 
 # Force GTK Theme Variable for XFCE/Thunar
-exec_always {
+exec {
     systemctl --user import-environment GTK_THEME
     hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --all
 }
 set $gnome-schema org.gnome.desktop.interface
-exec_always gsettings set $gnome-schema gtk-theme 'Materia-dark'
+exec gsettings set $gnome-schema gtk-theme 'Materia-dark'
