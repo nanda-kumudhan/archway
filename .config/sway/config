@@ -93,7 +93,7 @@ bindsym Mod4+Shift+e exec $file_manager
 bindsym Mod4+space exec $launcher
 bindsym Mod4+Shift+q kill
 bindsym Mod4+l exec swaylock
-bindsym Ctrl+Escape exec $term -T "sysmon" -e htop
+bindsym Mod4+Escape exec $term -T "sysmon" -e htop
 bindsym Mod4+w exec firefox
 bindsym Mod4+k exec keepassxc
 
