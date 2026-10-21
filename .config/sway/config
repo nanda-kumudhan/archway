@@ -101,8 +101,8 @@ bindsym Print exec sh ~/.config/sway/scripts/screenshot.sh
 
 bindsym Shift+Print exec sh ~/.config/sway/scripts/screenshot.sh area
 
-bindsym Ctrl+Print exec sh -c 'mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -f ~/Videos/Recordings/$(date +'"'"'%Y-%m-%d_%H-%M-%S'"'"').mp4; fi'
-bindsym Ctrl+Shift+Print exec sh -c 'mkdir -p ~/Videos/Recordings && if pgrep -x wf-recorder >/dev/null; then pkill -INT -x wf-recorder; else wf-recorder -g "$(slurp)" -f ~/Videos/Recordings/$(date +'"'"'%Y-%m-%d_%H-%M-%S'"'"').mp4; fi'
+bindsym Ctrl+Print exec sh ~/.config/sway/scripts/record-screen.sh
+bindsym Ctrl+Shift+Print exec sh ~/.config/sway/scripts/record-screen.sh area
 bindsym Mod4+h splith
 bindsym Mod4+v splitv
 bindsym Mod4+r layout toggle split
