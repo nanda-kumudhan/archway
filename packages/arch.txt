@@ -23,6 +23,7 @@ brave-bin
 brightnessctl
 btrfs-progs
 btrfsmaintenance
+chrony
 cups
 cups-pk-helper
 dbeaver
@@ -134,6 +135,7 @@ snap-pac
 snapper
 sof-firmware
 starship
+step-cli
 strace
 sudo
 sway
