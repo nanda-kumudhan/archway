@@ -8,6 +8,7 @@ apparmor
 arduino-cli
 autotiling
 aws-cli-v2
+azure-cli
 base
 base-devel
 bash-completion
@@ -59,6 +60,7 @@ htop
 imv
 intel-media-driver
 intel-ucode
+jdk21-openjdk
 jq
 just
 k9s
@@ -82,6 +84,7 @@ lvm2
 man-db
 man-pages
 materia-gtk-theme
+maven
 minikube
 mkinitcpio
 mpv
@@ -114,6 +117,7 @@ polkit-gnome
 powertop
 prismlauncher
 proton-vpn-cli
+python-pip
 qemu-base
 qemu-full
 reflector
@@ -121,6 +125,7 @@ remmina
 ripgrep
 rofi
 rpi-imager
+rustup
 sbctl
 seatd
 slurp
