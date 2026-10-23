@@ -71,6 +71,7 @@
       "(rpi-imager|org[.]raspberrypi[.]rpi-imager|com[.]raspberrypi[.]rpi-imager)": "",
       "org[.]remmina[.]Remmina": "󰢹",
       "system-config-printer": "󰐪",
+      "([Tt]e[Xx]studio|org[.]texstudio[.]TeXstudio)": "󰙩",
       "([Tt]hunar|org[.]xfce[.]Thunar|thunar-settings|thunar-bulk-rename)": "󰉋",
       "thunar-volman-settings": "󱊞",
       "(torbrowser-launcher|torbrowser|Tor Browser|org[.]torproject[.]torbrowser-launcher([.]settings)?)": "󰗹",

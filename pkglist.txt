@@ -8,6 +8,7 @@ apparmor
 arduino-cli
 autotiling
 aws-cli-v2
+azure-cli
 base
 base-devel
 bash-completion
@@ -22,6 +23,7 @@ brave-bin
 brightnessctl
 btrfs-progs
 btrfsmaintenance
+chrony
 cups
 cups-pk-helper
 dbeaver
@@ -49,6 +51,7 @@ git
 git-lfs
 github-cli
 gnome-keyring
+go
 greetd
 greetd-tuigreet
 grim
@@ -82,6 +85,7 @@ lvm2
 man-db
 man-pages
 materia-gtk-theme
+maven
 minikube
 mkinitcpio
 mpv
@@ -114,6 +118,7 @@ polkit-gnome
 powertop
 prismlauncher
 proton-vpn-cli
+python-pip
 qemu-base
 qemu-full
 reflector
@@ -121,6 +126,7 @@ remmina
 ripgrep
 rofi
 rpi-imager
+rustup
 sbctl
 seatd
 slurp
@@ -129,6 +135,7 @@ snap-pac
 snapper
 sof-firmware
 starship
+step-cli
 strace
 sudo
 sway
@@ -140,6 +147,11 @@ systemd-ukify
 tectonic
 terraform
 texlab
+texlive-basic
+texlive-fontsrecommended
+texlive-latexextra
+texlive-plaingeneric
+texstudio
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin

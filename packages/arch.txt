@@ -147,6 +147,11 @@ systemd-ukify
 tectonic
 terraform
 texlab
+texlive-basic
+texlive-fontsrecommended
+texlive-latexextra
+texlive-plaingeneric
+texstudio
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
