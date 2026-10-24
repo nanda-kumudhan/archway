@@ -6,6 +6,7 @@ set $editor zeditor
 
 exec dunst
 exec kanshi
+exec_always kanshictl reload
 exec autotiling
 exec gvfsd
 
