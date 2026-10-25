@@ -60,6 +60,12 @@
     background-color: transparent;
 }
 
+#workspaces button:hover {
+    color: @foreground;
+    background-color: @background-raised;
+    border-bottom-color: @foreground-inactive;
+}
+
 #workspaces button.focused,
 #workspaces button.active {
     color: @accent;

@@ -32,8 +32,8 @@
   "sway/workspaces": {
     "format": "{name} {windows}",
     "format-window-separator": " ",
-    "disable-click": true,
-    "disable-scroll": true,
+    "disable-click": false,
+    "disable-scroll": false,
     "sort-by-number": true,
     "all-outputs": false,
 
