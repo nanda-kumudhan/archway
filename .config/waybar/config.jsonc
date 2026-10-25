@@ -33,7 +33,7 @@
     "format": "{name} {windows}",
     "format-window-separator": " ",
     "disable-click": false,
-    "disable-scroll": true,
+    "disable-scroll": false,
     "sort-by-number": true,
     "all-outputs": false,
 
