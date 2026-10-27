@@ -2,6 +2,7 @@
 acpi
 acpid
 age
+anki
 ansible
 apparmor
 arduino-cli
