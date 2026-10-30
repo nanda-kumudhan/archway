@@ -220,6 +220,7 @@ bindgesture swipe:3:up exec playerctl play-pause
 
 bindsym Mod4+XF86AudioMute exec pavucontrol
 
+bindsym Mod4+b exec foot --app-id=bluetui -e bluetui
 bindsym Mod4+n exec foot --app-id=nmtui -e nmtui
 
 
