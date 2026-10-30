@@ -247,6 +247,7 @@ for_window [app_id="scratchpad_term"] floating enable, resize set 75% 80%, move 
 for_window [class="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="pavucontrol"] floating enable, resize set 56% 60%, move position center
 for_window [app_id="nmtui"] floating enable, resize set 1000 700, move position center
+for_window [app_id="bluetui"] floating enable, resize set 1000 700, move position center
 
 # Utility windows are easier to use as centered floating windows.
 for_window [app_id="^(org\.keepassxc\.KeePassXC|keepassxc)$"] floating enable, resize set 76% 80%, move position center
