@@ -13,9 +13,8 @@
     "systemd-failed-units"
 
   ],
-  "modules-center": [
-    "clock"
-  ],
+  // Keep the center empty so the time stays out of view.
+  "modules-center": [],
   "modules-right": [
     "mpris",
     "wireplumber",
