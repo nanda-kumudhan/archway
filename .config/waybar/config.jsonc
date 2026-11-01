@@ -94,9 +94,9 @@
 
   "clock": {
     "interval": 60,
-    // Start with an icon; reveal the time only when explicitly clicked.
-    "format": "",
-    "format-alt": "{:%H:%M}",
+    // Show the date by default; reveal the time only when explicitly clicked.
+    "format": "{:%a %d %b}",
+    "format-alt": "{:%a %d %b · %H:%M}",
     "format-alt-click": 1,
     "tooltip-format": "Left-click: show / hide time"
   },
