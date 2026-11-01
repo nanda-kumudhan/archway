@@ -279,7 +279,7 @@ for_window [app_id="(?i)^(firefox|org\.mozilla\.firefox|brave|brave-browser|com\
 for_window [class="(?i)^(firefox|brave|brave-browser|com\.brave\.Browser)$" title="(?i)^Picture[ -]in[ -]Picture$"] floating enable, sticky enable
 
 bar {
-    position bottom
+    position top
     swaybar_command waybar
 }
 
