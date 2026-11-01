@@ -13,8 +13,9 @@
     "systemd-failed-units"
 
   ],
-  // Keep the center empty so the time stays out of view.
-  "modules-center": [],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "mpris",
     "wireplumber",
@@ -93,16 +94,11 @@
 
   "clock": {
     "interval": 60,
-    "format": "{:%H:%M}",
-    "format-alt": "{:%a %d %b}",
-    "tooltip-format": "{:%A, %d %B %Y\n%H:%M}\n\n{calendar}",
-    "calendar": {
-      "mode": "month",
-      "on-scroll": 1,
-      "format": {
-        "today": "<span color='#e6e6e6'>{}</span>"
-      }
-    }
+    // Start with an icon; reveal the time only when explicitly clicked.
+    "format": "",
+    "format-alt": "{:%H:%M}",
+    "format-alt-click": 1,
+    "tooltip-format": "Left-click: show / hide time"
   },
 
   "custom/cpu": {
