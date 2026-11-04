@@ -1,3 +1,0 @@
-com.discordapp.Discord
-com.stremio.Stremio
-org.telegram.desktop

@@ -2,6 +2,7 @@
 acpi
 acpid
 age
+android-udev
 anki
 ansible
 apparmor
@@ -32,12 +33,14 @@ ddcutil
 direnv
 distrobox
 dmidecode
+dnsmasq
 docker
 docker-buildx
 docker-compose
 dosfstools
 dunst
 efibootmgr
+expac
 eza
 fastfetch
 fd
@@ -83,6 +86,7 @@ localsend-bin
 lsb-release
 lsof
 lvm2
+lxc
 man-db
 man-pages
 materia-gtk-theme
@@ -127,6 +131,7 @@ remmina
 ripgrep
 rofi
 rpi-imager
+rsync
 rustup
 sbctl
 seatd
@@ -184,7 +189,6 @@ vulkan-intel
 vulkan-nouveau
 vulkan-radeon
 waybar
-waydroid
 wf-recorder
 wget
 wireplumber
@@ -199,7 +203,6 @@ xf86-video-ati
 xf86-video-nouveau
 xorg-xwayland
 yay
-yay-debug
 yq
 yt-dlp
 zathura
