@@ -1,5 +1,7 @@
 # My daily-driver Arch Linux Sway setup as a CS student
 
+Archway is the dotfiles collection behind this setup.
+
 ![Fastfetch](assets/archway-desktop.png)
 
 ![htop](assets/archway-desktop-221535.png)
