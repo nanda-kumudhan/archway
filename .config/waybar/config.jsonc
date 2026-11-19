@@ -50,7 +50,6 @@
       "class<([Ff]irewall-config|org[.]fedoraproject[.]FirewallConfig)>": " ",
       "class<(foot(-?client)?|scratchpad_term)>": " ",
       "class<(imv|imv-dir)>": " 󰋩",
-      "class<(keepassxc|KeePassXC|org[.]keepassxc[.]KeePassXC)>": " 󰌆",
       "class<libreoffice(-startcenter)?>": " 󰏆",
       "class<libreoffice-base>": " 󰆼",
       "class<libreoffice-writer>": " 󰈬",

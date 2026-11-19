@@ -16,7 +16,6 @@ bash-completion
 bat
 bc
 bind
-bitwarden
 blueman
 bluetui
 bluez

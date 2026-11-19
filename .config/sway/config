@@ -99,7 +99,6 @@ bindsym Mod4+Shift+q kill
 bindsym Mod4+l exec swaylock
 bindsym Mod4+Escape exec $term -T "sysmon" -e htop
 bindsym Mod4+w exec firefox
-bindsym Mod4+k exec keepassxc
 
 bindsym Print exec sh ~/.config/sway/scripts/screenshot.sh
 
@@ -250,8 +249,6 @@ for_window [app_id="nmtui"] floating enable, resize set 1000 700, move position 
 for_window [app_id="bluetui"] floating enable, resize set 1000 700, move position center
 
 # Utility windows are easier to use as centered floating windows.
-for_window [app_id="^(org\.keepassxc\.KeePassXC|keepassxc)$"] floating enable, resize set 76% 80%, move position center
-for_window [class="^KeePassXC$"] floating enable, resize set 76% 80%, move position center
 for_window [app_id="^org\.localsend\.localsend_app$"] floating enable, resize set 700 620, move position center
 for_window [app_id="^(rpi-imager|org\.raspberrypi\.rpi-imager|com\.raspberrypi\.rpi-imager)$"] floating enable, move position center
 for_window [class="^[Rr]pi-imager$"] floating enable, move position center
