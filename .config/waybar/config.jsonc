@@ -98,7 +98,7 @@
   "clock": {
     "interval": 60,
     "format": "{:%H:%M}",
-    "tooltip-format": "{calendar}",
+    "tooltip-format": "{:%A}\n\n{calendar}",
     "calendar": {
       "mode": "month",
       "format": {
