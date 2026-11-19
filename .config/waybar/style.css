@@ -112,15 +112,9 @@
 }
 
 #clock.calendar-months,
+#clock.calendar-weekdays,
+#clock.calendar-days,
 #clock.calendar-today {
-    color: @accent;
-}
-
-#clock.calendar-weekdays {
-    color: @foreground-muted;
-}
-
-#clock.calendar-days {
     color: @foreground;
 }
 
