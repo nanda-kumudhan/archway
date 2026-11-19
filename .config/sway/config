@@ -17,7 +17,7 @@ exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DE
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
-set $launcher exec rofi -show drun -show-icons -icon-theme "Papirus-Dark" -drun-display-format "{name}" -p "Apps"
+set $launcher exec rofi -show drun -show-icons -icon-theme "Papirus-Dark" -drun-display-format "{name}" -theme apps.rasi
 
 set $ws1 "1"
 set $ws2 "2"
@@ -186,8 +186,8 @@ bindsym Mod4+Ctrl+Shift+Left move workspace to output left
 
 bindsym Mod4+Tab workspace back_and_forth
 bindsym Mod4+Shift+Tab workspace back_and_forth
-bindsym Mod1+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
-bindsym Mod1+Shift+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
+bindsym Mod1+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark"
+bindsym Mod1+Shift+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark"
 
 bindsym Mod4+Shift+s exec systemctl suspend
 

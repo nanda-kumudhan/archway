@@ -1,25 +1,22 @@
-@define-color foreground #e8eaed;
-@define-color foreground-inactive #a8aeb8;
-@define-color foreground-muted #858d99;
-@define-color background #121212;
-@define-color background-raised #1d1d1d;
-@define-color background-selected #202838;
-@define-color border #2a2a2a;
-@define-color accent #8ab4f8;
-@define-color success #9acbad;
+@define-color foreground #f1f1f1;
+@define-color muted #b6b6b6;
+@define-color background #141414;
+@define-color surface #232323;
+@define-color selection #393939;
+@define-color border #353535;
+@define-color success #a7cfb2;
 @define-color warning #e7c58a;
-@define-color urgent #f28b82;
+@define-color urgent #ffada6;
+
 * {
-    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", monospace;
-    font-size: 15px;
-    font-weight: 400;
+    font-family: "Noto Sans", "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
     padding: 0;
     margin: 0;
     border: none;
     border-radius: 0;
     box-shadow: none;
     text-shadow: none;
-    /* Static styling avoids extra frames during hover and state changes. */
     transition: none;
     animation: none;
 }
@@ -31,39 +28,33 @@
 }
 
 .modules-left {
-    padding-left: 6px;
+    padding-left: 10px;
 }
 
 .modules-right {
-    padding-right: 6px;
+    padding-right: 10px;
 }
 
 #workspaces button {
-    color: @foreground;
-    background-color: transparent;
-    background-image: none;
-    padding: 0 8px;
-    margin: 3px 1px;
-    min-width: 2em;
+    color: @muted;
+    background: none;
+    padding: 0 9px;
+    margin: 4px 2px 4px 0;
+    min-width: 10px;
     min-height: 0;
-    border-radius: 4px;
+    border-radius: 12px;
 }
 
-#workspaces button.empty,
-#workspaces button.persistent {
-    color: @foreground-inactive;
-    background-color: transparent;
-}
-
-#workspaces button:hover {
+#workspaces button:hover,
+#clock:hover {
     color: @foreground;
-    background-color: @background-raised;
+    background-color: @surface;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
-    color: @accent;
-    background-color: @background-selected;
+    color: @foreground;
+    background-color: @selection;
 }
 
 #workspaces button.urgent {
@@ -71,62 +62,58 @@
     background-color: @urgent;
 }
 
+#clock {
+    font-weight: 600;
+    padding: 0 12px;
+    margin: 4px 0;
+    border-radius: 12px;
+}
+
 #scratchpad,
-#clock,
 #custom-cpu,
 #memory,
 #systemd-failed-units,
 #mpris,
-#custom-launcher,
-#custom-pomodoro,
-#network,
-#custom-vpn,
-#bluetooth,
-#wireplumber,
-#custom-mic-muted,
-#backlight,
-#battery,
-#idle_inhibitor,
 #privacy,
 #tray,
-#power-profiles-daemon {
-    color: @foreground;
-    background-color: transparent;
-    padding: 0 9px;
-    min-height: 0;
-    min-width: 18px;
+#power-profiles-daemon,
+#idle_inhibitor {
+    padding: 0 6px;
 }
 
-#clock {
-    color: @accent;
-    font-weight: 500;
-}
-
-#mpris,
 #scratchpad,
 #custom-cpu,
 #memory,
-#privacy,
-#idle_inhibitor,
-#tray {
-    color: @foreground-inactive;
-}
-
 #mpris.paused,
-#custom-pomodoro.idle,
-#custom-pomodoro.paused,
+#idle_inhibitor:not(.activated),
 #wireplumber.muted,
 #network.disconnected,
 #network.disabled,
 #bluetooth.disabled,
 #bluetooth.off {
-    color: @foreground-muted;
+    color: @muted;
 }
 
-#custom-pomodoro.work,
-#custom-pomodoro.break,
-#idle_inhibitor.activated {
-    color: @accent;
+#status {
+    background-color: @surface;
+    margin: 4px 0 4px 5px;
+    padding: 0 5px;
+    border-radius: 12px;
+}
+
+#network,
+#bluetooth,
+#wireplumber,
+#backlight,
+#battery {
+    font-size: 14px;
+    padding: 0 6px;
+    min-width: 14px;
+    border-radius: 9px;
+}
+
+#status .module:hover {
+    background-color: @selection;
 }
 
 #battery.charging,
@@ -139,72 +126,26 @@
 }
 
 #battery.critical:not(.charging):not(.plugged),
+#systemd-failed-units.degraded,
+#power-profiles-daemon.performance,
 #privacy {
     color: @urgent;
-}
-
-#mpris.playing,
-#bluetooth.connected {
-    color: @accent;
-}
-
-/* Background-only hover feedback cannot change module widths. */
-#wireplumber:hover,
-#battery:hover,
-#network:hover,
-#bluetooth:hover,
-#mpris:hover,
-#power-profiles-daemon:hover,
-#idle_inhibitor:hover {
-    background-color: @background-raised;
-}
-
-#power-profiles-daemon.performance {
-    color: @urgent;
-}
-
-#systemd-failed-units.degraded {
-    color: @urgent;
-}
-
-#power-profiles-daemon.balanced {
-    color: @foreground;
-}
-
-#power-profiles-daemon.power-saver {
-    color: @accent;
-}
-
-/* Separate status groups without adding space for dividers. */
-#battery,
-#tray {
-    background-image: linear-gradient(to bottom, @border, @border);
-    background-size: 1px 12px;
-    background-position: right center;
-    background-repeat: no-repeat;
 }
 
 tooltip,
 #tray menu {
     color: @foreground;
-    background-color: @background-raised;
+    background-color: @surface;
     border: 1px solid @border;
-    border-radius: 6px;
+    border-radius: 9px;
 }
 
-tooltip {
-    padding: 0;
-}
-
-tooltip label {
-    color: @foreground;
-    padding: 6px 8px;
-}
-
+tooltip label,
 #tray menu menuitem {
-    padding: 6px 10px;
+    color: @foreground;
+    padding: 7px 10px;
 }
 
 #tray menu menuitem:hover {
-    background-color: @background-selected;
+    background-color: @selection;
 }

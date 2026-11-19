@@ -1,0 +1,34 @@
+@import "mono.rasi"
+
+window {
+    width: calc(90% min 640px);
+}
+
+inputbar {
+    children: [ textbox-search, entry ];
+}
+
+entry {
+    placeholder: "Search apps";
+}
+
+element normal,
+element alternate {
+    background-color: #222222;
+}
+
+listview {
+    lines:         6;
+    columns:       2;
+    flow:          horizontal;
+    fixed-columns: true;
+    spacing:       6px;
+}
+
+element {
+    padding: 8px 12px;
+}
+
+element-icon {
+    size: 28px;
+}

@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "exclusive": true,
-  "height": 30,
+  "height": 32,
   "spacing": 0,
 
   "modules-left": [
@@ -18,16 +18,23 @@
   ],
   "modules-right": [
     "mpris",
-    "wireplumber",
-    "backlight",
-    "battery",
     "privacy",
-    "network",
-    "bluetooth",
     "tray",
     "power-profiles-daemon",
     "idle_inhibitor",
+    "group/status"
   ],
+
+  "group/status": {
+    "orientation": "inherit",
+    "modules": [
+      "network",
+      "bluetooth",
+      "wireplumber",
+      "backlight",
+      "battery"
+    ]
+  },
 
   "sway/workspaces": {
     "format": "{name} {windows}",
@@ -94,11 +101,10 @@
 
   "clock": {
     "interval": 60,
-    // Start with an icon; reveal the date and time only when explicitly clicked.
-    "format": "",
+    "format": "{:%a %H:%M}",
     "format-alt": "{:%a %d %b · %H:%M}",
     "format-alt-click": 1,
-    "tooltip-format": "Left-click: show / hide date and time"
+    "tooltip-format": "{:%A, %d %B %Y}"
   },
 
   "custom/cpu": {
@@ -145,13 +151,14 @@
   },
 
   "wireplumber": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰖁 {volume}%",
+    "format": "{icon}",
+    "format-muted": "󰖁",
     "format-icons": [
       "󰕿",
       "󰖀",
       "󰕾"
     ],
+    "tooltip-format": "{node_name}\nVolume: {volume}%",
     "max-volume": 100,
     "on-click": "pavucontrol",
     "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
@@ -160,15 +167,13 @@
   "backlight": {
     // Keep periodic hardware checks infrequent to reduce wakeups.
     "interval": 60,
-    "format": "{icon} {percent}%",
+    "format": "{icon}",
     "format-icons": [
       "󰃞",
       "󰃟",
       "󰃠"
     ],
-
-
-
+    "tooltip-format": "Brightness: {percent}%"
   },
 
   "battery": {
@@ -223,7 +228,8 @@
   "network": {
     // Connection changes still arrive through network events.
     "interval": 120,
-    "format-wifi": "󰖩 {essid}",
+    "format-wifi": "{icon}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format-ethernet": "󰈀",
     "format-linked": "󰈀",
     "format-disconnected": "󰖪",
@@ -243,12 +249,13 @@
     "format-disabled": "󰂲",
     "format-off": "󰂲",
     "format-on": "󰂯",
-    "format-connected": "󰂱 {device_alias}",
-    "format-connected-battery": "󰂱 {device_alias} {device_battery_percentage}%",
+    "format-connected": "󰂱",
+    "format-connected-battery": "󰂱",
     "on-click": "bluetoothctl power on",
     "on-click-middle": "bluetoothctl power off",
     "tooltip-format": "Bluetooth: {status}",
-    "tooltip-format-connected": "Connected: {device_alias}\nBattery: {device_battery_percentage}%",
+    "tooltip-format-connected": "Connected: {device_alias}",
+    "tooltip-format-connected-battery": "Connected: {device_alias}\nBattery: {device_battery_percentage}%"
 
   },
 
