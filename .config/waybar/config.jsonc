@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "exclusive": true,
-  "height": 32,
+  "height": 40,
   "spacing": 0,
 
   "modules-left": [
@@ -208,18 +208,18 @@
 
   "privacy": {
     "icon-spacing": 6,
-    "icon-size": 14,
+    "icon-size": 18,
     "transition-duration": 0,
     "modules": [
       {
         "type": "screenshare",
         "tooltip": true,
-        "tooltip-icon-size": 18
+        "tooltip-icon-size": 22
       },
       {
         "type": "audio-in",
         "tooltip": true,
-        "tooltip-icon-size": 18
+        "tooltip-icon-size": 22
       }
     ],
     "ignore-monitor": true
@@ -260,7 +260,7 @@
   },
 
   "tray": {
-    "icon-size": 14,
+    "icon-size": 18,
     "spacing": 10
   },
 

@@ -1,7 +1,8 @@
 @import "mono.rasi"
 
 window {
-    width: calc(90% min 640px);
+    width:    calc(94% min 920px);
+    y-offset: calc(4% min 36px);
 }
 
 inputbar {
@@ -18,17 +19,40 @@ element alternate {
 }
 
 listview {
-    lines:         6;
-    columns:       2;
+    lines:         5;
+    columns:       5;
     flow:          horizontal;
     fixed-columns: true;
-    spacing:       6px;
+    spacing:       7px;
+    scrollbar:     true;
 }
 
 element {
-    padding: 8px 12px;
+    orientation:  vertical;
+    children:     [ element-icon, element-text ];
+    padding:      6px 7px;
+    spacing:      4px;
+    border:       1px;
+    border-color: transparent;
+}
+
+element selected {
+    border-color: #696969;
 }
 
 element-icon {
-    size: 28px;
+    size:             calc(6% min 48px);
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    highlight:        bold;
+}
+
+scrollbar {
+    handle-width:           4px;
+    handle-color:           #646464;
+    handle-rounded-corners: true;
 }

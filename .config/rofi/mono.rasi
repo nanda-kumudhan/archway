@@ -9,14 +9,14 @@
 
     background-color: transparent;
     text-color:       @foreground;
-    font:             "Sans 12";
+    font:             "Sans 13";
 }
 
 window {
     location:         north;
     anchor:           north;
     y-offset:         16%;
-    width:            calc(90% min 560px);
+    width:            calc(90% min 620px);
     border:           1px;
     border-color:     @outline;
     border-radius:    16px;
@@ -39,22 +39,22 @@ inputbar {
 
 textbox-search {
     content:        "󰍉";
-    font:           "JetBrainsMono Nerd Font Mono 14";
+    font:           "JetBrainsMono Nerd Font Mono 17";
     expand:         false;
-    width:          22px;
+    width:          25px;
     text-color:     @muted;
     vertical-align: 0.5;
 }
 
 entry {
-    font:              "Sans 14";
+    font:              "Sans 16";
     placeholder:       "Type to search";
     placeholder-color: @muted;
     vertical-align:    0.5;
 }
 
 prompt {
-    font:           "Sans Medium 10";
+    font:           "Sans Medium 11";
     expand:         false;
     text-color:     @muted;
     vertical-align: 0.5;
@@ -80,7 +80,7 @@ element-text {
 }
 
 element-icon {
-    size: 22px;
+    size: 26px;
 }
 
 element normal.urgent,
