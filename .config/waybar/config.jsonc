@@ -98,7 +98,19 @@
   "clock": {
     "interval": 60,
     "format": "{:%H:%M}",
-    "tooltip-format": "{:%A, %d %B %Y}"
+    "tooltip-format": "{:%A, %d %B %Y}\n\n<tt>{calendar}</tt>\n\n<small>Scroll to browse\nClick for this month</small>",
+    "calendar": {
+      "mode": "month",
+      "format": {
+        "months": "<b>{}</b>",
+        "today": "<b><u>{}</u></b>"
+      }
+    },
+    "actions": {
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+      "on-click": "shift_reset"
+    }
   },
 
   "custom/cpu": {

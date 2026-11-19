@@ -111,6 +111,19 @@
     font-weight: 500;
 }
 
+#clock.calendar-months,
+#clock.calendar-today {
+    color: @accent;
+}
+
+#clock.calendar-weekdays {
+    color: @foreground-muted;
+}
+
+#clock.calendar-days {
+    color: @foreground;
+}
+
 #mpris,
 #scratchpad,
 #custom-cpu,
