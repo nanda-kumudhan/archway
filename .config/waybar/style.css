@@ -1,7 +1,7 @@
 /* Black base with restrained blue accents and consistent module spacing. */
 @define-color foreground #e2e8f0;
 @define-color foreground-inactive #a1adbf;
-@define-color foreground-muted #778397;
+@define-color foreground-muted #8b98ac;
 @define-color background #000000;
 @define-color background-raised #171717;
 @define-color background-selected #252525;
@@ -158,7 +158,10 @@
 }
 
 /* Background-only hover feedback cannot change module widths. */
+#clock:hover,
+#memory:hover,
 #wireplumber:hover,
+#backlight:hover,
 #battery:hover,
 #network:hover,
 #bluetooth:hover,
