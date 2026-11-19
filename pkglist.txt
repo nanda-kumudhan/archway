@@ -16,6 +16,7 @@ bash-completion
 bat
 bc
 bind
+bitwarden
 blueman
 bluetui
 bluez
@@ -70,7 +71,6 @@ jq
 just
 k9s
 kanshi
-keepassxc
 kind
 kubectl
 kustomize
