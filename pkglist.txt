@@ -26,6 +26,7 @@ brave-bin
 brightnessctl
 btrfs-progs
 btrfsmaintenance
+calf
 chrony
 cups
 cups-pk-helper
@@ -40,12 +41,15 @@ docker-buildx
 docker-compose
 dosfstools
 dunst
+easyeffects
 efibootmgr
 expac
 eza
 fastfetch
 fd
 firefox
+firewall-config
+firewalld
 flatpak
 foot
 fprintd
@@ -56,7 +60,6 @@ git
 git-lfs
 github-cli
 gnome-keyring
-go
 greetd
 greetd-tuigreet
 grim
@@ -86,12 +89,14 @@ linux-firmware
 linux-lts
 lsb-release
 lsof
+lsp-plugins-lv2
 lvm2
 lxc
 man-db
 man-pages
 materia-gtk-theme
 maven
+mda.lv2
 minikube
 mkinitcpio
 mpv
@@ -109,6 +114,7 @@ nwg-look
 openai-codex
 opencode
 openconnect
+openssh
 opentofu
 pacman-contrib
 papirus-icon-theme
@@ -136,6 +142,7 @@ rsync
 rustup
 sbctl
 seatd
+signal-desktop
 slurp
 smartmontools
 snap-pac
@@ -162,8 +169,6 @@ texstudio
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
-thunar-shares-plugin
-thunar-vcs-plugin
 thunar-volman
 tlp
 tlp-pd
@@ -182,7 +187,6 @@ ttf-jetbrains-mono-nerd
 ttf-liberation
 tumbler
 udiskie
-ufw
 unrar
 unzip
 veracrypt
@@ -198,7 +202,6 @@ wget
 wireplumber
 wl-clipboard
 wmenu
-wpa_supplicant
 xarchiver
 xdg-desktop-portal-wlr
 xdg-utils
@@ -207,8 +210,10 @@ xf86-video-ati
 xf86-video-nouveau
 xorg-xwayland
 yay
+yay-debug
 yq
 yt-dlp
+zam-plugins-lv2
 zathura
 zathura-pdf-poppler
 zed
