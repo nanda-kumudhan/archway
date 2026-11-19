@@ -17,7 +17,7 @@ exec systemctl --user import-environment SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DE
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
-set $launcher exec rofi -show drun -show-icons -icon-theme "Papirus-Dark" -drun-display-format "{name}" -theme apps.rasi
+set $launcher exec rofi -show drun -show-icons -icon-theme "Papirus-Dark" -drun-display-format "{name}" -p "Apps"
 
 set $ws1 "1"
 set $ws2 "2"
@@ -34,8 +34,6 @@ workspace $ws1 output eDP-1
 
 xwayland enable
 set $m_bg #121212
-set $m_selected #202838
-set $m_focus_border #405674
 set $m_active #8ab4f8
 set $m_inactive #2a2a2a
 set $m_urgent #f28b82
@@ -57,9 +55,9 @@ hide_edge_borders smart
 
 exec udiskie --smart-tray --automount
 
-client.focused $m_focus_border $m_selected $m_text $m_active $m_focus_border
+client.focused #262626 $m_bg $m_text $m_active #262626
 client.focused_inactive #1f1f1f $m_bg #a0a4a8 #1f1f1f #1f1f1f
-client.focused_tab_title $m_focus_border $m_selected $m_active
+client.focused_tab_title #262626 $m_bg $m_text
 client.unfocused $m_bg $m_bg #6f7378 $m_inactive $m_inactive
 client.urgent $m_urgent $m_bg $m_urgent $m_urgent $m_urgent
 
@@ -186,8 +184,8 @@ bindsym Mod4+Ctrl+Shift+Left move workspace to output left
 
 bindsym Mod4+Tab workspace back_and_forth
 bindsym Mod4+Shift+Tab workspace back_and_forth
-bindsym Mod1+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark"
-bindsym Mod1+Shift+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark"
+bindsym Mod1+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
+bindsym Mod1+Shift+Tab exec rofi -show window -show-icons -icon-theme "Papirus-Dark" -p "Windows"
 
 bindsym Mod4+Shift+s exec systemctl suspend
 

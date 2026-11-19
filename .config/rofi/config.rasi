@@ -1,7 +1,4 @@
 configuration {
-    display-drun: "Apps";
-    display-window: "Windows";
-    display-filebrowser: "Files";
 }
 
-@theme "mono.rasi"
+@theme "~/.config/rofi/mono.rasi"

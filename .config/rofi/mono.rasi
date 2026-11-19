@@ -1,100 +1,105 @@
 * {
-    surface:         #191919;
-    field:           #272727;
-    selection:       #424242;
-    outline:         #353535;
-    foreground:      #f1f1f1;
-    muted:           #b6b6b6;
-    urgent:          #ffada6;
+    bg:              #121212;
+    bg-alt:          #1d1d1d;
+    bg-selected:     #272727;
+    bg-hover:        #2a2a2a;
+
+    fg:              #e8eaed;
+    fg-muted:        #9aa0a6;
+    fg-subtle:       #6f7378;
+
+    border:          #2a2a2a;
+    border-strong:   #8ab4f8;
+    accent:          #8ab4f8;
+    urgent:          #f28b82;
 
     background-color: transparent;
-    text-color:       @foreground;
-    font:             "Sans 13";
+    text-color:       @fg;
+    font:             "JetBrainsMono Nerd Font 11";
 }
 
 window {
-    location:         north;
-    anchor:           north;
-    y-offset:         16%;
-    width:            calc(90% min 620px);
+    width:            34%;
     border:           1px;
-    border-color:     @outline;
-    border-radius:    16px;
-    background-color: @surface;
-    padding:          14px;
+    border-color:     @border;
+    background-color: @bg;
+    padding:          7px;
 }
 
 mainbox {
-    spacing: 12px;
-    children: [ inputbar, message, listview ];
+    spacing: 8px;
 }
 
 inputbar {
-    children:         [ textbox-search, entry, prompt ];
-    spacing:          12px;
-    padding:          10px 14px;
-    background-color: @field;
-    border-radius:    10px;
-}
-
-textbox-search {
-    content:        "󰍉";
-    font:           "JetBrainsMono Nerd Font Mono 17";
-    expand:         false;
-    width:          25px;
-    text-color:     @muted;
-    vertical-align: 0.5;
-}
-
-entry {
-    font:              "Sans 16";
-    placeholder:       "Type to search";
-    placeholder-color: @muted;
-    vertical-align:    0.5;
+    children: [ prompt, entry ];
+    spacing: 8px;
+    padding: 6px 10px;
+    background-color: @bg-alt;
+    border: 1px;
+    border-color: @border;
 }
 
 prompt {
-    font:           "Sans Medium 11";
-    expand:         false;
-    text-color:     @muted;
-    vertical-align: 0.5;
+    text-color: @accent;
+    font: "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: @fg-subtle;
+    text-color: @fg;
 }
 
 listview {
-    lines:        8;
-    columns:      1;
-    spacing:      3px;
-    fixed-height: false;
-    scrollbar:    false;
+    lines: 12;
+    columns: 1;     /* IMPORTANT: keeps it stable list-based */
+    spacing: 2px;
+    fixed-height: true;
+    scrollbar: false;
 }
 
 element {
-    padding:       7px 10px;
-    spacing:       10px;
-    border-radius: 8px;
+    padding: 6px 9px;
+    border: 1px;
+    border-color: transparent;
 }
 
 element-text {
-    text-color:     inherit;
-    vertical-align: 0.5;
+    text-color: inherit;
 }
 
 element-icon {
-    size: 26px;
+    size: 1.1em;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg-muted;
+}
+
+element selected.normal,
+element selected.active {
+    background-color: @bg-selected;
+    border-color: @border-strong;
+    text-color: @fg;
 }
 
 element normal.urgent,
 element alternate.urgent,
 element selected.urgent {
-    text-color: @urgent;
-}
-
-element selected {
-    background-color: @selection;
+    background-color: @bg-selected;
+    border-color: @urgent;
+    text-color: @fg;
 }
 
 message {
-    padding:          8px 10px;
-    border-radius:    8px;
-    background-color: @field;
+    border: 1px;
+    border-color: @border;
+    background-color: @bg-alt;
+    padding: 8px 10px;
+}
+
+textbox {
+    text-color: @fg;
 }
