@@ -1,15 +1,14 @@
 * {
     bg:              #121212;
     bg-alt:          #1d1d1d;
-    bg-selected:     #272727;
-    bg-hover:        #2a2a2a;
+    bg-selected:     #202838;
 
     fg:              #e8eaed;
-    fg-muted:        #9aa0a6;
-    fg-subtle:       #6f7378;
+    fg-muted:        #a8aeb8;
+    fg-subtle:       #858d99;
 
     border:          #2a2a2a;
-    border-strong:   #8ab4f8;
+    border-selected: #405674;
     accent:          #8ab4f8;
     urgent:          #f28b82;
 
@@ -22,8 +21,9 @@ window {
     width:            34%;
     border:           1px;
     border-color:     @border;
+    border-radius:    8px;
     background-color: @bg;
-    padding:          7px;
+    padding:          10px;
 }
 
 mainbox {
@@ -37,6 +37,7 @@ inputbar {
     background-color: @bg-alt;
     border: 1px;
     border-color: @border;
+    border-radius: 5px;
 }
 
 prompt {
@@ -52,7 +53,7 @@ entry {
 
 listview {
     lines: 12;
-    columns: 1;     /* IMPORTANT: keeps it stable list-based */
+    columns: 1;
     spacing: 2px;
     fixed-height: true;
     scrollbar: false;
@@ -62,6 +63,8 @@ element {
     padding: 6px 9px;
     border: 1px;
     border-color: transparent;
+    border-radius: 4px;
+    spacing: 8px;
 }
 
 element-text {
@@ -81,7 +84,7 @@ element alternate.normal {
 element selected.normal,
 element selected.active {
     background-color: @bg-selected;
-    border-color: @border-strong;
+    border-color: @border-selected;
     text-color: @fg;
 }
 
@@ -96,6 +99,7 @@ element selected.urgent {
 message {
     border: 1px;
     border-color: @border;
+    border-radius: 5px;
     background-color: @bg-alt;
     padding: 8px 10px;
 }

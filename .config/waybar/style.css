@@ -1,16 +1,14 @@
-/* Black base with restrained blue accents and consistent module spacing. */
-@define-color foreground #e2e8f0;
-@define-color foreground-inactive #a1adbf;
-@define-color foreground-muted #778397;
-@define-color background #000000;
-@define-color background-raised #171717;
-@define-color background-selected #252525;
+@define-color foreground #e8eaed;
+@define-color foreground-inactive #a8aeb8;
+@define-color foreground-muted #858d99;
+@define-color background #121212;
+@define-color background-raised #1d1d1d;
+@define-color background-selected #202838;
 @define-color border #2a2a2a;
-@define-color separator #202020;
-@define-color accent #93b9f5;
+@define-color accent #8ab4f8;
 @define-color success #9acbad;
 @define-color warning #e7c58a;
-@define-color urgent #f1949e;
+@define-color urgent #f28b82;
 * {
     font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", monospace;
     font-size: 15px;
@@ -43,15 +41,12 @@
 #workspaces button {
     color: @foreground;
     background-color: transparent;
-    padding: 0 12px;
-    margin: 0;
-    min-width: 2.2em;
+    background-image: none;
+    padding: 0 8px;
+    margin: 3px 1px;
+    min-width: 2em;
     min-height: 0;
-    border-bottom: 2px solid transparent;
-}
-
-#workspaces button label {
-    min-width: 2.2em;
+    border-radius: 4px;
 }
 
 #workspaces button.empty,
@@ -63,20 +58,17 @@
 #workspaces button:hover {
     color: @foreground;
     background-color: @background-raised;
-    border-bottom-color: @foreground-inactive;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
     color: @accent;
     background-color: @background-selected;
-    border-bottom-color: @accent;
 }
 
 #workspaces button.urgent {
     color: @background;
     background-color: @urgent;
-    border-bottom-color: @urgent;
 }
 
 #scratchpad,
@@ -100,10 +92,9 @@
 #power-profiles-daemon {
     color: @foreground;
     background-color: transparent;
-    /* Equal padding keeps gaps consistent across text and icon modules. */
-    padding: 0 12px;
+    padding: 0 9px;
     min-height: 0;
-    min-width: 24px;
+    min-width: 18px;
 }
 
 #clock {
@@ -184,33 +175,12 @@
     color: @accent;
 }
 
-/* Static, short dividers painted inside existing space: no added width. */
-#scratchpad,
-#custom-cpu,
-#memory,
-#systemd-failed-units,
-#mpris,
-#wireplumber,
-#backlight,
+/* Separate status groups without adding space for dividers. */
 #battery,
-#privacy,
-#network,
-#bluetooth,
-#tray,
-#power-profiles-daemon,
-#idle_inhibitor,
-#workspaces button {
-    background-image: linear-gradient(to bottom, @separator, @separator);
+#tray {
+    background-image: linear-gradient(to bottom, @border, @border);
     background-size: 1px 12px;
     background-position: right center;
-    background-repeat: no-repeat;
-}
-
-#clock {
-    background-image: linear-gradient(to bottom, @separator, @separator),
-                      linear-gradient(to bottom, @separator, @separator);
-    background-size: 1px 12px;
-    background-position: left center, right center;
     background-repeat: no-repeat;
 }
 
@@ -219,7 +189,7 @@ tooltip,
     color: @foreground;
     background-color: @background-raised;
     border: 1px solid @border;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 tooltip {
