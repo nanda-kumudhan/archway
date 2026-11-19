@@ -79,6 +79,7 @@ libfido2
 libpulse
 libreoffice-fresh
 libva-intel-driver
+libva-utils
 libvpl
 linux
 linux-firmware
